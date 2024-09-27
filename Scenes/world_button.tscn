@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo13vw3jh2slx"]
+
+[ext_resource type="Script" path="res://Scenes/WorldButton.gd" id="1_kforx"]
+[ext_resource type="LabelSettings" uid="uid://cnw3wdb2q0mrr" path="res://defaultLabelSettings.tres" id="2_nm1hb"]
+
+[node name="WorldButton" type="Button"]
+custom_minimum_size = Vector2(525, 100)
+offset_right = 500.0
+offset_bottom = 100.0
+script = ExtResource("1_kforx")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -25.0
+offset_right = 590.0
+offset_bottom = 25.0
+grow_vertical = 2
+text = "World Name
+"
+label_settings = ExtResource("2_nm1hb")
+vertical_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://6kgf46t38s3a"]
+
+[ext_resource type="PackedScene" uid="uid://0kuh24rookmg" path="res://Assets/WorldMap/Globe.blend" id="1_4yh8a"]
+
+[node name="Globe" instance=ExtResource("1_4yh8a")]

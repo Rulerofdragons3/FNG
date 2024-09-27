@@ -1,0 +1,50 @@
+{
+	"tags":{},
+	"conversation":[
+		{
+			"text":"Is water wet?",
+			"displayTime":3,
+			"speaker":"left"
+		},
+		{
+			"text":"\"Wetness\" is defined as a liquid's ability to maintain contact with a solid surface.",
+			"displayTime":5,
+			"speaker":"right"
+		},
+		{
+			"text":"Which would mean that water itself isn't wet.",
+			"displayTime":3,
+			"speaker":"right"
+		},
+		{
+			"text":"So wouldn't that mean that water is dry?",
+			"displayTime":3,
+			"speaker":"left"
+		},
+		{
+			"text":"Because that doen't sit right with me",
+			"displayTime":3,
+			"speaker":"left"
+		},
+		{
+			"text":"I-",
+			"displayTime":1,
+			"speaker":"right"
+		},
+		{
+			"text":"...",
+			"displayTime":2,
+			"speaker":"right"
+		},
+		{
+			"text":"Dryness is the absence of a liquid.",
+			"displayTime":3,
+			"speaker":"right"
+		},
+		{
+			"text":"So it's best to believe that liquids can neither be wet, nor dry",
+			"displayTime":5,
+			"speaker":"right"
+		}
+	]
+}

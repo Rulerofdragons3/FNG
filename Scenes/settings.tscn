@@ -1,0 +1,301 @@
+[gd_scene load_steps=14 format=3 uid="uid://ucn1pra6yjuu"]
+
+[ext_resource type="Script" path="res://Scenes/settings.gd" id="1_wcime"]
+[ext_resource type="Texture2D" uid="uid://x4qqty1bin5d" path="res://Assets/Phone.png" id="2_m8c4j"]
+[ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="3_6yk6y"]
+[ext_resource type="Texture2D" uid="uid://du2s7la1tqct1" path="res://Assets/Buttons/ExitDOWN.png" id="4_huq2r"]
+[ext_resource type="LabelSettings" uid="uid://cnw3wdb2q0mrr" path="res://defaultLabelSettings.tres" id="5_2xvsb"]
+[ext_resource type="FontFile" uid="uid://goan0j3j1id4" path="res://Assets/Fonts/PublicPixel-rv0pA.ttf" id="5_u1fw5"]
+[ext_resource type="Texture2D" uid="uid://dcsi4d78em60x" path="res://Assets/Backgrounds/OceanBG.png" id="7_iixfj"]
+[ext_resource type="Script" path="res://Scenes/remapButton.gd" id="8_ai6sr"]
+[ext_resource type="Script" path="res://Scenes/AccessFileScreen.gd" id="9_lghdm"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_66fwk"]
+action = &"DictHotkey"
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_kftxq"]
+events = [SubResource("InputEventAction_66fwk")]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xnthr"]
+font = ExtResource("5_u1fw5")
+font_size = 30
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wc1ty"]
+font = ExtResource("5_u1fw5")
+font_size = 9
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wcime")
+metadata/_edit_lock_ = true
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -300.0
+offset_right = 200.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.340339, 0.340339, 0.340339, 1)
+
+[node name="Phone" type="TextureRect" parent="BG"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -325.0
+offset_right = 200.0
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_m8c4j")
+
+[node name="ExitButton" type="TextureButton" parent="BG"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 566.0
+offset_right = 223.0
+offset_bottom = 616.0
+shortcut = SubResource("Shortcut_kftxq")
+texture_normal = ExtResource("3_6yk6y")
+texture_pressed = ExtResource("4_huq2r")
+stretch_mode = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(320, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -162.0
+offset_top = -281.0
+offset_right = 163.0
+offset_bottom = 262.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingList" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Padding0" type="Panel" parent="ScrollContainer/SettingList"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="PageTitle" type="Label" parent="ScrollContainer/SettingList"]
+custom_minimum_size = Vector2(325, 0)
+layout_mode = 2
+text = "Settings"
+label_settings = SubResource("LabelSettings_xnthr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Note" type="Label" parent="ScrollContainer/SettingList"]
+custom_minimum_size = Vector2(325, 0)
+layout_mode = 2
+text = "(These automatically save on app closure)"
+label_settings = SubResource("LabelSettings_wc1ty")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Padding1" type="Panel" parent="ScrollContainer/SettingList"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Wallpaper" type="Label" parent="ScrollContainer/SettingList"]
+custom_minimum_size = Vector2(325, 0)
+layout_mode = 2
+text = "Wallpaper"
+label_settings = ExtResource("5_2xvsb")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="WallpaperControl" type="Control" parent="ScrollContainer/SettingList"]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+
+[node name="WPPrev" type="TextureRect" parent="ScrollContainer/SettingList/WallpaperControl"]
+custom_minimum_size = Vector2(40, 60)
+layout_mode = 0
+offset_left = 200.0
+offset_right = 290.0
+offset_bottom = 160.0
+texture = ExtResource("7_iixfj")
+expand_mode = 1
+
+[node name="OpenFile" type="Button" parent="ScrollContainer/SettingList/WallpaperControl"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 37.0
+offset_right = 147.0
+offset_bottom = 68.0
+text = "Open image"
+
+[node name="Reset" type="Button" parent="ScrollContainer/SettingList/WallpaperControl"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 84.0
+offset_right = 162.0
+offset_bottom = 115.0
+text = "Reset to default"
+
+[node name="Padding2" type="Panel" parent="ScrollContainer/SettingList"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Audio" type="Label" parent="ScrollContainer/SettingList"]
+custom_minimum_size = Vector2(325, 0)
+layout_mode = 2
+text = "Audio"
+label_settings = ExtResource("5_2xvsb")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Music" type="Label" parent="ScrollContainer/SettingList"]
+custom_minimum_size = Vector2(325, 0)
+layout_mode = 2
+text = "Music"
+label_settings = ExtResource("5_2xvsb")
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="MusicVolSlider" type="HSlider" parent="ScrollContainer/SettingList"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 100.0
+scrollable = false
+
+[node name="Waves" type="Label" parent="ScrollContainer/SettingList"]
+custom_minimum_size = Vector2(325, 0)
+layout_mode = 2
+text = "Waves"
+label_settings = ExtResource("5_2xvsb")
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="WaveVolSlider" type="HSlider" parent="ScrollContainer/SettingList"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 100.0
+scrollable = false
+
+[node name="SFX" type="Label" parent="ScrollContainer/SettingList"]
+custom_minimum_size = Vector2(325, 0)
+layout_mode = 2
+text = "Sound Effects"
+label_settings = ExtResource("5_2xvsb")
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="SFXVolSlider" type="HSlider" parent="ScrollContainer/SettingList"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 100.0
+scrollable = false
+
+[node name="Padding3" type="Panel" parent="ScrollContainer/SettingList"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Keybinds" type="Label" parent="ScrollContainer/SettingList"]
+custom_minimum_size = Vector2(325, 0)
+layout_mode = 2
+text = "Keybinds"
+label_settings = ExtResource("5_2xvsb")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="KBFish" type="Control" parent="ScrollContainer/SettingList"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ScrollContainer/SettingList/KBFish"]
+layout_mode = 0
+offset_left = 12.0
+offset_right = 223.0
+offset_bottom = 31.0
+text = "Fish"
+label_settings = ExtResource("5_2xvsb")
+vertical_alignment = 1
+
+[node name="FishRebind" type="Button" parent="ScrollContainer/SettingList/KBFish"]
+layout_mode = 0
+offset_left = 223.0
+offset_right = 300.0
+offset_bottom = 31.0
+toggle_mode = true
+text = "SPACE"
+script = ExtResource("8_ai6sr")
+action = "StartMinigame"
+
+[node name="AccessFileScreen" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.576471)
+script = ExtResource("9_lghdm")
+metadata/_edit_lock_ = true
+
+[node name="FileDialog" type="FileDialog" parent="AccessFileScreen"]
+title = "Open a File"
+initial_position = 2
+size = Vector2i(500, 500)
+unresizable = true
+borderless = true
+ok_button_text = "Open"
+dialog_hide_on_ok = true
+dialog_close_on_escape = false
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png", "*.jpg", "*.jpeg")
+
+[connection signal="pressed" from="BG/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/SettingList/WallpaperControl/OpenFile" to="." method="_on_open_file_pressed"]
+[connection signal="pressed" from="ScrollContainer/SettingList/WallpaperControl/Reset" to="." method="_on_reset_pressed"]
+[connection signal="value_changed" from="ScrollContainer/SettingList/MusicVolSlider" to="." method="_on_vol_slider_changed" binds= ["Music"]]
+[connection signal="value_changed" from="ScrollContainer/SettingList/WaveVolSlider" to="." method="_on_vol_slider_changed" binds= ["Waves"]]
+[connection signal="value_changed" from="ScrollContainer/SettingList/SFXVolSlider" to="." method="_on_vol_slider_changed" binds= ["SFX"]]
+[connection signal="toggled" from="ScrollContainer/SettingList/KBFish/FishRebind" to="ScrollContainer/SettingList/KBFish/FishRebind" method="_on_toggled"]
+[connection signal="changeWallpaper" from="AccessFileScreen" to="." method="_on_access_file_screen_change_wallpaper"]
+[connection signal="visibility_changed" from="AccessFileScreen" to="AccessFileScreen" method="_on_visibility_changed"]
+[connection signal="file_selected" from="AccessFileScreen/FileDialog" to="AccessFileScreen" method="_on_file_dialog_file_selected"]
+[connection signal="visibility_changed" from="AccessFileScreen/FileDialog" to="AccessFileScreen" method="_on_file_dialog_visibility_changed"]

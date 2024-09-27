@@ -1,0 +1,118 @@
+{
+	"baseMultiplierUpgrades":[
+		{
+			"price":50,
+			"increase":1,
+			"obtained":false,
+			"desc":"[font n=res://Assets/Fonts/joystixMonospace.otf s=26][rainbow freq=0.2]base luck multiplier[/rainbow][font_size=1]\n[/font_size][font_size=12] Tired of fishing up the same old garbage? This upgrade automatically increases your luck by 1x!\n[tornado radius=4 freq=1]\n(Oooh you wanna buy this)[/tornado][font_size=7]\n\n(Message and data rates may apply)"
+		},
+		{
+			"price":125,
+			"increase":4,
+			"obtained":false,
+			"desc":"[font n=res://Assets/Fonts/joystixMonospace.otf s=26][rainbow freq=0.2]base luck multiplier+[/rainbow][font_size=1]\n[/font_size][font_size=12] Tired of fishing up the same old garbage? This upgrade increases your base luck by an extra 4x!\nDont like it? [color=#FF0000][shake level=20]BUY IT OR ELSE!!!![/shake][/color][font_size=7]\n\n(Message and data rates may apply)"
+		},
+		{
+			"price":500,
+			"increase":10,
+			"obtained":false,
+			"desc":"[font n=res://Assets/Fonts/joystixMonospace.otf s=20][rainbow freq=0.2]base luck multiplier deluxe[/rainbow][font_size=1]\n[/font_size][font_size=12]Love base luck multiplier+? then try our deluxe package! Add an extra 10x to the already existing multiplier!1!!\nStill don't like it? [color=#FF0000][shake level=20]we still don't care.[/shake][/color][font_size=7]\n\n(Message and data rates still apply)"
+		},
+		{
+			"price":1500,
+			"increase":15,
+			"obtained":false,
+			"desc":"[font n=res://Assets/Fonts/joystixMonospace.otf s=22][rainbow freq=0.2]base luck multiplier [shake level=10]ultra[/shake][/rainbow][font_size=1]\n[/font_size][font_size=12]Don't miss out! Get our ULTRA package to get +15x luck multiplier!!!!\nDont you wanna fish better? [color=#FF0000]buy. it.[/color]\n[font_size=7]\n\n(Message and data rates still apply)"
+		},
+		{
+			"price":4000,
+			"increase":20,
+			"obtained":false,
+			"desc":"[font n=res://Assets/Fonts/joystixMonospace.otf s=22][rainbow freq=0.3]base luck multiplier [shake level=20]omega[/shake][/rainbow][font_size=1]\n[/font_size][font_size=12]Pros use omega. Get it now for an extra 20x boost over other plans.\n[color=#FF0000][shake level=20]BUY IT.BUY IT.BUY IT.BUY IT.BUY IT.BUY IT.[/shake][/color][font_size=7]\n\n(Who cares at this point?)"
+		}
+	],
+	"performanceMultiplierUpgrades":[
+		{
+			"price":40,
+			"increase":0.25,
+			"obtained":false,
+			"desc":"[font n=res://Assets/Fonts/joystixMonospace.otf s=26][pulse freq=5]Upgrade to a lucky rod![/pulse][font_size=16]\nCurrent precision multipliers not enough for you? Purchase a [wave]lucky rod[/wave] to increase the multiplier's value![font_size=8]\n\n\nsuper duper happy lucky rods inc[/font_size]"
+		},
+		{
+			"price":80,
+			"increase":0.75,
+			"obtained":false,
+			"desc":"[font n=res://Assets/Fonts/joystixMonospace.otf s=22][pulse freq=5]Upgrade to a moderate lucky rod![/pulse][font_size=16]\nCurrent precision multipliers not enough for you? Purchase a [wave]lucky rod[/wave] to increase the multiplier's value![font_size=8]\n\n\nsuper duper happy lucky rods inc[/font_size]"
+		},
+		{
+			"price":320,
+			"increase":2,
+			"obtained":false,
+			"desc":"[font n=res://Assets/Fonts/joystixMonospace.otf s=26][pulse freq=5]Upgrade to a very lucky rod![/pulse][font_size=16]\nCurrent precision multipliers not enough for you? Purchase a [wave]lucky rod[/wave] to increase the multiplier's value![font_size=8]\n\n\nsuper duper happy lucky rods inc[/font_size]"
+		},
+		{
+			"price":640,
+			"increase":8,
+			"obtained":false,
+			"desc":"[font n=res://Assets/Fonts/joystixMonospace.otf s=26][pulse freq=5]Upgrade to a super lucky rod![/pulse][font_size=16]\nCurrent precision multipliers not enough for you? Purchase a [wave]lucky rod[/wave] to increase the multiplier's value![font_size=8]\n\n\nsuper duper happy lucky rods inc[/font_size]"
+		},
+		{
+			"price":1600,
+			"increase":10,
+			"obtained":false,
+			"desc":"[font n=res://Assets/Fonts/joystixMonospace.otf s=26][pulse freq=5]Upgrade to a extreme lucky rod![/pulse][font_size=16]\nCurrent precision multipliers not enough for you? Purchase a [wave]lucky rod[/wave] to increase the multiplier's value![font_size=8]\n\n\nsuper duper happy lucky rods inc[/font_size]"
+		}
+	],
+	"cheapValueMultiplier":[
+		{
+			"price":100,
+			"increase":2,
+			"obtained":false,
+			"desc":"[font n=res://Assets/Fonts/joystixMonospace.otf s=26]Get more for your fish![font_size=16]\nTired of getting little cash for your common fish? Try our new book:\n[i]\"the secrets of ripping off your customers\"[/i]!\nYour satisfaction is garunteed!"
+		},
+		{
+			"price":200,
+			"increase":4,
+			"obtained":false,
+			"desc":"[font n=res://Assets/Fonts/joystixMonospace.otf s=26]Get more for your fish![font_size=16]\nTired of getting little cash for your common fish? Try our new book:\n[i]\"the secrets of ripping off your customers\"[/i]!\nYour satisfaction is garunteed!"
+		},
+		{
+			"price":400,
+			"increase":8,
+			"obtained":false,
+			"desc":"[font n=res://Assets/Fonts/joystixMonospace.otf s=26]Get more for your fish![font_size=16]\nTired of getting little cash for your common fish? Try our new book:\n[i]\"the secrets of ripping off your customers\"[/i]!\nYour satisfaction is garunteed!"
+		}
+		
+	],
+	"locations":[
+		{
+			"price":1000,
+			"increase":"nightOcean",
+			"obtained":false,
+			"desc":"[center][font n=res://Assets/Fonts/joystixMonospace.otf s=26]need a vacation?
+					[font_size=12]go on your dream vacation with an EXPEDITIONS(TM) traveler. This wonderful boat will give you the opportunity to explore the shadowy waters of the night patch!"
+		},
+		{
+			"price":2000,
+			"increase":"redSea",
+			"obtained":false,
+			"desc":"[center][font n=res://Assets/Fonts/joystixMonospace.otf s=26]see the red sea!
+					[font_size=12]go on your next vacation with an EXPEDITIONS(TM) wayfinder. This impressive boat will keep you afloat in the Red Sea, garunteed!"
+		},
+		{
+			"price":3500,
+			"increase":"deepOcean",
+			"obtained":false,
+			"desc":"[center][font n=res://Assets/Fonts/joystixMonospace.otf s=26]go farther than before!
+					[font_size=12]take a trip to the Deep End with the EXPEDITIONS(TM) explorer. A ship that is durable enough to survive the deep waters!"
+		},
+		{
+			"price":5000,
+			"increase":"junkPatch",
+			"obtained":false,
+			"desc":"[center][font n=res://Assets/Fonts/joystixMonospace.otf s=20]need to ruin a relationship fast?
+					[font_size=12]go on a trip with a hated one to the Junk Patch with an EXPEDITIONS(TM) tanker. This boat will give you the trip you need to ruin that relationship with that special someone!"
+		}
+		
+	]
+}

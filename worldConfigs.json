@@ -1,0 +1,50 @@
+{
+	"ocean":{
+		"background":"OceanBG.png",
+		"globeOrientation":[0,0,0],
+		"name":"Coasta Azul",
+		"desc":"Right on the edge of paradise. It serves as a hotspot for the world's most common fish"
+	},
+	"nightOcean":{
+		"background":"NightOceanBG.png",
+		"globeOrientation":[-2,-69,5],
+		"name":"Night Patch",
+		"desc":"a strange part of the ocean where the sun never shines",
+		"playlist":[
+			"ambientClassicalGuitar.mp3",
+			"illusionFeelAmbientGuitar.mp3"
+		]
+	},
+	"redSea":{
+		"background":"RedSeaBG.png",
+		"globeOrientation":[-53,-171.5,-7],
+		"name":"Red Sea",
+		"desc":"A sea which has large deposits of sediment, resulting in it's red color"
+	},
+	"deepOcean":{
+		"background":"DeepOceanBG.png",
+		"globeOrientation":[-1,-98,-41],
+		"name":"Deep End",
+		"desc":"a place surrounded by gargantuan oil rigs. it is possible to catch deep-sea fish from the surface with a long enough fishing line."
+	},
+	"junkPatch":{
+		"background":"JunkPatchBG.png",
+		"globeOrientation":[11,-167.5,2.4],
+		"name":"Junk Patch",
+		"desc":"once a beautiful coral reef, now a huge floating island of trash. fish may not even exist here...",
+		"playlist":[
+			"perfectBeauty.mp3"
+		]
+	},
+	"dreadSea":{
+		"background":"DreadSeaBG.png",
+		"globeOrientation":[67,121,-56],
+		"name":"Dread Sea",
+		"desc":"the tar-black waters mask the horrors within",
+		"playlist":[
+			"tenseHorror.mp3",
+			"bgHorror.mp3",
+			"cosmicHorror.mp3"
+		]
+	}
+}

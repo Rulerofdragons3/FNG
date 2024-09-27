@@ -1,0 +1,20 @@
+{
+	"tags":{},
+	"conversation":[
+		{
+			"text":"%s, I'm quite concerned with the recent stock market fiasco.",
+			"displayTime":5,
+			"speaker":"left"
+		},
+		{
+			"text":"%s we are fish.",
+			"displayTime":3,
+			"speaker":"right"
+		},
+		{
+			"text":"Splendid.",
+			"displayTime":3,
+			"speaker":"both"
+		}
+	]
+}

@@ -1,0 +1,25 @@
+{
+	"tags":{},
+	"conversation":[
+		{
+			"text":"Have i told you how much i hate this stupid fucking background.",
+			"displayTime":5,
+			"speaker":"left"
+		},
+		{
+			"text":"Ugly ass jpeg",
+			"displayTime":2,
+			"speaker":"left"
+		},
+		{
+			"text":"Is the dev actually too fucking lazy to do the pixel art?",
+			"displayTime":4,
+			"speaker":"left"
+		},
+		{
+			"text":"Ugly ass jpeg that doesn't even fit the art style of the game.",
+			"displayTime":5,
+			"speaker":"left"
+		}
+	]
+}

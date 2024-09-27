@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=3 uid="uid://351gfnpfxyvc"]
+
+[ext_resource type="Texture2D" uid="uid://dvwlddmd3wakt" path="res://Assets/SpeechBubble.png" id="1_0fdo0"]
+[ext_resource type="Script" path="res://Scenes/conversation.gd" id="1_jmbnh"]
+[ext_resource type="Texture2D" uid="uid://cx87tm3e5fx3r" path="res://Assets/SpeechBubbleTail.png" id="2_w1v7p"]
+[ext_resource type="FontFile" uid="uid://goan0j3j1id4" path="res://Assets/Fonts/PublicPixel-rv0pA.ttf" id="4_3bkco"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_k2q8e"]
+font = ExtResource("4_3bkco")
+font_color = Color(0, 0, 0, 1)
+
+[node name="Conversation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jmbnh")
+
+[node name="Bubble" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -216.0
+offset_top = -328.0
+offset_right = 216.0
+offset_bottom = -88.0
+texture = ExtResource("1_0fdo0")
+
+[node name="Tail1" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -120.0
+offset_top = -107.0
+offset_right = -53.0
+offset_bottom = -43.0
+rotation = 1.8326
+texture = ExtResource("2_w1v7p")
+
+[node name="Tail2" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 64.0
+offset_top = -208.0
+offset_right = 128.0
+offset_bottom = -144.0
+rotation = 1.309
+pivot_offset = Vector2(0, 120)
+texture = ExtResource("2_w1v7p")
+
+[node name="Speech" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -184.0
+offset_top = -328.0
+offset_right = 184.0
+offset_bottom = -88.0
+text = "This is a test conversation."
+label_settings = SubResource("LabelSettings_k2q8e")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 129
+clip_text = true
+
+[node name="Pos1" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -224.0
+offset_top = -48.0
+offset_right = -224.0
+offset_bottom = -48.0
+
+[node name="Pos2" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 144.0
+offset_top = -48.0
+offset_right = 144.0
+offset_bottom = -48.0
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]

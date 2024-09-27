@@ -1,0 +1,212 @@
+[gd_scene load_steps=24 format=3 uid="uid://b1fus4882sx0c"]
+
+[ext_resource type="Script" path="res://Scenes/UI.gd" id="1_hqbtp"]
+[ext_resource type="FontFile" uid="uid://csakyqqjxrehm" path="res://Assets/Fonts/joystixMonospace.otf" id="2_uj4x1"]
+[ext_resource type="Texture2D" uid="uid://djv84w3w1xd4h" path="res://Assets/Buttons/ShopButton1.png" id="2_w6r82"]
+[ext_resource type="Texture2D" uid="uid://chfpiamytbvag" path="res://Assets/Buttons/ShopButton1Pressed.png" id="5_uo1il"]
+[ext_resource type="Texture2D" uid="uid://cpjtbq3tng4pt" path="res://Assets/Buttons/ShopButton1Disabled.png" id="6_lpfif"]
+[ext_resource type="LabelSettings" uid="uid://cnw3wdb2q0mrr" path="res://defaultLabelSettings.tres" id="6_po55g"]
+[ext_resource type="Texture2D" uid="uid://dcsi4d78em60x" path="res://Assets/Backgrounds/OceanBG.png" id="7_5pp01"]
+[ext_resource type="Texture2D" uid="uid://x4qqty1bin5d" path="res://Assets/Phone.png" id="8_3c4yr"]
+[ext_resource type="Texture2D" uid="uid://ch4s3y75ke12t" path="res://Assets/Buttons/ShopApp.png" id="8_ej6o6"]
+[ext_resource type="Texture2D" uid="uid://cp6kex6lrk4wl" path="res://Assets/Buttons/ShopAppPressed.png" id="9_inps5"]
+[ext_resource type="Texture2D" uid="uid://bu21wpmth53v5" path="res://Assets/Buttons/FishionaryApp.png" id="11_pjpiv"]
+[ext_resource type="Texture2D" uid="uid://ckeos5k3jo0p5" path="res://Assets/Buttons/FishionaryAppPressed.png" id="12_s6dbw"]
+[ext_resource type="Texture2D" uid="uid://dnfxf45uopyms" path="res://Assets/Buttons/WorldMap.png" id="13_2siwl"]
+[ext_resource type="Texture2D" uid="uid://dx3hs02oj8nf8" path="res://Assets/Buttons/PowerOff.png" id="13_6k003"]
+[ext_resource type="Texture2D" uid="uid://xqjq0dcoy7xq" path="res://Assets/Buttons/PowerOffPressed.png" id="14_1di28"]
+[ext_resource type="Texture2D" uid="uid://bvdvdb6jvtblu" path="res://Assets/Buttons/WorldMapPressed.png" id="14_u4152"]
+[ext_resource type="Texture2D" uid="uid://dhskqjua7gle7" path="res://Assets/Buttons/SettingsApp.png" id="15_8fe8x"]
+[ext_resource type="Texture2D" uid="uid://ciui8chetiofu" path="res://Assets/Buttons/AquariumApp.png" id="15_st5up"]
+[ext_resource type="Texture2D" uid="uid://dom2hcvlfs8ls" path="res://Assets/Buttons/AquariumAppPressed.png" id="16_svsqk"]
+[ext_resource type="Texture2D" uid="uid://bpr7h223d3gwo" path="res://Assets/Buttons/SettingsAppPressed.png" id="16_tmktk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wqsoj"]
+font = ExtResource("2_uj4x1")
+font_size = 64
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="InputEventAction" id="InputEventAction_awhih"]
+action = &"ShopHotkey"
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_x42qx"]
+events = [SubResource("InputEventAction_awhih")]
+
+[node name="Ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hqbtp")
+
+[node name="MoneyLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 2000.0
+offset_bottom = 77.0
+scale = Vector2(0.5, 0.5)
+text = "$0
+"
+label_settings = SubResource("LabelSettings_wqsoj")
+
+[node name="FishingHint" type="Label" parent="."]
+layout_mode = 0
+offset_top = 550.0
+offset_right = 1152.0
+offset_bottom = 600.0
+text = "Press F to start Fishing"
+label_settings = ExtResource("6_po55g")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 10.0
+offset_right = 1140.0
+offset_bottom = 110.0
+shortcut = SubResource("Shortcut_x42qx")
+texture_normal = ExtResource("2_w6r82")
+texture_pressed = ExtResource("5_uo1il")
+texture_disabled = ExtResource("6_lpfif")
+stretch_mode = 0
+
+[node name="Phone" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BlackBG" type="ColorRect" parent="Phone"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 378.0
+offset_top = -20.0
+offset_right = 738.0
+offset_bottom = 630.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Wallpaper" type="TextureRect" parent="Phone"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 391.0
+offset_top = 20.0
+offset_right = 722.0
+offset_bottom = 564.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_5pp01")
+expand_mode = 1
+
+[node name="PhoneOutline" type="TextureRect" parent="Phone"]
+layout_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 356.0
+offset_top = -21.0
+offset_right = 756.0
+offset_bottom = 629.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_3c4yr")
+
+[node name="GridContainer" type="GridContainer" parent="Phone"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 428.0
+offset_top = 34.5
+offset_right = 684.0
+offset_bottom = 573.5
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="ShopButton" type="TextureButton" parent="Phone/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("8_ej6o6")
+texture_pressed = ExtResource("9_inps5")
+stretch_mode = 0
+
+[node name="FishionaryButton" type="TextureButton" parent="Phone/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("11_pjpiv")
+texture_pressed = ExtResource("12_s6dbw")
+stretch_mode = 0
+
+[node name="MapButton" type="TextureButton" parent="Phone/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("13_2siwl")
+texture_pressed = ExtResource("14_u4152")
+stretch_mode = 0
+
+[node name="TankButton" type="TextureButton" parent="Phone/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("15_st5up")
+texture_pressed = ExtResource("16_svsqk")
+stretch_mode = 0
+
+[node name="SettingsButton" type="TextureButton" parent="Phone/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("15_8fe8x")
+texture_pressed = ExtResource("16_tmktk")
+stretch_mode = 0
+
+[node name="OffButton" type="TextureButton" parent="Phone"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+offset_left = 791.0
+offset_top = 110.0
+offset_right = 871.0
+offset_bottom = 190.0
+texture_normal = ExtResource("13_6k003")
+texture_pressed = ExtResource("14_1di28")
+stretch_mode = 0
+
+[node name="Fade" type="ColorRect" parent="."]
+visible = false
+layout_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1250.0
+offset_top = -1250.0
+offset_right = 1250.0
+offset_bottom = 1250.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="visibility_changed" from="FishingHint" to="." method="_on_fishing_hint_visibility_changed"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Phone/GridContainer/ShopButton" to="." method="_on_shop_button_pressed"]
+[connection signal="pressed" from="Phone/GridContainer/FishionaryButton" to="." method="_on_fishionary_button_pressed"]
+[connection signal="pressed" from="Phone/GridContainer/MapButton" to="." method="_on_map_button_pressed"]
+[connection signal="pressed" from="Phone/GridContainer/TankButton" to="." method="_on_tank_button_pressed"]
+[connection signal="pressed" from="Phone/GridContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Phone/OffButton" to="." method="_on_off_button_pressed"]

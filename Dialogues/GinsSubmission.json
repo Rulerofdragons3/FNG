@@ -1,0 +1,25 @@
+{
+	"tags":{},
+	"conversation":[
+		{
+			"text":"%s, what does a gen alpha frog say?",
+			"displayTime":3,
+			"speaker":"left"
+		},
+		{
+			"text":"what?",
+			"displayTime":2,
+			"speaker":"right"
+		},
+		{
+			"text":"ribidi toilet",
+			"displayTime":4,
+			"speaker":"left"
+		},
+		{
+			"text":"kill yourself %s",
+			"displayTime":2,
+			"speaker":"right"
+		}
+	]
+}

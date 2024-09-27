@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1t5gljhsn163"]
+
+[ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="1_ba6bj"]
+[ext_resource type="Script" path="res://Scenes/tankfish.gd" id="2_5ubbj"]
+[ext_resource type="AudioStream" uid="uid://cd5nhx1e5qalm" path="res://Assets/Sounds/JokeSounds/squeakIn.mp3" id="3_rs1fr"]
+[ext_resource type="AudioStream" uid="uid://by7qgr5k1nu3t" path="res://Assets/Sounds/JokeSounds/squeakOut.mp3" id="4_qau53"]
+
+[node name="Fish" type="TextureButton"]
+texture_filter = 1
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(40, 40)
+texture_normal = ExtResource("1_ba6bj")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_5ubbj")
+swimRange = Vector2(900, 400)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="SqueakIn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_rs1fr")
+bus = &"SFX"
+
+[node name="SqueakOut" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qau53")
+bus = &"SFX"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

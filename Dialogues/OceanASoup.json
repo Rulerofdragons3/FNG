@@ -1,0 +1,26 @@
+{
+	"tags":{},
+	"conversation":[
+		{
+			"text":"%s, is the ocean a soup?",
+			"displayTime":5,
+			"speaker":"right"
+		},
+		{
+			"text":"A soup is a liquid food prepared from meat, fish, or vegetable stock combined with various other ingredients and often containing solid pieces.",
+			"displayTime":8,
+			"speaker":"left"
+		},
+		{
+			"text":"So it's dependent on if you consider the ocean itself to be a food item.",
+			"displayTime":5,
+			"speaker":"left"
+		},
+		{
+			"text":"Well I do, and will be ordering a bowl of ocean as my next meal.",
+			"displayTime":5,
+			"speaker":"right"
+		}
+		
+	]
+}

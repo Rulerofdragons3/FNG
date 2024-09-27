@@ -1,0 +1,75 @@
+{
+	"tags":{},
+	"conversation":[
+		{
+			"text":"%s, do you have a moment?",
+			"displayTime":3,
+			"speaker":"right"
+		},
+		{
+			"text":"%s we are simulated life who host these conversations between eachother for the amusement of unseen gods.",
+			"displayTime":7,
+			"speaker":"left"
+		},
+		{
+			"text":"I quite literally have nothing else better to do.",
+			"displayTime":4,
+			"speaker":"left"
+		},
+		{
+			"text":"Well I have a concern with the game's name.",
+			"displayTime":3,
+			"speaker":"right"
+		},
+		{
+			"text":"The name \"FNG\" is supposed to be a play on the term \"RNG.\"",
+			"displayTime":3,
+			"speaker":"right"
+		},
+		{
+			"text":"\"RNG\" stands for \"Random Number Generator.\"",
+			"displayTime":3,
+			"speaker":"right"
+		},
+		{
+			"text":"Which would imply that \"FNG\" stands for \"Fish Number Generator.\"",
+			"displayTime":4,
+			"speaker":"right"
+		},
+		{
+			"text":"Which is stupid.",
+			"displayTime":2,
+			"speaker":"right"
+		},
+		{
+			"text":"I see your concern. However, there has been a misunderstanding.",
+			"displayTime":5,
+			"speaker":"left"
+		},
+		{
+			"text":"\"FNG\" actually is an abbriviation for \"Fish 'N Gambling.\"",
+			"displayTime":5,
+			"speaker":"left"
+		},
+		{
+			"text":"...",
+			"displayTime":3,
+			"speaker":"right"
+		},
+		{
+			"text":"That's also stupid. It just sounds like the dev doesn't want to fix the name of the game.",
+			"displayTime":7,
+			"speaker":"right"
+		},
+		{
+			"text":"Impossible, the developer surely cannot be that foolish.",
+			"displayTime":4,
+			"speaker":"left"
+		},
+		{
+			"text":"...",
+			"displayTime":3,
+			"speaker":"both"
+		}
+	]
+}

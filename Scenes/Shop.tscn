@@ -1,0 +1,466 @@
+[gd_scene load_steps=23 format=3 uid="uid://b4cplf8v1xp2a"]
+
+[ext_resource type="Script" path="res://Scenes/Shop.gd" id="1_wp537"]
+[ext_resource type="Texture2D" uid="uid://cn47nlfmm1858" path="res://Assets/ads.png" id="3_qmuho"]
+[ext_resource type="Texture2D" uid="uid://dvj4tcco51x2r" path="res://Assets/Buttons/BuyButtonYellow.png" id="4_cywlt"]
+[ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="5_8hm1p"]
+[ext_resource type="Texture2D" uid="uid://c6grwx5kpibqo" path="res://Assets/Buttons/BuyButtonYellowPressed.png" id="5_iw5iq"]
+[ext_resource type="LabelSettings" uid="uid://cnw3wdb2q0mrr" path="res://defaultLabelSettings.tres" id="6_gmpe3"]
+[ext_resource type="Texture2D" uid="uid://du2s7la1tqct1" path="res://Assets/Buttons/ExitDOWN.png" id="6_ht106"]
+[ext_resource type="FontFile" uid="uid://csakyqqjxrehm" path="res://Assets/Fonts/joystixMonospace.otf" id="7_wxcfj"]
+[ext_resource type="Texture2D" uid="uid://x4qqty1bin5d" path="res://Assets/Phone.png" id="8_ugg21"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7l6al"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(0, 0, 95, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrcfw"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(95, 0, 95, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_miihl"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(190, 0, 95, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7313"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(285, 0, 95, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70lje"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(380, 0, 95, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssssw"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(0, 24, 95, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dv5ev"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(95, 24, 95, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3q4t"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(190, 24, 95, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qthvc"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(285, 24, 95, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j826f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7l6al")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrcfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_miihl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7313")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70lje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssssw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dv5ev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3q4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qthvc")
+}],
+"loop": true,
+"name": &"ads",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mx64v"]
+font = ExtResource("7_wxcfj")
+font_size = 8
+
+[sub_resource type="InputEventAction" id="InputEventAction_a33lw"]
+action = &"ShopHotkey"
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_s4cbc"]
+events = [SubResource("InputEventAction_a33lw")]
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wp537")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 104.0
+offset_right = 944.0
+offset_bottom = 604.0
+color = Color(0.190762, 0.190762, 0.190762, 1)
+
+[node name="PhoneSideways" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 617.0
+offset_right = 689.0
+offset_bottom = 1527.0
+rotation = -1.5708
+texture = ExtResource("8_ugg21")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+offset_left = 215.0
+offset_top = 104.0
+offset_right = 943.0
+offset_bottom = 566.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="ShopTitleContainer" type="ColorRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 50)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+
+[node name="URL" type="Label" parent="ScrollContainer/VBoxContainer/ShopTitleContainer"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 60.0
+offset_top = -25.0
+offset_right = 700.0
+offset_bottom = 25.0
+grow_vertical = 2
+text = "hppts://fishermansparadise.net/shop"
+label_settings = ExtResource("6_gmpe3")
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="Ads" type="AnimatedSprite2D" parent="ScrollContainer/VBoxContainer/PanelContainer"]
+position = Vector2(352, 72)
+scale = Vector2(5.62051, 5.68)
+sprite_frames = SubResource("SpriteFrames_j826f")
+animation = &"ads"
+
+[node name="GoToSite" type="TextureButton" parent="ScrollContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="baseMultiplierUpgrades" type="ColorRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+color = Color(0.245743, 0.844746, 1, 1)
+
+[node name="Desc" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/baseMultiplierUpgrades"]
+clip_contents = false
+custom_minimum_size = Vector2(490, 100)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -490.0
+offset_top = 2.0
+offset_bottom = 122.0
+grow_horizontal = 0
+bbcode_enabled = true
+text = "[font n=res://Assets/Fonts/joystixMonospace.otf s=26][rainbow freq=0.2]base luck multiplier[/rainbow]	[font_size=12]Tired of fishing up the same old garbage? This upgrade automatically increases your luck by 1x!
+
+Dont like it? Womp womp.
+[font_size=7](Message and data rates may apply)\""
+fit_content = true
+scroll_active = false
+tab_size = 0
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/baseMultiplierUpgrades"]
+layout_mode = 1
+offset_right = 200.0
+offset_bottom = 200.0
+
+[node name="Purchase" type="TextureButton" parent="ScrollContainer/VBoxContainer/baseMultiplierUpgrades"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -66.0
+offset_right = 202.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("4_cywlt")
+texture_pressed = ExtResource("5_iw5iq")
+texture_disabled = ExtResource("5_iw5iq")
+stretch_mode = 0
+
+[node name="Price" type="Label" parent="ScrollContainer/VBoxContainer/baseMultiplierUpgrades/Purchase"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -25.0
+offset_right = 100.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "$0
+"
+label_settings = ExtResource("6_gmpe3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="performanceMultiplierUpgrades" type="ColorRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+color = Color(4.57242e-06, 0.636876, 0.524732, 1)
+
+[node name="Desc" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/performanceMultiplierUpgrades"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -696.0
+offset_right = -296.0
+offset_bottom = 200.0
+grow_horizontal = 0
+bbcode_enabled = true
+text = "[font n=res://Assets/Fonts/joystixMonospace.otf s=26][pulse freq=5]Upgrade to a lucky rod![/pulse][font_size=16]
+Precision multipliers not enough for you? Purchase a [wave]lucky rod[/wave] to increase the multiplier's value!
+
+
+[font_size=8]super duper happy lucky rods inc[/font_size]"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/performanceMultiplierUpgrades"]
+layout_mode = 1
+offset_left = 502.0
+offset_top = 20.0
+offset_right = 602.0
+offset_bottom = 120.0
+
+[node name="Purchase" type="TextureButton" parent="ScrollContainer/VBoxContainer/performanceMultiplierUpgrades"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 104.0
+offset_top = -68.0
+offset_right = 304.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("4_cywlt")
+texture_pressed = ExtResource("5_iw5iq")
+texture_disabled = ExtResource("5_iw5iq")
+stretch_mode = 0
+
+[node name="Price" type="Label" parent="ScrollContainer/VBoxContainer/performanceMultiplierUpgrades/Purchase"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -25.0
+offset_right = 100.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "$0
+"
+label_settings = ExtResource("6_gmpe3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Joke" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "<ins class=\"adspice\"
+style=\"display:inline-block;width:700px;height:100px\"
+data-ad-client=\"fi-sh-1234567890123456\"data-ad-slot=\"1234567890\"></ins>"
+label_settings = SubResource("LabelSettings_mx64v")
+
+[node name="cheapValueMultiplier" type="ColorRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+color = Color(0.665402, 0.509202, 0.382386, 1)
+
+[node name="Desc" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/cheapValueMultiplier"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -696.0
+offset_right = -7.0
+offset_bottom = 200.0
+grow_horizontal = 0
+bbcode_enabled = true
+text = "[font n=res://Assets/Fonts/joystixMonospace.otf s=26]Get more for your fish![font_size=16]
+Tired of getting little cash for your common fish? Try our new book: 
+[i]\"the secrets of ripping off your vendors\"[/i]!
+your satisfaction is garunteed!"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/cheapValueMultiplier"]
+layout_mode = 1
+offset_top = 131.0
+offset_right = 439.0
+offset_bottom = 200.0
+
+[node name="Purchase" type="TextureButton" parent="ScrollContainer/VBoxContainer/cheapValueMultiplier"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 104.0
+offset_top = -68.0
+offset_right = 304.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("4_cywlt")
+texture_pressed = ExtResource("5_iw5iq")
+texture_disabled = ExtResource("5_iw5iq")
+stretch_mode = 0
+
+[node name="Price" type="Label" parent="ScrollContainer/VBoxContainer/cheapValueMultiplier/Purchase"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -25.0
+offset_right = 100.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "$0
+"
+label_settings = ExtResource("6_gmpe3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="locations" type="ColorRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+color = Color(0.470697, 0.468781, 0.477326, 1)
+
+[node name="Desc" type="RichTextLabel" parent="ScrollContainer/VBoxContainer/locations"]
+clip_contents = false
+custom_minimum_size = Vector2(490, 100)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_right = 300.0
+offset_bottom = 100.0
+grow_horizontal = 2
+bbcode_enabled = true
+text = "[center][font n=res://Assets/Fonts/joystixMonospace.otf s=26]need a vacation?
+[font_size=12]go on your dream vacation with an EXPEDITIONS(TM) explorer. This wonderful boat will give you the opportunity to explore the waters beyond!
+(Also unlocks the map)"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/locations"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -100.0
+offset_right = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Purchase" type="TextureButton" parent="ScrollContainer/VBoxContainer/locations"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_right = 200.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("4_cywlt")
+texture_pressed = ExtResource("5_iw5iq")
+texture_disabled = ExtResource("5_iw5iq")
+stretch_mode = 0
+
+[node name="Price" type="Label" parent="ScrollContainer/VBoxContainer/locations/Purchase"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -25.0
+offset_right = 100.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Unavailable"
+label_settings = ExtResource("6_gmpe3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Copyright" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Copyright @ who really cares industries
+
+"
+label_settings = SubResource("LabelSettings_mx64v")
+
+[node name="ExitButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 959.0
+offset_top = 315.0
+offset_right = 1009.0
+offset_bottom = 365.0
+shortcut = SubResource("Shortcut_s4cbc")
+texture_normal = ExtResource("5_8hm1p")
+texture_pressed = ExtResource("6_ht106")
+stretch_mode = 0
+
+[connection signal="hidden" from="." to="." method="_on_hidden"]
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/PanelContainer/GoToSite" to="." method="_on_go_to_site_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/baseMultiplierUpgrades/Purchase" to="." method="_on_purchase_pressed" binds= ["baseMultiplierUpgrades"]]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/performanceMultiplierUpgrades/Purchase" to="." method="_on_purchase_pressed" binds= ["performanceMultiplierUpgrades"]]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/cheapValueMultiplier/Purchase" to="." method="_on_purchase_pressed" binds= ["cheapValueMultiplier"]]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/locations/Purchase" to="." method="_on_purchase_pressed" binds= ["locations"]]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

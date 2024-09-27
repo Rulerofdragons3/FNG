@@ -1,0 +1,110 @@
+{
+	"tags":{},
+	"conversation":[
+		{
+			"text":"This is the only way it could have ended.",
+			"displayTime":3,
+			"speaker":"right"
+		},
+		{
+			"text":"War no longer needed its ultimate practitioner.",
+			"displayTime":3,
+			"speaker":"left"
+		},
+		{
+			"text":"It had become a self-sustaining system.",
+			"displayTime":3,
+			"speaker":"left"
+		},
+		{
+			"text":"Man was crushed under the wheels of a machine created to create the machine created to crush the machine.",
+			"displayTime":5.5,
+			"speaker":"left"
+		},
+		{
+			"text":"Samsara of cut sinew and bone.",
+			"displayTime":2.5,
+			"speaker":"right"
+		},
+		{
+			"text":"Death without life.",
+			"displayTime":2,
+			"speaker":"right"
+		},
+		{
+			"text":"Null ouroboros.",
+			"displayTime":2,
+			"speaker":"right"
+		},
+		{
+			"text":"All that remained is war without reason.",
+			"displayTime":3,
+			"speaker":"right"
+		},
+		{
+			"text":"A magnum opus.",
+			"displayTime":1.5,
+			"speaker":"left"
+		},
+		{
+			"text":"A cold tower of steel.",
+			"displayTime":2,
+			"speaker":"right"
+		},
+		{
+			"text":"A machine built to end war",
+			"displayTime":2,
+			"speaker":"left"
+		},
+		{
+			"text":"...is a machine built to continue war.",
+			"displayTime":3,
+			"speaker":"right"
+		},
+		{
+			"text":"You were beautiful, outstretched like antennas to heaven.",
+			"displayTime":3,
+			"speaker":"left"
+		},
+		{
+			"text":"You were beyond your creators.",
+			"displayTime":2.25,
+			"speaker":"left"
+		},
+		{
+			"text":"You reached for god, and you fell.",
+			"displayTime":3,
+			"speaker":"right"
+		},
+		{
+			"text":"None were left to speak your eulogy.",
+			"displayTime":2.5,
+			"speaker":"left"
+		},
+		{
+			"text":"No final words.",
+			"displayTime":2,
+			"speaker":"right"
+		},
+		{
+			"text":"No concluding statement.",
+			"displayTime":2.25,
+			"speaker":"left"
+		},
+		{
+			"text":"No point.",
+			"displayTime":2,
+			"speaker":"right"
+		},
+		{
+			"text":"Perfect closure",
+			"displayTime":2.5,
+			"speaker":"left"
+		},
+		{
+			"text":"This is the only way it could have ended.",
+			"displayTime":5,
+			"speaker":"both"
+		}
+	]
+}

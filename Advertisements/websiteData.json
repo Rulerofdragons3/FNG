@@ -1,0 +1,27 @@
+{
+	"0": {
+		"pageColor":"#0000FF",
+		"PageData":"HaveYouSeenThisFish.txt",
+		"URL":"HaveYouSeenThisFish.org"
+	},
+	"2": {
+		"pageColor":"#000000",
+		"PageData":"FishSpin.txt",
+		"URL":"FunnyFis.html"
+	},
+	"3": {
+		"pageColor":"#FFFFFF",
+		"PageData":"FishRecipe.txt",
+		"URL":"recettesgratuites.com/fishauchocolat"
+	},
+	"7":{
+		"pageColor":"#ed04e9",
+		"PageData":"HotFish.txt",
+		"URL":"hotf.ish"
+	},
+	"8":{
+		"pageColor":"#000000",
+		"PageData":"CultSite.txt",
+		"URL":"weseethetruth.html"
+	}
+}

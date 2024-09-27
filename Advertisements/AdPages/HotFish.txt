@@ -1,0 +1,24 @@
+[center]
+[font_size=30]View The Hottest Fish in Your Area[/font_size]
+
+[img=400x200]res://Advertisements/CookedFish.jpg[/img]
+Nikki & Ness
+20 mi
+
+[img=400x200]res://Advertisements/CookedFish1.jpg[/img]
+Teddi
+10 mi
+
+[img=400x200]res://Advertisements/CookedFish2.jpg[/img]
+Pedro
+7 km
+
+[img=400x200]res://Advertisements/CookedFish3.jpg[/img]
+Albathor
+0 au
+
+[img=400x200]res://Advertisements/CookedFish4.jpg[/img]
+Bob
+-2.5
+
+[font_size=15]Service provided by hotf.ish[/font_size]

@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://bniexxxqtoabk"]
+
+[ext_resource type="Script" path="res://Scenes/fish_container.gd" id="1_61ccr"]
+[ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="1_lfbeo"]
+[ext_resource type="LabelSettings" uid="uid://cnw3wdb2q0mrr" path="res://defaultLabelSettings.tres" id="2_icvd4"]
+
+[node name="FishContainer" type="Button"]
+custom_minimum_size = Vector2(325, 50)
+offset_right = 250.0
+offset_bottom = 50.0
+script = ExtResource("1_61ccr")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -25.0
+offset_right = 50.0
+offset_bottom = 25.0
+grow_vertical = 2
+texture = ExtResource("1_lfbeo")
+expand_mode = 1
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -22.0
+offset_right = 88.0
+offset_bottom = 30.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.75, 0.85)
+text = "Fish Name"
+label_settings = ExtResource("2_icvd4")
+vertical_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

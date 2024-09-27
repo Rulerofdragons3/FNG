@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxt5bvk8b8huv"]
+
+[ext_resource type="Script" path="res://Websites.gd" id="1_x44om"]
+[ext_resource type="Texture2D" uid="uid://x4qqty1bin5d" path="res://Assets/Phone.png" id="2_51624"]
+[ext_resource type="LabelSettings" uid="uid://cnw3wdb2q0mrr" path="res://defaultLabelSettings.tres" id="3_ijf0h"]
+[ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="4_fswum"]
+[ext_resource type="Texture2D" uid="uid://du2s7la1tqct1" path="res://Assets/Buttons/ExitDOWN.png" id="5_nvbph"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_a33lw"]
+action = &"ShopHotkey"
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_35d4k"]
+events = [SubResource("InputEventAction_a33lw")]
+
+[node name="Websites" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_x44om")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 186.0
+offset_top = 104.0
+offset_right = 944.0
+offset_bottom = 604.0
+
+[node name="PhoneSideways" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 123.0
+offset_top = 617.0
+offset_right = 689.0
+offset_bottom = 1527.0
+rotation = -1.5708
+texture = ExtResource("2_51624")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+offset_left = 215.0
+offset_top = 104.0
+offset_right = 943.0
+offset_bottom = 566.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="ShopTitleContainer" type="ColorRect" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 50)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+
+[node name="URL" type="Label" parent="ScrollContainer/VBoxContainer/ShopTitleContainer"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 60.0
+offset_top = -25.0
+offset_right = 700.0
+offset_bottom = 25.0
+grow_vertical = 2
+text = "hppts://website.com"
+label_settings = ExtResource("3_ijf0h")
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="ScrollContainer/VBoxContainer/ShopTitleContainer"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -25.0
+offset_right = 50.0
+offset_bottom = 25.0
+grow_vertical = 2
+text = "←"
+
+[node name="Content" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+bbcode_enabled = true
+text = "Test"
+fit_content = true
+
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="ExitButton" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 959.0
+offset_top = 315.0
+offset_right = 1009.0
+offset_bottom = 365.0
+shortcut = SubResource("Shortcut_35d4k")
+texture_normal = ExtResource("4_fswum")
+texture_pressed = ExtResource("5_nvbph")
+stretch_mode = 0
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/ShopTitleContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="meta_clicked" from="ScrollContainer/VBoxContainer/Content" to="." method="_on_content_meta_clicked"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

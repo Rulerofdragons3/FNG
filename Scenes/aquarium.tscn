@@ -1,0 +1,95 @@
+[gd_scene load_steps=8 format=3 uid="uid://c74h6gtqecvdj"]
+
+[ext_resource type="Script" path="res://Scenes/aquarium.gd" id="1_l1bey"]
+[ext_resource type="Texture2D" uid="uid://coo1llppfwup6" path="res://Assets/auqrium.jpg" id="2_25ip4"]
+[ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="4_g6we7"]
+[ext_resource type="Texture2D" uid="uid://du2s7la1tqct1" path="res://Assets/Buttons/ExitDOWN.png" id="5_jra8q"]
+[ext_resource type="Texture2D" uid="uid://x4qqty1bin5d" path="res://Assets/Phone.png" id="7_faomg"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_a33lw"]
+action = &"ShopHotkey"
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_c3phn"]
+events = [SubResource("InputEventAction_a33lw")]
+
+[node name="Aquarium" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -300.0
+offset_right = 500.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l1bey")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 37.0
+offset_right = 951.0
+offset_bottom = 562.0
+rotation = 0.000310084
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(900, 525)
+render_target_update_mode = 4
+
+[node name="AQCamera" type="Camera2D" parent="SubViewportContainer/SubViewport"]
+
+[node name="BG" type="TextureRect" parent="SubViewportContainer/SubViewport"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_25ip4")
+expand_mode = 1
+
+[node name="FishContainer" type="Control" parent="SubViewportContainer/SubViewport"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FishConvoContainer" type="Control" parent="SubViewportContainer/SubViewport"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PhoneSideways" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -11.0
+offset_top = 610.0
+offset_right = 613.0
+offset_bottom = 1660.0
+rotation = -1.5708
+mouse_filter = 2
+texture = ExtResource("7_faomg")
+
+[node name="FishSpawnTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="ConversationTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="ExitButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 958.0
+offset_top = 274.0
+offset_right = 1008.0
+offset_bottom = 324.0
+shortcut = SubResource("Shortcut_c3phn")
+texture_normal = ExtResource("4_g6we7")
+texture_pressed = ExtResource("5_jra8q")
+stretch_mode = 0
+
+[connection signal="timeout" from="FishSpawnTimer" to="." method="_on_fish_spawn_timer_timeout"]
+[connection signal="timeout" from="ConversationTimer" to="." method="_on_conversation_timer_timeout"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

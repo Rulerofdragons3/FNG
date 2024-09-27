@@ -1,0 +1,715 @@
+[
+	{
+		"name":"plguffer",
+		"desc":"is touch-starved, but always hurts those he gets close to",
+		"value":1,
+		"rarity":1
+	},
+	{
+		"name":"anchovy",
+		"desc":"gets jealous of sardine's popularity over anchovies as a food item, but doesn't realize how much it sucks to get eaten.",
+		"value":0.5,
+		"rarity":1
+	},
+	{
+		"name":"tuna",
+		"desc":"marches tuna beat of its drum.\nalso has an irrational fear of cats",
+		"value":3,
+		"rarity":1
+	},
+	{
+		"name":"sardine",
+		"desc":"is claustraphobic",
+		"value":0.5,
+		"rarity":1
+	},
+	{
+		"name":"bream",
+		"desc":"is very immersed in its hobbies, and tends to bream with joy when asked about them",
+		"value":1.5,
+		"rarity":1
+	},
+	{
+		"name":"largemouth bass",
+		"desc":"a bassist based in basston, MA. bass't you don't basster him if you know what's bass't for ya",
+		"value":2,
+		"rarity":1
+	},
+	{
+		"name":"smallmouth bass",
+		"desc":"a smalltown bassball player from bassechussetts who has bass'ted its peers and fishes to surbass the greats",
+		"value":2,
+		"rarity":1
+	},
+	{
+		"name":"rainbow trout",
+		"desc":"is in the closet about its sexuality, however all of the other fish already know it's queer",
+		"value":2,
+		"rarity":1
+	},
+	{
+		"name":"salmon",
+		"desc":"despite always being overshadowed by its red cousin, this salmon plans to make itself KNOWN",
+		"value":3,
+		"rarity":2
+	},
+	{
+		"name":"walleye",
+		"desc":"is a fan of sci-fi movies, its favorite being one about a little trash robot and survey robot who fall in love",
+		"value":1.5,
+		"rarity":2
+	},
+	{
+		"name":"perch",
+		"desc":"is fully aware that it is a freshwater fish in the ocean. it, like the other freshwater fish, has learned to \"just get over the salinity\"",
+		"value":2.5,
+		"rarity":1
+	},
+	{
+		"name":"carp",
+		"desc":"would probably be a fantastic carpenter, but unfortunately fish don't have access to a reliable source of wood.",
+		"value":1,
+		"rarity":1
+	},
+	{
+		"name":"catfish",
+		"desc":"is the kind to lie about its appearance on dating apps",
+		"value":2,
+		"rarity":2
+	},
+	{
+		"name":"pike",
+		"desc":"once scaled an entire mountain in colorado; the mountain gets its name from this legendary fish",
+		"value":2,
+		"rarity":3
+	},
+	{
+		"name":"'lil sunfish",
+		"desc":"typically overshadowed by its much bigger sibling, this fish is often subject to comparison. \"why do you keep on bringing up my brother? you should care about me as a person! my size doesn't matter!\" it says, crying",
+		"value":1,
+		"rarity":2
+	},
+	{
+		"name":"red mullet",
+		"desc":"is completely stuck in the 80's. it tries to be modern by dying itself red, but to no avail",
+		"shinyDesc":"is completely stuck in the 80's. it tries to be modern by dying itself blue, but to no avail",
+		"value":1.5,
+		"rarity":2,
+		"world":["ocean","redSea"]
+	},
+	{
+		"name":"herring",
+		"desc":"says it has crucial evidence on a murder case. despite initial skepticism, detectives determined that this isn't a red herring.",
+		"shinyDesc":"says it has crucial evidence on a murder case. however, detectives determined that this IS a red herring.",
+		"value":2,
+		"rarity":3
+	},
+	{
+		"name":"octopiss",
+		"desc":"is a big introvert, and tries its best to blend in with the crowd",
+		"value":10,
+		"rarity":5
+	},
+	{
+		"name":"red snapper",
+		"desc":"literally red with anger, it will snap at anyone who is even the slightest annoyacne",
+		"shinyDesc":"remarkably, this snapper is not red with anger. its calm demeanor reveals it's true colors.",
+		"value":3,
+		"rarity":3,
+		"world":["ocean","redSea"]
+	},
+	{
+		"name":"eel",
+		"desc":"yes, i'm being for eel with you",
+		"value":7,
+		"rarity":4,
+		"tankIsMirrored":true
+	},
+	{
+		"name":"sea cucumber",
+		"desc":"not a substitute for actual cucumbers",
+		"value":5,
+		"rarity":4
+	},
+	{
+		"name":"ghostfish",
+		"desc":"a rare, sightless fish native to caves. this one blindly found its way to these waters... somehow",
+		"value":14,
+		"rarity":8,
+		"world":["nightOcean"]
+	},
+	{
+		"name":"stonefish",
+		"desc":"stonefish don't get their name due to their stone-like appearance! it actually comes from their diet of rocks and other stone-like material. this one appears to have swallowed an entire cinderblock whole",
+		"value":20,
+		"rarity":10
+	},
+	{
+		"name":"crimsonfish",
+		"desc":"lives deep in the ocean, but comes to the surface to work on its tan",
+		"value":25,
+		"rarity":11,
+		"world":["ocean","redSea","deepOcean"]
+	},
+	{
+		"name":"angler",
+		"desc":"how many angler fish does it take to change a light bulb?\nzero. they are dumb fish who only focus on eating dumber fish",
+		"value":30,
+		"rarity":11,
+		"world":["nightOcean"]
+	},
+	{
+		"name":"ice pip",
+		"desc":"melts relatively quickly, so never handle them for too long!",
+		"value":20,
+		"rarity":10
+	},
+	{
+		"name":"lava eel",
+		"desc":"is on vacation in these serene waters. it says its hometown is in an active volcano, and i honestly can't tell if it's bluffing or not...",
+		"value":24,
+		"rarity":12,
+		"world":["ocean","redSea"],
+		"tankIsMirrored":true
+	},
+	{
+		"name":"plantfish",
+		"desc":"a fish that somehow has the ability to photosynthesize. they were considered to be the solution to world hunger due to their great nutritional value and hypothesized easy mass production. unfortunately, they explode on death. because of course they do",
+		"value":26,
+		"rarity":14
+	},
+	{
+		"name":"grugfish",
+		"desc":"despite their large head size, their brains remain completely useless. it's a miracle that they even exist to this day. they are sought out by collectors due to their rarity",
+		"value":1000,
+		"rarity":500
+	},
+	{
+		"name":"mutacarp",
+		"desc":"a species that was bioengineered in an unethical lab. this fish was intended on being a weapon, but just ended up ugly. these were released into the wild and ended up becoming an invasive species.",
+		"value":50,
+		"rarity":40
+	},
+	{
+		"name":"sandfish",
+		"desc":"used to be found in deserts such as the sahara desert. however, due to global warming, they were forced to move to beaches, then the ocean",
+		"value":60,
+		"rarity":50
+	},
+	{
+		"name":"scorpion carp",
+		"desc":"the media says that it is just a carp with a sharp stinger. however, conspiracists argue that scorpion carps are actually scorpions in mech suits",
+		"value":65,
+		"rarity":52
+	},
+	{
+		"name":"flounder",
+		"desc":"got caught eating a yet another quarter-flounder. what a flatass",
+		"value":60,
+		"rarity":54
+	},
+	{
+		"name":"midnight carp",
+		"desc":"sibling of the common carp, this fish has a preference of staying up and playing video games instead of actually sleeping",
+		"value":55,
+		"rarity":55,
+		"world":["nightOcean"]
+	},
+	{
+		"name":"lobter",
+		"desc":"typically red-dy to start a new day with a bang! You will rarely find one of these creatures blue",
+		"shinyDesc":"this one is quite blue, and could use some cheering up...",
+		"value":60,
+		"rarity":55
+	},
+	{
+		"name":"shrimp",
+		"desc":"it's as shrimple as that", 
+		"value":0.5,
+		"rarity":2
+	},
+	{
+		"name":"crayfish",
+		"desc":"say your crayers",
+		"value":0.50,
+		"rarity":2
+	},
+	{
+		"name":"sturgeon",
+		"desc":"I AM A STURGEON! I. AM. A. STURGEON!!! I AM- I AM A STURGEON!!!! I AM A STURGEON, DR. HAN! I AM A STURGEON!",
+		"value":65,
+		"rarity":60,
+		"world":["nightOcean"]
+	},
+	{
+		"name":"tiger trout",
+		"desc":"\"Rrrawwrrrr!! Rrawrrr! Rawwrrrr!!! mprrrr. rawr rar? prrrr :3 rawr rawer rarrr!! :333 mprwwww,,, rawr rar rar? roar rawarr!!! purrr,,, rrrrrrrrr. nyaur! ^w^\"\n\n(This fish is beyond redemption)",
+		"value":75.50,
+		"rarity":65,
+		"world":["nightOcean"]
+	},
+	{
+		"name":"bullhead",
+		"desc":"probably what a minotaur would look like if it was a fish...?",
+		"value":75,
+		"rarity":65,
+		"world":["nightOcean"]
+	},
+	{
+		"name":"tilapia",
+		"desc":"i don't have a joke for this fish",
+		"value":40,
+		"rarity":30
+	},
+	{
+		"name":"chub",
+		"desc":"is concious about its weight",
+		"value":80,
+		"rarity":75,
+		"world":["nightOcean"]
+	},
+	{
+		"name":"Dorado",
+		"desc":"is not affiliated with any major corn chip brands",
+		"value":65,
+		"rarity":70,
+		"world":["nightOcean","redSea"]
+	},
+	{
+		"name":"Albacore",
+		"desc":"i just looked this fish up and apparently this fish just a tuna with a name change and some makeup.",
+		"value":15.50,
+		"rarity":15,
+		"world":["nightOcean"]
+	},
+	{
+		"name":"Shad",
+		"desc":"erm... i just shad my pants!11!\n(this is a terrible joke i'll change it later)",
+		"value":30,
+		"rarity":12,
+		"world":["nightOcean"]
+	},
+	{
+		"name":"Lingcod",
+		"desc":"The lingcod or ling cod, also known as the buffalo cod or cultus cod, is a fish of the greenling family Hexagrammidae. It is the only extant member of the genus Ophiodon. It has been observed up to a size of 152 centimetres and a weight of 59 kilograms. It is spotted in various shades of gray.",
+		"value":10,
+		"rarity":10,
+		"world":["nightOcean"]
+	},
+	{
+		"name":"Halibut",
+		"desc":"Halibut feed on almost any fish or animal they can fit into their mouths. which makes them lowkey a freak imo",
+		"value":45,
+		"rarity":32,
+		"world":["nightOcean"]
+	},
+	{
+		"name":"Woodskip",
+		"desc":"Always starts game progression with stone",
+		"value":23,
+		"rarity":32,
+		"world":["redSea"]
+	},
+	{
+		"name":"Forsaken",
+		"desc":"It was not meant to be seen",
+		"value":90,
+		"rarity":140,
+		"world":["nightOcean","dreadSea"]
+	},
+	{
+		"name":"Slimejack",
+		"desc":"Say the line slimejack! \"I'm in agony\"",
+		"value":44,
+		"rarity":55,
+		"world":["deepOcean"]
+	},
+	{
+		"name":"Spook Fish",
+		"desc":"with eyes that big it may seem like it has seen some horrific things, but in reality it's just ugly",
+		"value":110,
+		"rarity":140,
+		"world":["deepOcean"]
+	},
+	{
+		"name":"Lionfish",
+		"desc":"could be a lion, could be a fish.\nwe really can't tell",
+		"value":51,
+		"rarity":51,
+		"world":["ocean","redSea"]
+	},
+	{
+		"name":"Blue Discus",
+		"desc":"probably isn't a disc",
+		"value":77,
+		"rarity":77,
+		"world":["ocean","nightOcean","deepOcean"]
+	},
+	{
+		"name":"Midnight Squid",
+		"desc":"Glowie",
+		"value":95,
+		"rarity":99,
+		"world":["deepOcean","nightOcean"]
+	},
+	{
+		"name":"Ray",
+		"desc":"Stings",
+		"value":67,
+		"rarity":67,
+		"world":["nightOcean","deepOcean"]
+	},
+	{
+		"name":"blobfish",
+		"desc":"this fish has inflated due to the pressure changed it experienced! It is in intense pain!",
+		"value":45,
+		"rarity":95,
+		"world":["deepOcean"]
+	},
+	{
+		"name":"carb",
+		"desc":"is probably greedy????",
+		"value":25,
+		"rarity":25,
+		"world":["ocean","nightOcean","redSea"]
+	},
+	{
+		"name":"squid",
+		"desc":"\"You know what? I think you're all right squiddo\"",
+		"value":67,
+		"rarity":67,
+		"world":["nightOcean","deepOcean"]
+	},
+	{
+		"name":"clam",
+		"desc":"something something clammy",
+		"value":2.5,
+		"rarity":10,
+		"world":["nightOcean","ocean"]
+	},
+	{
+		"name":"oyster",
+		"desc":"literally a biological filter",
+		"value":3.5,
+		"rarity":12,
+		"world":["nightOcean","deepOcean","ocean"]
+	},
+	{
+		"name":"cockle",
+		"desc":"i'm sorry what was it called again?",
+		"value":1.5,
+		"rarity":5,
+		"world":["nightOcean","ocean"]
+	},
+	{
+		"name":"mussel",
+		"desc":"lifts",
+		"value":2.5,
+		"rarity":13,
+		"world":["nightOcean","deepOcean"]
+	},
+	{
+		"name":"periwinkle",
+		"desc":"a teeny tiny snail. it's a shame how this is such a rare catch and all you get is a measily $0.50...",
+		"value":0.50,
+		"rarity":80,
+		"world":["nightOcean","deepOcean","ocean","redSea"]
+	},
+	{
+		"name":"snail",
+		"desc":"is a bit slow",
+		"value":2,
+		"rarity":5,
+		"world":["nightOcean","redSea"]
+	},
+	{
+		"name":"urchin",
+		"desc":"i'm just urchin to poke ya",
+		"value":14,
+		"rarity":15,
+		"world":["nightOcean","deepOcean"]
+	},
+	{
+		"name":"Redfish",
+		"desc":"the elusive and prideful red fish which gives the red sea its name.\n(besides the sea's actual color)",
+		"value":1500,
+		"rarity":750,
+		"world":["redSea"]
+	},
+	{
+		"name":"Mrs. Angler",
+		"desc":"how many angler fish does it take to change a light bulb? zer- oh wait she is actually doing it",
+		"value":2000,
+		"rarity":1000,
+		"world":["deepOcean"]
+	},
+	{
+		"name":"Perfect Plantfish",
+		"desc":"A plantfish that doesn't explode! these are very valuable and fetch high prices at research facilities",
+		"value":50000,
+		"rarity":45000,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"Mutacarp II",
+		"desc":"yet another failed experiment from the same coorperation",
+		"value":8000,
+		"rarity":10000,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"gregfish",
+		"desc":"omg it's gregfish.",
+		"value":20000,
+		"rarity":15000,
+		"world":["dreadSea"]
+	},
+	{
+		"name":"goby",
+		"desc":"likes chasing waterfalls",
+		"value":20,
+		"rarity":30,
+		"world":["ocean","nightOcean","redSea"]
+	},
+	{
+		"name":"angry coral",
+		"desc":"hates this floating dump",
+		"value":0,
+		"rarity":0,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"compassionate coral",
+		"desc":"despite its situation, it still sees beauty in the filth",
+		"value":0,
+		"rarity":0,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"brainy coral",
+		"desc":"spends its days keeping track of the junk that floats by",
+		"value":0,
+		"rarity":0,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"content coral",
+		"desc":"has grown content with the trash, realizing that it cannot do anything about it",
+		"value":0,
+		"rarity":0,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"indifferent coral",
+		"desc":"doesn't seem to mind the pollution, despite the negative health effects",
+		"value":0,
+		"rarity":0,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"rock",
+		"desc":"no value here... unless you are into collecting them",
+		"value":0,
+		"rarity":0,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"seagrass",
+		"desc":"isn't actually grass",
+		"value":0,
+		"rarity":0,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"kelp",
+		"desc":"tasty when dried",
+		"value":0,
+		"rarity":0,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"anchor",
+		"desc":"how did you even pull this up?",
+		"value":0,
+		"rarity":0,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"treasure chest",
+		"desc":"completely useless to you as a fisherman. toss it back",
+		"value":0,
+		"rarity":4000,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"plastic clump",
+		"desc":"bits of this wind their way into the bloodstreams of every seafood-loving animal",
+		"value":0,
+		"rarity":0,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"pineapple",
+		"desc":"this curious fruit has a sponge lving inside",
+		"value":0,
+		"rarity":1000,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"sword",
+		"desc":"a sword from an acient warring period. this serves no use in today's world",
+		"value":0,
+		"rarity":50,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"driftwood",
+		"desc":"wood which has decided on a seafaring life",
+		"value":0,
+		"rarity":0,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"shell",
+		"desc":"is just an empty shell",
+		"value":0,
+		"rarity":0,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"mystery junk",
+		"desc":"it's unrecognizable from what it used to be",
+		"value":0,
+		"rarity":0,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"can",
+		"desc":"yes it can",
+		"value":0,
+		"rarity":0,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"trunks",
+		"desc":"somebody had a bad day at the beach",
+		"value":0,
+		"rarity":200,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"sandcastle",
+		"desc":"how did you even catch this?",
+		"value":0,
+		"rarity":700,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"unborn",
+		"desc":"a visitor from another dimension. this fish doesn't actually exist; it is beleived to be the shadow of a much larger creatue",
+		"value":500,
+		"rarity":500,
+		"world":["dreadSea"],
+		"tankIsMirrored":true
+	},
+	{
+		"name":"whisper",
+		"desc":"an imperfection born of darkness. it has no fins to swim, and drifts silently through the deep",
+		"value":45,
+		"rarity":50,
+		"world":["dreadSea"],
+		"shinyOverride":"trueInvert",
+		"tankIsMirrored":true
+	},
+	{
+		"name":"cultfish",
+		"desc":"this fish has been assimilated into the Brotherhood of Spilled Blood. it speaks in tounges long forgotten",
+		"value":225,
+		"rarity":80,
+		"world":["dreadSea"],
+		"shinyOverride":"trueInvert",
+		"tankIsMirrored":true
+	},
+	{
+		"name":"comb jelly",
+		"desc":"a jelly who glows with dazling colors",
+		"value":75,
+		"rarity":60,
+		"world":["deepOcean"]
+	},
+	{
+		"name":"vampire squid",
+		"desc":"does not \"vant to zuck your blood\".",
+		"value":150,
+		"rarity":200,
+		"world":["dreadSea","deepOcean"]
+	},
+	{
+		"name":"leaf sheep",
+		"desc":"ever wonder what fish count to fall asleep?\nthis adorable sea slug has the unique ability to photosynthesize!\n(no it's not a salad i just suck at sprites)",
+		"value":100,
+		"rarity":225,
+		"world":["nowhere"]
+	},
+	{
+		"name":"sea bunny",
+		"desc":"what's up doc?",
+		"value":125,
+		"rarity":350,
+		"world":["nowhere"]
+	},
+	{
+		"name":"ringfish",
+		"desc":"a visitor from another dimension. these fish travel in large swarms and act together as a hivemind, dovouring anything unforunate enough to get trapped in the swarm",
+		"value":145,
+		"rarity":150,
+		"world":["dreadSea"],
+		"shinyOverride":"trueInvert",
+		"tankIsMirrored":true
+	},
+	{
+		"name":"violence",
+		"desc":"a visitor from another dimension. it wears the remains of its biggest kill",
+		"value":550,
+		"rarity":230,
+		"world":["dreadSea"],
+		"shinyOverride":"trueInvert"
+	},
+	{
+		"name":"kissing gourami",
+		"desc":"when provoked, these fish will violently kiss eachother until a victor is decided",
+		"value":100,
+		"rarity":11111,
+		"world":["redSea"]
+	},
+	{
+		"name":"the angler",
+		"desc":"holy shit what are you doing reading this hop in a locker quick!!!!",
+		"value":100000,
+		"rarity":100000,
+		"world":["dreadSea"],
+		"shinyOverride":"none"
+	},
+	{
+		"name":"pandemonium",
+		"desc":"\"Honey! It's time for your minigame!\"",
+		"value":100000,
+		"rarity":100000,
+		"world":["dreadSea"],
+		"shinyOverride":"none"
+	},
+	{
+		"name":"john FNG",
+		"desc":"Look! It's the guy from FNG!",
+		"value":77777,
+		"rarity":1000000,
+		"world":["junkPatch"]
+	},
+	{
+		"name":"sleeper",
+		"desc":"Isn't this the fish from the ad?",
+		"value":30,
+		"rarity":50000,
+		"world":["deepOcean","junkPatch"]
+	}
+]
