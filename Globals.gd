@@ -11,7 +11,7 @@ var cheapValueMultiplier = 0
 var obtainedFishIDs = []
 var obtainedShinies = []
 var world = "ocean"
-var obtainedWorlds = ['ocean','nightOcean','redSea','dreadSea','junkPatch']
+var obtainedWorlds = ['ocean']
 var worldPool = [] #Fish available in the selected world
 
 #The long one
@@ -93,8 +93,8 @@ func loadSave():
 	if 'world' in saveData:
 		world = saveData['world']
 	if 'obtainedWorlds' in saveData:
-		#obtainedWorlds = saveData['obtainedWorlds']
-		pass
+		obtainedWorlds = saveData['obtainedWorlds']
+		
 	if 'obtainedShinies' in saveData:
 		obtainedShinies = saveData['obtainedShinies']
 	#I'm glad i rewrote this save system this is much easier :3

@@ -557,7 +557,7 @@
 	},
 	{
 		"name":"sword",
-		"desc":"a sword from an acient warring period. this serves no use in today's world",
+		"desc":"a sword from an ancient warring period. this serves no use in today's world",
 		"value":0,
 		"rarity":50,
 		"world":["junkPatch"]

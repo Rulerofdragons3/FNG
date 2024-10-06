@@ -204,7 +204,6 @@ func _physics_process(delta):
 		#Catches when the bar moves too far
 		if ($ReelMarker.position.x < -10) or $ReelMarker.position.x > 610:
 			minigameActive = false
-			canFish = true
 			reset()
 			return
 			

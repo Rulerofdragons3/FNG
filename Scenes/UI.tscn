@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://chfpiamytbvag" path="res://Assets/Buttons/ShopButton1Pressed.png" id="5_uo1il"]
 [ext_resource type="Texture2D" uid="uid://cpjtbq3tng4pt" path="res://Assets/Buttons/ShopButton1Disabled.png" id="6_lpfif"]
 [ext_resource type="LabelSettings" uid="uid://cnw3wdb2q0mrr" path="res://defaultLabelSettings.tres" id="6_po55g"]
-[ext_resource type="Texture2D" uid="uid://dcsi4d78em60x" path="res://Assets/Backgrounds/OceanBG.png" id="7_5pp01"]
+[ext_resource type="Texture2D" uid="uid://cx2o8qff2nwc4" path="res://Assets/Backgrounds/OceanBG.png" id="7_5pp01"]
 [ext_resource type="Texture2D" uid="uid://x4qqty1bin5d" path="res://Assets/Phone.png" id="8_3c4yr"]
 [ext_resource type="Texture2D" uid="uid://ch4s3y75ke12t" path="res://Assets/Buttons/ShopApp.png" id="8_ej6o6"]
 [ext_resource type="Texture2D" uid="uid://cp6kex6lrk4wl" path="res://Assets/Buttons/ShopAppPressed.png" id="9_inps5"]

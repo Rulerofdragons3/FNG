@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://du2s7la1tqct1" path="res://Assets/Buttons/ExitDOWN.png" id="4_huq2r"]
 [ext_resource type="LabelSettings" uid="uid://cnw3wdb2q0mrr" path="res://defaultLabelSettings.tres" id="5_2xvsb"]
 [ext_resource type="FontFile" uid="uid://goan0j3j1id4" path="res://Assets/Fonts/PublicPixel-rv0pA.ttf" id="5_u1fw5"]
-[ext_resource type="Texture2D" uid="uid://dcsi4d78em60x" path="res://Assets/Backgrounds/OceanBG.png" id="7_iixfj"]
+[ext_resource type="Texture2D" uid="uid://cx2o8qff2nwc4" path="res://Assets/Backgrounds/OceanBG.png" id="7_iixfj"]
 [ext_resource type="Script" path="res://Scenes/remapButton.gd" id="8_ai6sr"]
 [ext_resource type="Script" path="res://Scenes/AccessFileScreen.gd" id="9_lghdm"]
 
@@ -166,7 +166,7 @@ text = "Reset to default"
 
 [node name="Padding2" type="Panel" parent="ScrollContainer/SettingList"]
 modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 
 [node name="Audio" type="Label" parent="ScrollContainer/SettingList"]

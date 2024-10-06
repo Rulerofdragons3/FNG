@@ -79,8 +79,11 @@ func _on_visibility_changed():
 		for child in $ScrollContainer/WorldList.get_children():
 			$ScrollContainer/WorldList.remove_child(child)
 		selectWorld(Globals.world)
-		for world in worldConfigs:
-			createEntry(world)
+		#Should probably rewrite this lol
+		for i in range(len(worldConfigs) + 1):
+			for world in worldConfigs:
+				if worldConfigs[world]["order"] == i:
+					createEntry(world)
 
 func _on_exit_button_pressed():
 	hide()
