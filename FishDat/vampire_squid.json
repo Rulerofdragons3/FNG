@@ -1,0 +1,12 @@
+{
+ "name": "vampire squid",
+ "desc": "does not \"vant to zuck your blood\".",
+ "value": 150,
+ "rarity": 200,
+ "world": [
+  "dreadSea",
+  "deepOcean"
+ ],
+ "texture": "BaseFish/vampire_squid.png",
+ "id": "vampire_squid"
+}

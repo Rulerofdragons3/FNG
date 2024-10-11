@@ -1,0 +1,14 @@
+{
+ "name": "periwinkle",
+ "desc": "a teeny tiny snail. it's a shame how this is such a rare catch and all you get is a measily $0.50...",
+ "value": 0.5,
+ "rarity": 80,
+ "world": [
+  "nightOcean",
+  "deepOcean",
+  "ocean",
+  "redSea"
+ ],
+ "texture": "BaseFish/periwinkle.png",
+ "id": "periwinkle"
+}

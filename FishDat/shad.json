@@ -1,0 +1,11 @@
+{
+ "name": "Shad",
+ "desc": "erm... i just shad my pants!11!\n(this is a terrible joke i'll change it later)",
+ "value": 30,
+ "rarity": 12,
+ "world": [
+  "nightOcean"
+ ],
+ "texture": "BaseFish/shad.png",
+ "id": "shad"
+}

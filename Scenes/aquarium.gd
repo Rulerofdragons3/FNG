@@ -46,7 +46,7 @@ func instantiateFish():
 		return
 	
 	var tankfish = fishScene.instantiate()
-	var ID = Globals.obtainedFishIDs.pick_random()
+	var ID = Globals.obtainedFishIDs.keys().pick_random()
 	tankfish.fishID = ID
 	tankfish.swimRange = $SubViewportContainer/SubViewport/BG.size - Vector2(0,100)
 	if "tankIsMirrored" in Globals.fishData[ID]:

@@ -1,0 +1,8 @@
+{
+ "name": "rainbow trout",
+ "desc": "is in the closet about its sexuality, however all of the other fish already know it's queer",
+ "value": 2,
+ "rarity": 1,
+ "texture": "BaseFish/rainbow_trout.png",
+ "id": "rainbow_trout"
+}

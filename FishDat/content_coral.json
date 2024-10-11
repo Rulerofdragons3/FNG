@@ -1,0 +1,11 @@
+{
+ "name": "content coral",
+ "desc": "has grown content with the trash, realizing that it cannot do anything about it",
+ "value": 0,
+ "rarity": 0,
+ "world": [
+  "junkPatch"
+ ],
+ "texture": "BaseFish/content_coral.png",
+ "id": "content_coral"
+}

@@ -1,0 +1,8 @@
+{
+ "name": "shrimp",
+ "desc": "it's as shrimple as that",
+ "value": 0.5,
+ "rarity": 2,
+ "texture": "BaseFish/shrimp.png",
+ "id": "shrimp"
+}

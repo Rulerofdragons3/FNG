@@ -1,0 +1,13 @@
+{
+ "name": "red snapper",
+ "desc": "literally red with anger, it will snap at anyone who is even the slightest annoyacne",
+ "shinyDesc": "remarkably, this snapper is not red with anger. its calm demeanor reveals it's true colors.",
+ "value": 3,
+ "rarity": 3,
+ "world": [
+  "ocean",
+  "redSea"
+ ],
+ "texture": "BaseFish/red_snapper.png",
+ "id": "red_snapper"
+}

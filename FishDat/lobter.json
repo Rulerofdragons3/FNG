@@ -1,0 +1,9 @@
+{
+ "name": "lobter",
+ "desc": "typically red-dy to start a new day with a bang! You will rarely find one of these creatures blue",
+ "shinyDesc": "this one is quite blue, and could use some cheering up...",
+ "value": 60,
+ "rarity": 55,
+ "texture": "BaseFish/lobter.png",
+ "id": "lobter"
+}

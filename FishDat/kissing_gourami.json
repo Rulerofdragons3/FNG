@@ -1,0 +1,11 @@
+{
+ "name": "kissing gourami",
+ "desc": "when provoked, these fish will violently kiss eachother until a victor is decided",
+ "value": 100,
+ "rarity": 11111,
+ "world": [
+  "redSea"
+ ],
+ "texture": "BaseFish/kissing_gourami.png",
+ "id": "kissing_gourami"
+}

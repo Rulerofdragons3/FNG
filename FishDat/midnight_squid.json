@@ -1,0 +1,12 @@
+{
+ "name": "Midnight Squid",
+ "desc": "Glowie",
+ "value": 95,
+ "rarity": 99,
+ "world": [
+  "deepOcean",
+  "nightOcean"
+ ],
+ "texture": "BaseFish/midnight_squid.png",
+ "id": "midnight_squid"
+}

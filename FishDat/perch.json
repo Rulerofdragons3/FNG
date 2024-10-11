@@ -1,0 +1,8 @@
+{
+ "name": "perch",
+ "desc": "is fully aware that it is a freshwater fish in the ocean. it, like the other freshwater fish, has learned to \"just get over the salinity\"",
+ "value": 2.5,
+ "rarity": 1,
+ "texture": "BaseFish/perch.png",
+ "id": "perch"
+}

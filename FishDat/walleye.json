@@ -1,0 +1,8 @@
+{
+ "name": "walleye",
+ "desc": "is a fan of sci-fi movies, its favorite being one about a little trash robot and survey robot who fall in love",
+ "value": 1.5,
+ "rarity": 2,
+ "texture": "BaseFish/walleye.png",
+ "id": "walleye"
+}

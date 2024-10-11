@@ -1,0 +1,13 @@
+{
+ "name": "cultfish",
+ "desc": "this fish has been assimilated into the Brotherhood of Spilled Blood. it speaks in tounges long forgotten",
+ "value": 225,
+ "rarity": 80,
+ "world": [
+  "dreadSea"
+ ],
+ "shinyOverride": "trueInvert",
+ "tankIsMirrored": true,
+ "texture": "BaseFish/cultfish.png",
+ "id": "cultfish"
+}

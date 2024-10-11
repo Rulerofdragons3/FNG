@@ -1,0 +1,11 @@
+{
+ "name": "trunks",
+ "desc": "somebody had a bad day at the beach",
+ "value": 0,
+ "rarity": 200,
+ "world": [
+  "junkPatch"
+ ],
+ "texture": "BaseFish/trunks.png",
+ "id": "trunks"
+}

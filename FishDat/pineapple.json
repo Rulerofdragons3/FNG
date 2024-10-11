@@ -1,0 +1,11 @@
+{
+ "name": "pineapple",
+ "desc": "this curious fruit has a sponge lving inside",
+ "value": 0,
+ "rarity": 1000,
+ "world": [
+  "junkPatch"
+ ],
+ "texture": "BaseFish/pineapple.png",
+ "id": "pineapple"
+}

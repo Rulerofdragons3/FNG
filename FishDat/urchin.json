@@ -1,0 +1,12 @@
+{
+ "name": "urchin",
+ "desc": "i'm just urchin to poke ya",
+ "value": 14,
+ "rarity": 15,
+ "world": [
+  "nightOcean",
+  "deepOcean"
+ ],
+ "texture": "BaseFish/urchin.png",
+ "id": "urchin"
+}

@@ -1,0 +1,11 @@
+{
+ "name": "Woodskip",
+ "desc": "Always starts game progression with stone",
+ "value": 23,
+ "rarity": 32,
+ "world": [
+  "redSea"
+ ],
+ "texture": "BaseFish/woodskip.png",
+ "id": "woodskip"
+}

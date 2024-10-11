@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4h377y7h0x3i"
-path="res://.godot/imported/PandemoniumInfobox.png-cd571c850aa9a15123b3dee5abef50a9.ctex"
+uid="uid://besh3fffbg1cy"
+path="res://.godot/imported/lingcod.png-83791726d7af9958f97c7ae021ffeadd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fish/PandemoniumInfobox.png"
-dest_files=["res://.godot/imported/PandemoniumInfobox.png-cd571c850aa9a15123b3dee5abef50a9.ctex"]
+source_file="res://Assets/Fish/BaseFish/lingcod.png"
+dest_files=["res://.godot/imported/lingcod.png-83791726d7af9958f97c7ae021ffeadd.ctex"]
 
 [params]
 

@@ -2,7 +2,7 @@ extends Control
 
 #VARIABLES
 #Yes i am just grabbing them from the catch screen
-@onready var fishSprites = $"../FishSprites"
+#@onready var fishSprites = $"../FishSprites"
 #For hiding things
 @onready var phoneMenu = $"../Ui/Phone"
 
@@ -13,9 +13,11 @@ var worldData = JSON.parse_string(
 	FileAccess.get_file_as_string(worldConfigFile)
 )
 var showingShiny = false
-var currentFishID = 0
+var currentFishID = ""
 
-func createEntry(data:Dictionary, ID:int):
+func createEntry(ID:String):
+	var data:Dictionary = fishData[ID]
+	
 	var entry = fishContainer.instantiate()
 	var icon = entry.get_node("Icon")
 	var fishName = entry.get_node("Name")
@@ -23,31 +25,23 @@ func createEntry(data:Dictionary, ID:int):
 	entry.ID = ID
 	entry.connect("showFishcription",self.show_fishcription)
 	
-	var frameData = null
-	if fishSprites: #Prevents errors
-		frameData = fishSprites.sprite_frames.get_frame_texture("default",ID)
+	#var frameData = null
+	#if fishSprites: #Prevents errors
+	#	frameData = fishSprites.sprite_frames.get_frame_texture("default",ID)
 	
 	#Checks if obtained or not
+	icon.texture = load("res://Assets/Fish/" + data["texture"])
 	if ID in Globals.obtainedFishIDs:
 		fishName.text = data['name']
-		if frameData: #Prevents errors
-			icon.texture = frameData
 	else:
 		fishName.text = "???"
-		#entry.disabled = true
-		if frameData:
-		#	icon.texture = createSilhouette(frameData.get_image())
-			icon.texture = frameData
-			icon.modulate = Color.BLACK
+		icon.modulate = Color.BLACK
 			
 	$ScrollContainer/FishList.add_child(entry)
 	
 func createEntries():
-	var pos = 0
-	for data in fishData:
-		createEntry(data,pos)
-		pos += 1
-	
+	for fish in fishData:
+		createEntry(fish)
 
 func _on_exit_button_pressed():
 	self.visible = false
@@ -63,17 +57,17 @@ func _on_visibility_changed():
 
 
 func show_fishcription(ID):
+	currentFishID = ID
 	$BG.visible = false
 	$ScrollContainer.visible = false
-	currentFishID = ID #Global to remember the fish
-	var fish = fishData[ID]
+	var fish:Dictionary = fishData[ID]
 	var obtained = (ID in Globals.obtainedFishIDs)
 	#Setting up description
 	if obtained:
 		$FiscriptionBG/Name.text = fish['name']
 		$FiscriptionBG/Value.text = "Base Value:\n$" + "%.2f" % fish['value']
 		$FiscriptionBG/Desc.text = fish['desc']
-		if ID in Globals.obtainedShinies:
+		if Globals.obtainedFishIDs[ID]["caughtShiny"] >= 1:
 			$FiscriptionBG/ShowShiny.show()
 	else:
 		$FiscriptionBG/Name.text = "???" 
@@ -82,8 +76,8 @@ func show_fishcription(ID):
 		
 	$FiscriptionBG/Rarity.text = "Rarity:\n" + str(fish['rarity'])
 	
-	if fishSprites: #Prevents errors
-		var texture = fishSprites.sprite_frames.get_frame_texture("default",ID)
+	if true: 
+		var texture = load("res://Assets/Fish/" + fish["texture"])
 		$FiscriptionBG/Icon.texture = texture
 		if !obtained:
 			$FiscriptionBG/Icon.modulate = Color.BLACK
@@ -121,11 +115,10 @@ func _on_back_button_pressed():
 	$FiscriptionBG/ShowShiny.texture_pressed = load("res://Assets/Buttons/ShowShinyPressed.png")
 
 
-
-
 func _on_show_shiny_pressed():
 	#Toggles Shiny
-	var texture = fishSprites.sprite_frames.get_frame_texture("default",currentFishID)
+	print(currentFishID)
+	var texture = load("res://Assets/Fish/" + Globals.fishData[currentFishID]["texture"])
 	if not showingShiny:
 		if "shinyOverride" in fishData[currentFishID]:
 			$FiscriptionBG/Icon.texture = ShinyHandler.createShiny(

@@ -1,0 +1,12 @@
+{
+ "name": "snail",
+ "desc": "is a bit slow",
+ "value": 2,
+ "rarity": 5,
+ "world": [
+  "nightOcean",
+  "redSea"
+ ],
+ "texture": "BaseFish/snail.png",
+ "id": "snail"
+}

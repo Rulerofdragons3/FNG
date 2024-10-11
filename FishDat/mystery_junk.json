@@ -1,0 +1,11 @@
+{
+ "name": "mystery junk",
+ "desc": "it's unrecognizable from what it used to be",
+ "value": 0,
+ "rarity": 0,
+ "world": [
+  "junkPatch"
+ ],
+ "texture": "BaseFish/mystery_junk.png",
+ "id": "mystery_junk"
+}

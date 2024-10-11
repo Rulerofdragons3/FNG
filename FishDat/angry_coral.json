@@ -1,0 +1,11 @@
+{
+ "name": "angry coral",
+ "desc": "hates this floating dump",
+ "value": 0,
+ "rarity": 0,
+ "world": [
+  "junkPatch"
+ ],
+ "texture": "BaseFish/angry_coral.png",
+ "id": "angry_coral"
+}

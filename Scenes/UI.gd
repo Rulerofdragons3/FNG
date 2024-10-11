@@ -16,16 +16,7 @@ func _input(_event):
 	#Hide hint when game starts
 	if Input.is_action_just_pressed("StartMinigame"):
 		$FishingHint.visible = false
-	#DEBUG
-	elif Input.is_key_label_pressed(KEY_M):
-		match Globals.world:
-			"ocean":
-				Globals.setWorldPool("nightOcean")
-				print("Set to night")
-			"nightOcean":
-				Globals.setWorldPool("ocean")
-				print("Set to day")
-
+	
 func _on_shop_button_pressed():
 	shop.visible = true
 	bar.canFish = false

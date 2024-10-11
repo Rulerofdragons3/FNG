@@ -1,0 +1,11 @@
+{
+ "name": "shell",
+ "desc": "is just an empty shell",
+ "value": 0,
+ "rarity": 0,
+ "world": [
+  "junkPatch"
+ ],
+ "texture": "BaseFish/shell.png",
+ "id": "shell"
+}

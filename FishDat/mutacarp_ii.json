@@ -1,0 +1,11 @@
+{
+ "name": "Mutacarp II",
+ "desc": "yet another failed experiment from the same coorperation",
+ "value": 8000,
+ "rarity": 10000,
+ "world": [
+  "junkPatch"
+ ],
+ "texture": "BaseFish/mutacarp_ii.png",
+ "id": "mutacarp_ii"
+}

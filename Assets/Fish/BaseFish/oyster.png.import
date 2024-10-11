@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cep3qiipulmxc"
-path="res://.godot/imported/Angler_Infobox.png-8a1ece6b516c804345e2a5b60a29fa07.ctex"
+uid="uid://bijoiutatmuws"
+path="res://.godot/imported/oyster.png-7f5a9ea553ef98aa7b8e33df0ac566e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fish/Angler_Infobox.png"
-dest_files=["res://.godot/imported/Angler_Infobox.png-8a1ece6b516c804345e2a5b60a29fa07.ctex"]
+source_file="res://Assets/Fish/BaseFish/oyster.png"
+dest_files=["res://.godot/imported/oyster.png-7f5a9ea553ef98aa7b8e33df0ac566e6.ctex"]
 
 [params]
 

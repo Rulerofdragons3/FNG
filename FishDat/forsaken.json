@@ -1,0 +1,12 @@
+{
+ "name": "Forsaken",
+ "desc": "It was not meant to be seen",
+ "value": 90,
+ "rarity": 140,
+ "world": [
+  "nightOcean",
+  "dreadSea"
+ ],
+ "texture": "BaseFish/forsaken.png",
+ "id": "forsaken"
+}

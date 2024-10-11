@@ -1,0 +1,11 @@
+{
+ "name": "anchor",
+ "desc": "how did you even pull this up?",
+ "value": 0,
+ "rarity": 0,
+ "world": [
+  "junkPatch"
+ ],
+ "texture": "BaseFish/anchor.png",
+ "id": "anchor"
+}

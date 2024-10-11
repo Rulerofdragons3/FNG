@@ -1,0 +1,11 @@
+{
+ "name": "Redfish",
+ "desc": "the elusive and prideful red fish which gives the red sea its name.\n(besides the sea's actual color)",
+ "value": 1500,
+ "rarity": 750,
+ "world": [
+  "redSea"
+ ],
+ "texture": "BaseFish/redfish.png",
+ "id": "redfish"
+}

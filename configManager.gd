@@ -23,7 +23,7 @@ func loadCFG():
 		return #Aborts essentially
 	
 	var fileDat = JSON.parse_string(FileAccess.get_file_as_string(saveDir))
-	print(fileDat)
+	#print(fileDat)
 	for data in fileDat:
 		if data in config:
 			config[data] = fileDat[data]

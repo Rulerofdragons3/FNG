@@ -1,0 +1,12 @@
+{
+ "name": "cockle",
+ "desc": "i'm sorry what was it called again?",
+ "value": 1.5,
+ "rarity": 5,
+ "world": [
+  "nightOcean",
+  "ocean"
+ ],
+ "texture": "BaseFish/cockle.png",
+ "id": "cockle"
+}

@@ -1,0 +1,12 @@
+{
+ "name": "squid",
+ "desc": "\"You know what? I think you're all right squiddo\"",
+ "value": 67,
+ "rarity": 67,
+ "world": [
+  "nightOcean",
+  "deepOcean"
+ ],
+ "texture": "BaseFish/squid.png",
+ "id": "squid"
+}

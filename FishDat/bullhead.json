@@ -1,0 +1,11 @@
+{
+ "name": "bullhead",
+ "desc": "probably what a minotaur would look like if it was a fish...?",
+ "value": 75,
+ "rarity": 65,
+ "world": [
+  "nightOcean"
+ ],
+ "texture": "BaseFish/bullhead.png",
+ "id": "bullhead"
+}

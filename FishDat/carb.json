@@ -1,0 +1,13 @@
+{
+ "name": "carb",
+ "desc": "is probably greedy????",
+ "value": 25,
+ "rarity": 25,
+ "world": [
+  "ocean",
+  "nightOcean",
+  "redSea"
+ ],
+ "texture": "BaseFish/carb.png",
+ "id": "carb"
+}

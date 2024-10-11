@@ -1,0 +1,11 @@
+{
+ "name": "treasure chest",
+ "desc": "completely useless to you as a fisherman. toss it back",
+ "value": 0,
+ "rarity": 4000,
+ "world": [
+  "junkPatch"
+ ],
+ "texture": "BaseFish/treasure_chest.png",
+ "id": "treasure_chest"
+}

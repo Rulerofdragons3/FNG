@@ -1,0 +1,11 @@
+{
+ "name": "seagrass",
+ "desc": "isn't actually grass",
+ "value": 0,
+ "rarity": 0,
+ "world": [
+  "junkPatch"
+ ],
+ "texture": "BaseFish/seagrass.png",
+ "id": "seagrass"
+}

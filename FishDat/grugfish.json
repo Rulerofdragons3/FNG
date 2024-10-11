@@ -1,0 +1,8 @@
+{
+ "name": "grugfish",
+ "desc": "despite their large head size, their brains remain completely useless. it's a miracle that they even exist to this day. they are sought out by collectors due to their rarity",
+ "value": 1000,
+ "rarity": 500,
+ "texture": "BaseFish/grugfish.png",
+ "id": "grugfish"
+}

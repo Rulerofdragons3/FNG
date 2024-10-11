@@ -1,0 +1,11 @@
+{
+ "name": "can",
+ "desc": "yes it can",
+ "value": 0,
+ "rarity": 0,
+ "world": [
+  "junkPatch"
+ ],
+ "texture": "BaseFish/can.png",
+ "id": "can"
+}

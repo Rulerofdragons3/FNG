@@ -1,0 +1,8 @@
+{
+ "name": "tuna",
+ "desc": "marches tuna beat of its drum.\nalso has an irrational fear of cats",
+ "value": 3,
+ "rarity": 1,
+ "texture": "BaseFish/tuna.png",
+ "id": "tuna"
+}

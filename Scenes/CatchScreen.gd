@@ -2,10 +2,10 @@ extends Control
 @onready var bar = $"../Bar"
 @onready var UIMoney = $"../Ui/MoneyLabel"
 @onready var menuButton = $"../Ui/MenuButton"
-@onready var fishSprites = $"../FishSprites"
+#@onready var fishSprites = $"../FishSprites"
 #Get World Fish
-var ID = -1
-var isShiny = false
+var ID:String = "plguffer"
+var isShiny:bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,7 +19,7 @@ func _on_bar_fish_caught(luckMult,bigCatch):
 		print("No fish in world pools")
 		return
 	var fish = determineFish(luckMult,bigCatch)
-	ID = fish
+	ID = Globals.fishData[fish]["id"]
 	displayFishInfo(fish)
 
 func determineFish(luckMult, bigCatch:bool = false):
@@ -32,22 +32,25 @@ func determineFish(luckMult, bigCatch:bool = false):
 		isShiny = false
 	#Rolls for a fish five times
 	for i in range(5):
-		var selectedID = randi_range(0,datLen)
-		var rarity = Globals.worldPool[selectedID]['rarity']
+		var selectedFish:Dictionary = Globals.fishData[
+			Globals.worldPool[randi_range(0,datLen)]
+			]
+		var fishID:String = selectedFish["id"]
+		var rarity:int = selectedFish["rarity"]
 		#Minimum num to roll to ensure catch
 		var minRoll = 1 * (luckMult * Globals.performanceMultiplier)
 		
 		#If the fish is determined to be a "big catch", then it will automatically be caught
 		if bigCatch == true: 
-			if "bigCatch" in Globals.worldPool[selectedID] and Globals.worldPool[selectedID] == true:
-				return Globals.fishData.find(Globals.worldPool[selectedID])
+			if "bigCatch" in selectedFish:
+				return fishID
 		
 		if randi_range(1, rarity) <= minRoll:
 			#Translates from worldpool to fishData index
 			#I just don't want to rewrite how this script & fishionary works
-			return Globals.fishData.find(Globals.worldPool[selectedID])
+			return fishID
 	print("Failed")
-	return 0 #Default fish if all goes wrong
+	return "plguffer" #Default fish if all goes wrong
 
 func calculateFishValue(fishValue):
 	if fishValue <= Globals.cheapValueMultiplier:
@@ -55,10 +58,19 @@ func calculateFishValue(fishValue):
 	if isShiny:
 		fishValue *= 2
 	return fishValue
-	
-func displayFishInfo(id):
+
+func loadTexture(id):
+	var imagePath = "res://Assets/Fish/" + Globals.fishData[id]["texture"]
+	var texture
+	if FileAccess.file_exists(imagePath):
+		texture = load(imagePath)
+	else:
+		texture = load("res://Assets/Buttons/ExitUP.png")
+	return texture
+
+func displayFishInfo(id:String):
 	var valueText = "$" + "%.2f" % calculateFishValue(Globals.fishData[id]['value'])
-	var texture = fishSprites.sprite_frames.get_frame_texture("default",id)
+	var texture = loadTexture(id) #fishSprites.sprite_frames.get_frame_texture("default",id)
 	if "shinyOverride" in Globals.fishData[id] and Globals.fishData[id]["shinyOverride"] == "none":
 		isShiny = false
 	
@@ -89,7 +101,7 @@ func displayFishInfo(id):
 	bar.visible = false
 	self.visible = true
 	# Probably should remove this code eventually...
-	if Globals.fishData[id]['name'] == "the angler" or Globals.fishData[id]['name'] == "pandemonium":
+	if Globals.fishData[id]["id"] == "the_angler" or Globals.fishData[id]["id"] == "pandemonium":
 		$JokeAudioContainer/PressureIdle.play()
 	
 		#NewFish Control
@@ -104,9 +116,15 @@ func displayFishInfo(id):
 func _on_dismiss_pressed():
 	#Update Globals
 	if ID not in Globals.obtainedFishIDs: #Test to see if fish is obtained
-		Globals.obtainedFishIDs.append(ID)
-	if isShiny and (ID not in Globals.obtainedShinies):
-		Globals.obtainedShinies.append(ID)
+		if !isShiny:
+			Globals.obtainedFishIDs.merge({ID:{"caught":1,"caughtShiny":0}})
+		else:
+			Globals.obtainedFishIDs.merge({ID:{"caught":0,"caughtShiny":1}})
+	else:
+		if !isShiny:
+			Globals.obtainedFishIDs[ID]["caught"] += 1
+		else:
+			Globals.obtainedFishIDs[ID]["caughtShiny"] += 1
 	
 	Globals.money += calculateFishValue(Globals.fishData[ID]['value']) 
 	await Globals.saveGame()

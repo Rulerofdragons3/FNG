@@ -1,0 +1,11 @@
+{
+ "name": "rock",
+ "desc": "no value here... unless you are into collecting them",
+ "value": 0,
+ "rarity": 0,
+ "world": [
+  "junkPatch"
+ ],
+ "texture": "BaseFish/rock.png",
+ "id": "rock"
+}

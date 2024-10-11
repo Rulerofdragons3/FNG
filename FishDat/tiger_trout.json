@@ -1,0 +1,11 @@
+{
+ "name": "tiger trout",
+ "desc": "\"Rrrawwrrrr!! Rrawrrr! Rawwrrrr!!! mprrrr. rawr rar? prrrr :3 rawr rawer rarrr!! :333 mprwwww,,, rawr rar rar? roar rawarr!!! purrr,,, rrrrrrrrr. nyaur! ^w^\"\n\n(This fish is beyond redemption)",
+ "value": 75.5,
+ "rarity": 65,
+ "world": [
+  "nightOcean"
+ ],
+ "texture": "BaseFish/tiger_trout.png",
+ "id": "tiger_trout"
+}

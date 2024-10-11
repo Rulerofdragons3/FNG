@@ -1,0 +1,11 @@
+{
+ "name": "comb jelly",
+ "desc": "a jelly who glows with dazling colors",
+ "value": 75,
+ "rarity": 60,
+ "world": [
+  "deepOcean"
+ ],
+ "texture": "BaseFish/comb_jelly.png",
+ "id": "comb_jelly"
+}

@@ -1,0 +1,8 @@
+{
+ "name": "plantfish",
+ "desc": "a fish that somehow has the ability to photosynthesize. they were considered to be the solution to world hunger due to their great nutritional value and hypothesized easy mass production. unfortunately, they explode on death. because of course they do",
+ "value": 26,
+ "rarity": 14,
+ "texture": "BaseFish/plantfish.png",
+ "id": "plantfish"
+}

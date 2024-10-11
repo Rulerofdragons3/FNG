@@ -1,0 +1,11 @@
+{
+ "name": "indifferent coral",
+ "desc": "doesn't seem to mind the pollution, despite the negative health effects",
+ "value": 0,
+ "rarity": 0,
+ "world": [
+  "junkPatch"
+ ],
+ "texture": "BaseFish/indifferent_coral.png",
+ "id": "indifferent_coral"
+}

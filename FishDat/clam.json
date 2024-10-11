@@ -1,0 +1,12 @@
+{
+ "name": "clam",
+ "desc": "something something clammy",
+ "value": 2.5,
+ "rarity": 10,
+ "world": [
+  "nightOcean",
+  "ocean"
+ ],
+ "texture": "BaseFish/clam.png",
+ "id": "clam"
+}

@@ -1,0 +1,8 @@
+{
+ "name": "scorpion carp",
+ "desc": "the media says that it is just a carp with a sharp stinger. however, conspiracists argue that scorpion carps are actually scorpions in mech suits",
+ "value": 65,
+ "rarity": 52,
+ "texture": "BaseFish/scorpion_carp.png",
+ "id": "scorpion_carp"
+}

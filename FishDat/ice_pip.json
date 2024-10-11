@@ -1,0 +1,8 @@
+{
+ "name": "ice pip",
+ "desc": "melts relatively quickly, so never handle them for too long!",
+ "value": 20,
+ "rarity": 10,
+ "texture": "BaseFish/ice_pip.png",
+ "id": "ice_pip"
+}

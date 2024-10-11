@@ -1,0 +1,8 @@
+{
+ "name": "largemouth bass",
+ "desc": "a bassist based in basston, MA. bass't you don't basster him if you know what's bass't for ya",
+ "value": 2,
+ "rarity": 1,
+ "texture": "BaseFish/largemouth_bass.png",
+ "id": "largemouth_bass"
+}

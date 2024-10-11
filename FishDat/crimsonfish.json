@@ -1,0 +1,13 @@
+{
+ "name": "crimsonfish",
+ "desc": "lives deep in the ocean, but comes to the surface to work on its tan",
+ "value": 25,
+ "rarity": 11,
+ "world": [
+  "ocean",
+  "redSea",
+  "deepOcean"
+ ],
+ "texture": "BaseFish/crimsonfish.png",
+ "id": "crimsonfish"
+}

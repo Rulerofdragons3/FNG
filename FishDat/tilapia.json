@@ -1,0 +1,8 @@
+{
+ "name": "tilapia",
+ "desc": "i don't have a joke for this fish",
+ "value": 40,
+ "rarity": 30,
+ "texture": "BaseFish/tilapia.png",
+ "id": "tilapia"
+}

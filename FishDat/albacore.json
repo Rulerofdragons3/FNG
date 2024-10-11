@@ -1,0 +1,11 @@
+{
+ "name": "Albacore",
+ "desc": "i just looked this fish up and apparently this fish just a tuna with a name change and some makeup.",
+ "value": 15.5,
+ "rarity": 15,
+ "world": [
+  "nightOcean"
+ ],
+ "texture": "BaseFish/albacore.png",
+ "id": "albacore"
+}

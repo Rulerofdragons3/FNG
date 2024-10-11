@@ -1,0 +1,8 @@
+{
+ "name": "catfish",
+ "desc": "is the kind to lie about its appearance on dating apps",
+ "value": 2,
+ "rarity": 2,
+ "texture": "BaseFish/catfish.png",
+ "id": "catfish"
+}

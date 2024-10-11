@@ -11,9 +11,11 @@ var playlist
 func _ready():
 	Globals.loadSave() #Yes this is where I load the save data
 	ConfigManager.loadCFG()
+	Globals.createFishData() #Creates the fishdata dict
 	$Waves.play()
 	$Timer.wait_time = randi_range(60,300)
 	resetMusic()
+	#createFishPNGS()
 
 func resetMusic():
 	$Timer.stop()

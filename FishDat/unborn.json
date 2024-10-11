@@ -1,0 +1,12 @@
+{
+ "name": "unborn",
+ "desc": "a visitor from another dimension. this fish doesn't actually exist; it is beleived to be the shadow of a much larger creatue",
+ "value": 500,
+ "rarity": 500,
+ "world": [
+  "dreadSea"
+ ],
+ "tankIsMirrored": true,
+ "texture": "BaseFish/unborn.png",
+ "id": "unborn"
+}

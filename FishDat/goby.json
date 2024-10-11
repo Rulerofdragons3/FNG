@@ -1,0 +1,13 @@
+{
+ "name": "goby",
+ "desc": "likes chasing waterfalls",
+ "value": 20,
+ "rarity": 30,
+ "world": [
+  "ocean",
+  "nightOcean",
+  "redSea"
+ ],
+ "texture": "BaseFish/goby.png",
+ "id": "goby"
+}

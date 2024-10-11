@@ -1,0 +1,8 @@
+{
+ "name": "'lil sunfish",
+ "desc": "typically overshadowed by its much bigger sibling, this fish is often subject to comparison. \"why do you keep on bringing up my brother? you should care about me as a person! my size doesn't matter!\" it says, crying",
+ "value": 1,
+ "rarity": 2,
+ "texture": "BaseFish/lil_sunfish.png",
+ "id": "lil_sunfish"
+}

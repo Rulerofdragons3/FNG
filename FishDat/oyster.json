@@ -1,0 +1,13 @@
+{
+ "name": "oyster",
+ "desc": "literally a biological filter",
+ "value": 3.5,
+ "rarity": 12,
+ "world": [
+  "nightOcean",
+  "deepOcean",
+  "ocean"
+ ],
+ "texture": "BaseFish/oyster.png",
+ "id": "oyster"
+}

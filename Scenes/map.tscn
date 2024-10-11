@@ -83,7 +83,6 @@ texture_filter = 0
 texture = ExtResource("3_uudhl")
 
 [node name="Globe" type="MeshInstance3D" parent="SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_hol54")
 
 [node name="GlobeOutline" type="Sprite3D" parent="SubViewport"]

@@ -1,0 +1,12 @@
+{
+ "name": "mussel",
+ "desc": "lifts",
+ "value": 2.5,
+ "rarity": 13,
+ "world": [
+  "nightOcean",
+  "deepOcean"
+ ],
+ "texture": "BaseFish/mussel.png",
+ "id": "mussel"
+}

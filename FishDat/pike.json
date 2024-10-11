@@ -1,0 +1,8 @@
+{
+ "name": "pike",
+ "desc": "once scaled an entire mountain in colorado; the mountain gets its name from this legendary fish",
+ "value": 2,
+ "rarity": 3,
+ "texture": "BaseFish/pike.png",
+ "id": "pike"
+}
