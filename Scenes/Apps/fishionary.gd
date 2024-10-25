@@ -66,6 +66,8 @@ func show_fishcription(ID):
 	if obtained:
 		$FiscriptionBG/Name.text = fish['name']
 		$FiscriptionBG/Value.text = "Base Value:\n$" + "%.2f" % fish['value']
+		$FiscriptionBG/Caught.text =  "Caught:\n" + str(
+			Globals.obtainedFishIDs[ID]["caught"])
 		$FiscriptionBG/Desc.text = fish['desc']
 		if Globals.obtainedFishIDs[ID]["caughtShiny"] >= 1:
 			$FiscriptionBG/ShowShiny.show()
@@ -117,7 +119,7 @@ func _on_back_button_pressed():
 
 func _on_show_shiny_pressed():
 	#Toggles Shiny
-	print(currentFishID)
+	#print(currentFishID)
 	var texture = load("res://Assets/Fish/" + Globals.fishData[currentFishID]["texture"])
 	if not showingShiny:
 		if "shinyOverride" in fishData[currentFishID]:
@@ -134,6 +136,8 @@ func _on_show_shiny_pressed():
 			$FiscriptionBG/Desc.text = fishData[currentFishID]['shinyDesc']
 		else:
 			$FiscriptionBG/Desc.text = fishData[currentFishID]['desc']
+		$FiscriptionBG/Caught.text = "Caught:\n" + str(
+				Globals.obtainedFishIDs[currentFishID]["caughtShiny"])
 			
 		$ShowShinySound.stop()
 		$ShowShinySound.play()
@@ -141,5 +145,8 @@ func _on_show_shiny_pressed():
 		$FiscriptionBG/ShowShiny.texture_normal = load("res://Assets/Buttons/ShowShiny.png")
 		$FiscriptionBG/ShowShiny.texture_pressed = load("res://Assets/Buttons/ShowShinyPressed.png")
 		$FiscriptionBG/Icon.texture = texture
+		$FiscriptionBG/Caught.text =  "Caught:\n" + str(
+			Globals.obtainedFishIDs[currentFishID]["caught"]
+		)
 		$FiscriptionBG/Desc.text = fishData[currentFishID]['desc']
 	showingShiny = not showingShiny #Inverts value

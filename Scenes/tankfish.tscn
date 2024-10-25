@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://by7qgr5k1nu3t" path="res://Assets/Sounds/JokeSounds/squeakOut.mp3" id="4_qau53"]
 
 [node name="Fish" type="TextureButton"]
-texture_filter = 1
+texture_filter = 5
 offset_left = -40.0
 offset_top = -40.0
 offset_right = 40.0

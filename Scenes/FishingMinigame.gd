@@ -58,6 +58,7 @@ func determineLuck():
 	return luckMult			
 
 
+
 #Detects input
 func _input(_event):
 	#Minigame Active Code

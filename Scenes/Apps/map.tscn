@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://dwcfhyw6g5pv6"]
 
 [ext_resource type="Texture2D" uid="uid://cthqjel08m200" path="res://Assets/WorldMap/Map.png" id="1_08g50"]
-[ext_resource type="Script" path="res://Scenes/map.gd" id="1_nntji"]
+[ext_resource type="Script" path="res://Scenes/Apps/map.gd" id="1_nntji"]
 [ext_resource type="Texture2D" uid="uid://b7uv5jsr3wgtb" path="res://Assets/BoatMap.png" id="2_dnxfs"]
 [ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="2_s4tfq"]
 [ext_resource type="Texture2D" uid="uid://6yiajdtsl6qa" path="res://Assets/Boat.png" id="3_uudhl"]
@@ -64,9 +64,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -500.0
+offset_left = -514.0
 offset_top = -300.0
-offset_right = 500.0
+offset_right = 486.0
 offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2

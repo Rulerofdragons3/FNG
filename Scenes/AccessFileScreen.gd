@@ -7,7 +7,7 @@ func _ready():
 
 func _on_file_dialog_file_selected(path):
 	self.hide()
-	print(path)
+	#print(path)
 	changeWallpaper.emit(path)
 	
 

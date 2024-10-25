@@ -1,12 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://ucn1pra6yjuu"]
+[gd_scene load_steps=16 format=3 uid="uid://ucn1pra6yjuu"]
 
-[ext_resource type="Script" path="res://Scenes/settings.gd" id="1_wcime"]
+[ext_resource type="Script" path="res://Scenes/Apps/settings.gd" id="1_wcime"]
 [ext_resource type="Texture2D" uid="uid://x4qqty1bin5d" path="res://Assets/Phone.png" id="2_m8c4j"]
 [ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="3_6yk6y"]
 [ext_resource type="Texture2D" uid="uid://du2s7la1tqct1" path="res://Assets/Buttons/ExitDOWN.png" id="4_huq2r"]
 [ext_resource type="LabelSettings" uid="uid://cnw3wdb2q0mrr" path="res://defaultLabelSettings.tres" id="5_2xvsb"]
 [ext_resource type="FontFile" uid="uid://goan0j3j1id4" path="res://Assets/Fonts/PublicPixel-rv0pA.ttf" id="5_u1fw5"]
 [ext_resource type="Texture2D" uid="uid://cx2o8qff2nwc4" path="res://Assets/Backgrounds/OceanBG.png" id="7_iixfj"]
+[ext_resource type="Theme" uid="uid://dhanbq80a5w00" path="res://defaultTheme.tres" id="8_3l3id"]
 [ext_resource type="Script" path="res://Scenes/remapButton.gd" id="8_ai6sr"]
 [ext_resource type="Script" path="res://Scenes/AccessFileScreen.gd" id="9_lghdm"]
 
@@ -28,6 +29,9 @@ font = ExtResource("5_u1fw5")
 font_size = 9
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kh87"]
+bg_color = Color(0.201527, 0.201527, 0.201526, 1)
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -150,24 +154,37 @@ expand_mode = 1
 
 [node name="OpenFile" type="Button" parent="ScrollContainer/SettingList/WallpaperControl"]
 layout_mode = 0
-offset_left = 45.0
-offset_top = 37.0
-offset_right = 147.0
-offset_bottom = 68.0
+offset_left = 16.0
+offset_top = 172.0
+offset_right = 184.0
+offset_bottom = 203.0
+theme = ExtResource("8_3l3id")
 text = "Open image"
 
 [node name="Reset" type="Button" parent="ScrollContainer/SettingList/WallpaperControl"]
+visible = false
 layout_mode = 0
-offset_left = 31.0
-offset_top = 84.0
-offset_right = 162.0
-offset_bottom = 115.0
+offset_left = 18.0
+offset_top = 174.0
+offset_right = 290.0
+offset_bottom = 198.0
 text = "Reset to default"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ScrollContainer/SettingList/WallpaperControl"]
+layout_mode = 0
+offset_left = 17.0
+offset_right = 182.0
+offset_bottom = 165.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5kh87")
+
+[node name="WPSelContainer" type="HBoxContainer" parent="ScrollContainer/SettingList/WallpaperControl/ScrollContainer"]
+layout_mode = 2
 
 [node name="Padding2" type="Panel" parent="ScrollContainer/SettingList"]
 modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Audio" type="Label" parent="ScrollContainer/SettingList"]
 custom_minimum_size = Vector2(325, 0)

@@ -1,0 +1,9 @@
+{
+	"id":"shinyCharmLesser",
+	"name":"Lesser Shiny Charm",
+	"desc":"Increases shiny odds to 10% for the next successful catch.",
+	"texture":"shinyCharms/shinyCharm2.png",
+	"consumable":true,
+	"script":"shinyCharm.gd",
+	"bonus":10
+}

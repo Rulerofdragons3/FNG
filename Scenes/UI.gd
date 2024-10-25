@@ -7,6 +7,7 @@ extends Control
 @onready var map = $"../Map"
 @onready var settings = $"../Settings"
 @onready var tank = $"../Aquarium"
+@onready var inv = $"../Inventory"
 
 func _ready():
 	$MoneyLabel.text = "$%.2f" % Globals.money
@@ -54,6 +55,10 @@ func _on_tank_button_pressed():
 	bar.canFish = false
 	$Phone.visible = false
 
+func _on_inv_button_pressed():
+	inv.visible = true
+	bar.canFish = false
+	$Phone.visible = false
 
 func _on_fishing_hint_visibility_changed():
 	$FishingHint.text = "Press "+ InputMap.action_get_events("StartMinigame")[0].as_text().replace(" (Physical)","") + " to start fishing"

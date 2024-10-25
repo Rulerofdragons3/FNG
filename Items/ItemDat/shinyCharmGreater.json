@@ -1,0 +1,9 @@
+{
+	"id":"shinyCharmGreater",
+	"name":"Greater Shiny Charm",
+	"desc":"Increases shiny odds to 40% for the next successful catch.",
+	"texture":"shinyCharms/shinyCharm5.png",
+	"consumable":true,
+	"script":"shinyCharm.gd",
+	"bonus":20
+}

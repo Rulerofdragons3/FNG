@@ -1,0 +1,9 @@
+{
+	"id":"shinyCharmPity",
+	"name":"Pitiful Shiny Charm",
+	"desc":"Increases shiny odds to 5% for the next successful catch.",
+	"texture":"shinyCharms/shinyCharm0.png",
+	"consumable":true,
+	"script":"shinyCharm.gd",
+	"bonus":5
+}

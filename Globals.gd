@@ -1,18 +1,22 @@
 extends Node
 
-
 var fishData:Dictionary = {}
 var money:float = 0.00
 var baseMultiplier = 1
 var performanceMultiplier = 1
 var cheapValueMultiplier = 0
 var obtainedFishIDs:Dictionary = {}
-#var obtainedShinies = []
 var world = "ocean"
 var obtainedWorlds = ['ocean']
 var worldPool:Array = [] #Fish available in the selected world
-var SECURITY_KEY = "493610325234" #Encryption pass to prevent save editing
+var shinyOdds = 0.0005
+var itemInventory = {"shinyCharmPity":9999,"shinyCharmLesser":8,"shinyCharm":1,"shinyCharmGreater":1}
 
+#Non - saved
+var inUseItems:PackedStringArray = []
+var reUseItems:PackedStringArray = []
+
+var SECURITY_KEY = "493610325234" #Encryption pass to prevent save editing
 #The long one
 var upgrades = JSON.parse_string(FileAccess.get_file_as_string("res://upgrades.json"))
 
@@ -42,7 +46,6 @@ func setWorldPool(worldName):
 var saveDir = "user://Player.save"
 
 func updateLegacySaveData():
-	print("Started")
 	var saveFile = FileAccess.open_encrypted_with_pass(saveDir,FileAccess.READ,SECURITY_KEY)
 	print(FileAccess.get_open_error())
 	if saveFile:
@@ -95,8 +98,7 @@ func updateLegacySaveData():
 	print("Done!")
 	return true
 
-#Saves are stored in 
-#"C:\Users\[your name]\AppData\Roaming\Godot\app_userdata\FNG" 
+#Saves are stored in %appdata%
 func saveGame():
 	#Creates/loads save file
 	var saveFile = FileAccess.open_encrypted_with_pass(saveDir,FileAccess.WRITE,SECURITY_KEY)
@@ -168,4 +170,51 @@ func loadSave():
 		obtainedWorlds = saveData['obtainedWorlds']
 		
 	#I'm glad i rewrote this save system this is much easier :3
+
+#Item control
+
+
+func depleteItem(data:Dictionary, amount:int = 1) -> int:
+	var itemID:String = data["id"]
+	#The grand error-preventer
+	if itemID not in itemInventory:
+		return -1
 	
+	var isBeingReused:bool = itemID in reUseItems
+	
+	itemInventory[itemID] -= amount
+	
+	if itemInventory[itemID] <= 0:
+		#Remove items from respective arrays
+		inUseItems.remove_at(inUseItems.find(itemID))
+		callFunction("unequipped",data)
+		if isBeingReused:
+			reUseItems.remove_at(reUseItems.find(itemID))
+	#Remove item from use if not being reused,
+	elif !isBeingReused:
+		inUseItems.remove_at(inUseItems.find(itemID))
+		callFunction("unequipped",data)
+	
+	return itemInventory[itemID]
+	
+func triggerItems(toCall:String):
+	for itemID in inUseItems:
+		# A gazillion file reads
+		var data = JSON.parse_string(FileAccess.get_file_as_string(
+		"res://Items/ItemDat/" + itemID + ".json"
+		))
+		callFunction(toCall,data)
+
+
+func callFunction(toCall:String,data:Dictionary) -> bool:
+	if "script" in data:
+		var script:Script = load("res://Items/ItemScripts/" + data["script"])
+		# Checks if function is present, then calls it
+		if script.has_method(toCall):
+			#I have no idea why the regular call function doen't work on it's own
+			#But call deffered works so we're gonna roll with it.
+			script.call_deferred(toCall,data)
+			return true
+		return false
+	else: # Failed for some reason
+		return false

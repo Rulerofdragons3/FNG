@@ -26,7 +26,7 @@ func determineFish(luckMult, bigCatch:bool = false):
 	var datLen = len(Globals.worldPool) - 1
 	#Determines if it is shiny or not
 	#8192
-	if randi_range(1,2000) <= 1:
+	if randi_range(0,2000) <= 2000 * (Globals.shinyOdds/100):
 		isShiny = true
 	else:
 		isShiny = false
@@ -105,7 +105,7 @@ func displayFishInfo(id:String):
 		$JokeAudioContainer/PressureIdle.play()
 	
 		#NewFish Control
-	if (id not in Globals.obtainedFishIDs) or (isShiny and id not in Globals.obtainedShinies):
+	if (id not in Globals.obtainedFishIDs) or (isShiny and (Globals.obtainedFishIDs[id]["caughtShiny"] == 0)):
 		$BG/NewIndicator.show()
 		$BG/NewIndicator/PulseAnim.play("pulse")
 		$Dismiss.disabled = true
@@ -125,6 +125,9 @@ func _on_dismiss_pressed():
 			Globals.obtainedFishIDs[ID]["caught"] += 1
 		else:
 			Globals.obtainedFishIDs[ID]["caughtShiny"] += 1
+	
+	#Trigger items
+	Globals.triggerItems("onFished")
 	
 	Globals.money += calculateFishValue(Globals.fishData[ID]['value']) 
 	await Globals.saveGame()

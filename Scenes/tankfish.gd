@@ -76,10 +76,13 @@ func _on_timer_timeout():
 
 #Gets rid of fish
 func dismiss():
+	#Apparently if statements work in var declarations
+	var gotoX = -self.size.x if bool(randi_range(0,1)) else (swimRange.x + self.size.x)
 	await swim(Vector2(
-		float(randi_range(0,1)) * swimRange.x,
+		gotoX,
 		randf_range(0,swimRange.y)
 		))
+	
 	self.queue_free()
 
 ########################FISH TEXTUREs########################################

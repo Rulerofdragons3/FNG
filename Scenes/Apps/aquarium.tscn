@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://c74h6gtqecvdj"]
 
-[ext_resource type="Script" path="res://Scenes/aquarium.gd" id="1_l1bey"]
+[ext_resource type="Script" path="res://Scenes/Apps/aquarium.gd" id="1_l1bey"]
 [ext_resource type="Texture2D" uid="uid://coo1llppfwup6" path="res://Assets/auqrium.jpg" id="2_25ip4"]
 [ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="4_g6we7"]
 [ext_resource type="Texture2D" uid="uid://du2s7la1tqct1" path="res://Assets/Buttons/ExitDOWN.png" id="5_jra8q"]
@@ -32,18 +32,26 @@ script = ExtResource("1_l1bey")
 layout_mode = 0
 offset_left = 51.0
 offset_top = 37.0
-offset_right = 951.0
-offset_bottom = 562.0
+offset_right = 1851.0
+offset_bottom = 1087.0
 rotation = 0.000310084
+scale = Vector2(0.5, 0.5)
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+disable_3d = true
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(900, 525)
+snap_2d_transforms_to_pixel = true
+screen_space_aa = 1
+use_occlusion_culling = true
+canvas_item_default_texture_filter = 0
+canvas_item_default_texture_repeat = 1
+size = Vector2i(1800, 1050)
 render_target_update_mode = 4
 
 [node name="AQCamera" type="Camera2D" parent="SubViewportContainer/SubViewport"]
+zoom = Vector2(2, 2)
 
 [node name="BG" type="TextureRect" parent="SubViewportContainer/SubViewport"]
 offset_right = 1920.0

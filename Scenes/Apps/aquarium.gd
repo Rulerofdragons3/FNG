@@ -9,24 +9,27 @@ var convScene = preload("res://Scenes/conversation.tscn")
 var camLocation : Vector2
 var mouseLocation : Vector2
 @onready var tankDimensions:Vector2 = $SubViewportContainer/SubViewport.size
+var camBounds:Vector2
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$SubViewportContainer/SubViewport/AQCamera.position = $SubViewportContainer/SubViewport/BG.size / 2
-
+	camBounds = (
+		$SubViewportContainer.size / 2) * $SubViewportContainer.scale
+	
 func _process(_delta):
 	if !self.visible:
 		return
 	#We game
 	if dragging:
 		var dragPos = mouseLocation - get_local_mouse_position()
-		var camBounds:Vector2 = $SubViewportContainer/SubViewport.size / 2
 		var newPos = Vector2(
 			clamp(camLocation.x + dragPos.x,
 				camBounds.x,
-				$SubViewportContainer/SubViewport/BG.size.x - camBounds.x),
+				$SubViewportContainer.size.x - camBounds.x),
 			clamp(camLocation.y + dragPos.y,
 				camBounds.y,
-				$SubViewportContainer/SubViewport/BG.size.y - camBounds.y)
+				$SubViewportContainer.size.y - camBounds.y)
 			) #Ugly but functional so whatever
 		$SubViewportContainer/SubViewport/AQCamera.position = newPos 
 
@@ -45,7 +48,7 @@ func instantiateFish():
 	if len(Globals.obtainedFishIDs) <= 0:
 		return
 	
-	var tankfish = fishScene.instantiate()
+	var tankfish:TextureButton = fishScene.instantiate()
 	var ID = Globals.obtainedFishIDs.keys().pick_random()
 	tankfish.fishID = ID
 	tankfish.swimRange = $SubViewportContainer/SubViewport/BG.size - Vector2(0,100)
@@ -53,7 +56,7 @@ func instantiateFish():
 		tankfish.isMirrored = Globals.fishData[ID]["tankIsMirrored"]
 	
 	tankfish.create(
-		randi_range(0,1) * $SubViewportContainer/SubViewport/BG.size.x,
+		-self.size.x if bool(randi_range(0,1)) else $SubViewportContainer/SubViewport/BG.size.x + tankfish.size.x,
 		randi_range(0,$SubViewportContainer/SubViewport/BG.size.y)
 	)
 	$SubViewportContainer/SubViewport/FishContainer.add_child(tankfish)

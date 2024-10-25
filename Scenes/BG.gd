@@ -14,6 +14,7 @@ func _ready():
 	Globals.createFishData() #Creates the fishdata dict
 	$Waves.play()
 	$Timer.wait_time = randi_range(60,300)
+	$BoatContainer/Character.play("default")
 	resetMusic()
 	#createFishPNGS()
 
@@ -46,8 +47,3 @@ func _on_timer_timeout():
 	#Restart Timer	
 	$Timer.wait_time = randi_range(60,300)
 	$Timer.start()
-
-
-func _physics_process(delta):
-	$Path/MovingStuff.progress += 0.5 * delta
-

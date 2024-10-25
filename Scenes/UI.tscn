@@ -176,6 +176,13 @@ texture_normal = ExtResource("15_8fe8x")
 texture_pressed = ExtResource("16_tmktk")
 stretch_mode = 0
 
+[node name="invButton" type="TextureButton" parent="Phone/GridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("15_8fe8x")
+texture_pressed = ExtResource("16_tmktk")
+stretch_mode = 0
+
 [node name="OffButton" type="TextureButton" parent="Phone"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
@@ -209,4 +216,5 @@ color = Color(0, 0, 0, 1)
 [connection signal="pressed" from="Phone/GridContainer/MapButton" to="." method="_on_map_button_pressed"]
 [connection signal="pressed" from="Phone/GridContainer/TankButton" to="." method="_on_tank_button_pressed"]
 [connection signal="pressed" from="Phone/GridContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Phone/GridContainer/invButton" to="." method="_on_inv_button_pressed"]
 [connection signal="pressed" from="Phone/OffButton" to="." method="_on_off_button_pressed"]

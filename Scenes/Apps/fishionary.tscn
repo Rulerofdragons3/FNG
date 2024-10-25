@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dwcou6ea5scea"]
 
-[ext_resource type="Script" path="res://Scenes/fishionary.gd" id="1_emphk"]
+[ext_resource type="Script" path="res://Scenes/Apps/fishionary.gd" id="1_emphk"]
 [ext_resource type="Texture2D" uid="uid://x4qqty1bin5d" path="res://Assets/Phone.png" id="2_bk5fb"]
 [ext_resource type="PackedScene" uid="uid://bniexxxqtoabk" path="res://Scenes/fish_container.tscn" id="2_ct634"]
 [ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="3_pcchd"]
@@ -25,6 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_emphk")
+metadata/_edit_lock_ = true
 
 [node name="BG" type="ColorRect" parent="."]
 layout_mode = 1
@@ -129,7 +130,7 @@ layout_mode = 0
 offset_left = 310.0
 offset_top = 50.0
 offset_right = 700.0
-offset_bottom = 125.0
+offset_bottom = 88.0
 text = "Base Value:
 $0"
 label_settings = ExtResource("4_jy8nr")
@@ -137,19 +138,29 @@ label_settings = ExtResource("4_jy8nr")
 [node name="Rarity" type="Label" parent="FiscriptionBG"]
 layout_mode = 0
 offset_left = 310.0
-offset_top = 125.0
+offset_top = 97.0
 offset_right = 700.0
-offset_bottom = 200.0
+offset_bottom = 139.0
 text = "Rarity:
+1"
+label_settings = ExtResource("4_jy8nr")
+
+[node name="Caught" type="Label" parent="FiscriptionBG"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 149.0
+offset_right = 700.0
+offset_bottom = 191.0
+text = "Caught:
 1"
 label_settings = ExtResource("4_jy8nr")
 
 [node name="Worlds" type="Label" parent="FiscriptionBG"]
 layout_mode = 0
 offset_left = 310.0
-offset_top = 185.0
+offset_top = 203.0
 offset_right = 827.0
-offset_bottom = 300.0
+offset_bottom = 263.0
 text = "Native to:"
 label_settings = ExtResource("4_jy8nr")
 autowrap_mode = 3
@@ -217,6 +228,7 @@ offset_bottom = 1547.0
 rotation = -1.5708
 mouse_filter = 2
 texture = ExtResource("2_bk5fb")
+metadata/_edit_lock_ = true
 
 [node name="FishContainer" parent="." instance=ExtResource("2_ct634")]
 visible = false
