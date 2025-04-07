@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c1j4cytdpqjhy"]
 
-[ext_resource type="Script" path="res://Scenes/item_button.gd" id="2_2b8yq"]
+[ext_resource type="Script" uid="uid://by34bdjmysq3g" path="res://Scenes/item_button.gd" id="2_2b8yq"]
 [ext_resource type="Texture2D" uid="uid://5dr5y0urry6a" path="res://Assets/InUseItem.png" id="2_fky5v"]
 
 [node name="ItemButton" type="ColorRect"]

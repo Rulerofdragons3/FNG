@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://ucn1pra6yjuu"]
 
-[ext_resource type="Script" path="res://Scenes/Apps/settings.gd" id="1_wcime"]
+[ext_resource type="Script" uid="uid://d4liydp0wkegq" path="res://Scenes/Apps/settings.gd" id="1_wcime"]
 [ext_resource type="Texture2D" uid="uid://x4qqty1bin5d" path="res://Assets/Phone.png" id="2_m8c4j"]
 [ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="3_6yk6y"]
 [ext_resource type="Texture2D" uid="uid://du2s7la1tqct1" path="res://Assets/Buttons/ExitDOWN.png" id="4_huq2r"]
@@ -8,8 +8,8 @@
 [ext_resource type="FontFile" uid="uid://goan0j3j1id4" path="res://Assets/Fonts/PublicPixel-rv0pA.ttf" id="5_u1fw5"]
 [ext_resource type="Texture2D" uid="uid://cx2o8qff2nwc4" path="res://Assets/Backgrounds/OceanBG.png" id="7_iixfj"]
 [ext_resource type="Theme" uid="uid://dhanbq80a5w00" path="res://defaultTheme.tres" id="8_3l3id"]
-[ext_resource type="Script" path="res://Scenes/remapButton.gd" id="8_ai6sr"]
-[ext_resource type="Script" path="res://Scenes/AccessFileScreen.gd" id="9_lghdm"]
+[ext_resource type="Script" uid="uid://b05hqlmygqscn" path="res://Scenes/remapButton.gd" id="8_ai6sr"]
+[ext_resource type="Script" uid="uid://cc6o0g20s5jxv" path="res://Scenes/AccessFileScreen.gd" id="9_lghdm"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_66fwk"]
 action = &"DictHotkey"

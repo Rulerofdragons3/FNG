@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bo13vw3jh2slx"]
 
-[ext_resource type="Script" path="res://Scenes/WorldButton.gd" id="1_kforx"]
+[ext_resource type="Script" uid="uid://cfkin52odrjmc" path="res://Scenes/WorldButton.gd" id="1_kforx"]
 [ext_resource type="LabelSettings" uid="uid://cnw3wdb2q0mrr" path="res://defaultLabelSettings.tres" id="2_nm1hb"]
 
 [node name="WorldButton" type="Button"]

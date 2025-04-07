@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://c74h6gtqecvdj"]
 
-[ext_resource type="Script" path="res://Scenes/Apps/aquarium.gd" id="1_l1bey"]
+[ext_resource type="Script" uid="uid://ccscvoyv1c645" path="res://Scenes/Apps/aquarium.gd" id="1_l1bey"]
 [ext_resource type="Texture2D" uid="uid://coo1llppfwup6" path="res://Assets/auqrium.jpg" id="2_25ip4"]
 [ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="4_g6we7"]
 [ext_resource type="Texture2D" uid="uid://du2s7la1tqct1" path="res://Assets/Buttons/ExitDOWN.png" id="5_jra8q"]
@@ -42,7 +42,6 @@ stretch = true
 disable_3d = true
 transparent_bg = true
 handle_input_locally = false
-snap_2d_transforms_to_pixel = true
 screen_space_aa = 1
 use_occlusion_culling = true
 canvas_item_default_texture_filter = 0

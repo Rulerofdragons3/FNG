@@ -94,6 +94,7 @@ func getTexture(ID, isShiny = false):
 	
 	#fishSprites.sprite_frames.get_frame_texture("default",ID)
 	if isShiny:
+		$ShinyParticles.show()
 		if "shinyOverride" in Globals.fishData[ID]:
 			if Globals.fishData[ID]["shinyOverride"] == "none":
 				return frameData

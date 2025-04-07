@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=4 uid="uid://bbr1c7fe7xj68"]
 
-[ext_resource type="Script" path="res://Scenes/CatchScreen.gd" id="1_uo4ac"]
+[ext_resource type="Script" uid="uid://b0phel1ry3o7s" path="res://Scenes/CatchScreen.gd" id="1_uo4ac"]
 [ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="2_jl1tu"]
 [ext_resource type="Texture2D" uid="uid://cxr5ryqkobbw1" path="res://Assets/CatchScreen.png" id="2_k5h6v"]
 [ext_resource type="AudioStream" uid="uid://bfumxqwliu4hl" path="res://Assets/Sounds/shiny.mp3" id="3_ddpyc"]
@@ -79,8 +79,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7imyp"]
 _data = {
-"RESET": SubResource("Animation_2j8cl"),
-"pulse": SubResource("Animation_h2omo")
+&"RESET": SubResource("Animation_2j8cl"),
+&"pulse": SubResource("Animation_h2omo")
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_s8xwn"]

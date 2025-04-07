@@ -1,9 +1,9 @@
 [gd_scene load_steps=129 format=4 uid="uid://d4e3mnaty5tra"]
 
 [ext_resource type="Texture2D" uid="uid://cx2o8qff2nwc4" path="res://Assets/Backgrounds/OceanBG.png" id="1_2ayna"]
-[ext_resource type="Script" path="res://Scenes/BG.gd" id="1_i705n"]
+[ext_resource type="Script" uid="uid://kkuxne6gc0f7" path="res://Scenes/BG.gd" id="1_i705n"]
 [ext_resource type="PackedScene" uid="uid://bbr1c7fe7xj68" path="res://Scenes/CatchScreen.tscn" id="1_j7tnm"]
-[ext_resource type="Script" path="res://Scenes/screenScale.gd" id="1_p7v1t"]
+[ext_resource type="Script" uid="uid://ddku1kspom7wa" path="res://Scenes/screenScale.gd" id="1_p7v1t"]
 [ext_resource type="PackedScene" uid="uid://b1fus4882sx0c" path="res://Scenes/UI.tscn" id="2_l4tja"]
 [ext_resource type="Texture2D" uid="uid://6yiajdtsl6qa" path="res://Assets/Boat.png" id="2_luh3p"]
 [ext_resource type="PackedScene" uid="uid://dvdi4opl0erhm" path="res://Scenes/bar.tscn" id="2_yr64v"]
@@ -817,6 +817,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Character" type="AnimatedSprite2D" parent="Background/BoatContainer"]
+visible = false
 position = Vector2(527, 376)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_snvuu")

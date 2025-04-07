@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dxt5bvk8b8huv"]
 
-[ext_resource type="Script" path="res://Websites.gd" id="1_x44om"]
+[ext_resource type="Script" uid="uid://4y3066cbnifp" path="res://Websites.gd" id="1_x44om"]
 [ext_resource type="Texture2D" uid="uid://x4qqty1bin5d" path="res://Assets/Phone.png" id="2_51624"]
 [ext_resource type="LabelSettings" uid="uid://cnw3wdb2q0mrr" path="res://defaultLabelSettings.tres" id="3_ijf0h"]
 [ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="4_fswum"]

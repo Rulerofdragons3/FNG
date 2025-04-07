@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bniexxxqtoabk"]
 
-[ext_resource type="Script" path="res://Scenes/fish_container.gd" id="1_61ccr"]
+[ext_resource type="Script" uid="uid://d6krjwihp3wd" path="res://Scenes/fish_container.gd" id="1_61ccr"]
 [ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="1_lfbeo"]
 [ext_resource type="LabelSettings" uid="uid://cnw3wdb2q0mrr" path="res://defaultLabelSettings.tres" id="2_icvd4"]
 

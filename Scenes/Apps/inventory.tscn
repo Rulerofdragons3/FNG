@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://b25lagvl6w4g"]
 
 [ext_resource type="Texture2D" uid="uid://x4qqty1bin5d" path="res://Assets/Phone.png" id="1_sjunw"]
-[ext_resource type="Script" path="res://Scenes/Apps/inventory.gd" id="1_x06p2"]
+[ext_resource type="Script" uid="uid://2sc3prbuhjmu" path="res://Scenes/Apps/inventory.gd" id="1_x06p2"]
 [ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="2_760g1"]
 [ext_resource type="Texture2D" uid="uid://dctf6w3f6m872" path="res://Assets/GameIcons/icon.png" id="2_pexk1"]
 [ext_resource type="LabelSettings" uid="uid://cnw3wdb2q0mrr" path="res://defaultLabelSettings.tres" id="3_1hdfe"]
@@ -185,6 +185,7 @@ offset_left = 7.0
 offset_right = 494.0
 offset_bottom = 24.0
 theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_20ri2")
+current_tab = 0
 tab_count = 3
 tab_0/title = "Items"
 tab_1/title = "Rods"
