@@ -127,10 +127,10 @@ func _on_dismiss_pressed():
 			Globals.obtainedFishIDs[ID]["caughtShiny"] += 1
 	
 	#Trigger items
-	Globals.triggerItems("onFished")
+	ItemManager.triggerItems(ItemManager.Events.OnFished)
 	
 	Globals.money += calculateFishValue(Globals.fishData[ID]['value']) 
-	await Globals.saveGame()
+	SaveManager.save_game()
 	
 	#UpdateUI
 	$BG/NewIndicator.hide()

@@ -1,7 +1,7 @@
 extends Control
 var currentTab = 0
 var itemButton = preload("res://Scenes/item_button.tscn")
-var selectedItem = null
+var selectedItem:Item = null
 
 @onready var phoneMenu = $"../Ui/Phone"
 
@@ -19,73 +19,55 @@ func hideEverything():
 		child.hide()
 
 func createItemButtons():
-	for item in Globals.itemInventory:
-		if !FileAccess.file_exists("res://Items/ItemDat/" + item + ".json"):
-			error_string("Couldn't find file: " + item + ".json")
+	for item:Item in Globals.itemInventory:
+		if $"BG/TabBar/0/GridContainer".get_node_or_null(item.displayName):
 			continue
 		
+		var itemName = item.displayName
 		var button = itemButton.instantiate()
-		button.itemID = item
-		button.name = item
+		button.item = item
+		button.name = itemName
 		button.setup()
 		button.connect("showItemDesc",buttonPressed)
 		$"BG/TabBar/0/GridContainer".add_child(button)
 
-func buttonPressed(itemID):
-	selectedItem = JSON.parse_string(FileAccess.get_file_as_string(
-		"res://Items/ItemDat/" + itemID + ".json"
-	))
-	var data = selectedItem
+func buttonPressed(item:Item):
+	if selectedItem == item:
+		return
 	
+	selectedItem = item
 	#Texture Control
-	if "texture" in data and data["texture"] != "":
-		$BG/OptionsHolder/ItemTexture.texture = load("res://Assets/Items/" + data["texture"])
-	else:
-		$BG/OptionsHolder/ItemTexture.texture = load("res://Assets/Buttons/ExitUP.png")
-	#Naming control	
-	if "name" in data:
-		$BG/OptionsHolder/Name.text = data["name"]
-	else:
-		$BG/OptionsHolder/Name.text = itemID
-	#Description control
-	if "desc" in data:
-		$BG/OptionsHolder/Desc.text = data["desc"]
-	else:
-		$BG/OptionsHolder/Desc.text = ""
-	
+	$BG/OptionsHolder/ItemTexture.texture = item.texture
+	$BG/OptionsHolder/Name.text = item.displayName
+	$BG/OptionsHolder/Desc.text = item.description	
 	#Buttons
 	#Trashing Control
-	if "trashable" in data and !data["trashable"]:
+	if item.trashable:
 		$BG/OptionsHolder/OptionsContainer/VBoxContainer/Trash.hide()
 	else:
 		$BG/OptionsHolder/OptionsContainer/VBoxContainer/Trash.show()
 	
-	if "mergeable" in data:
+	if item.mergeable:
 		$BG/OptionsHolder/OptionsContainer/VBoxContainer/MergeButton.show()
 	else:
 		$BG/OptionsHolder/OptionsContainer/VBoxContainer/MergeButton.hide()
 	
-	if "consumable" in data:
-		$BG/OptionsHolder/ReUse.visible = data["consumable"]
-		$BG/OptionsHolder/ReUse.button_pressed = (data["id"] in Globals.reUseItems)
-		
+	if item.consumable:
+		$BG/OptionsHolder/ReUse.visible = item.consumable #Why did i write this?
+		$BG/OptionsHolder/ReUse.button_pressed = (item in Globals.reUseItems)
 	else:
 		$BG/OptionsHolder/ReUse.hide()
 	
 	#Detecting Script Functions
-	if "script" not in data:
-		return
-	
-	var script:Script = load("res://Items/ItemScripts/" + data["script"])
 	#Usable
-	if script.has_method("equipped"):
+	if item.has_method("equipped"):
 		$BG/OptionsHolder/OptionsContainer/VBoxContainer/UseButton.show()
 	else:
 		$BG/OptionsHolder/OptionsContainer/VBoxContainer/UseButton.hide()
 	
 	#Check for if item is already in use
-	var cancelable:bool = script.has_method("cancel") #Check to see if cancel function exists
-	if selectedItem["id"] in Globals.inUseItems:
+	var cancelable:bool = item.has_method("cancel") #Check to see if cancel function exists
+	if item in Globals.inUseItems:
 		$BG/OptionsHolder/OptionsContainer/VBoxContainer/UseButton.hide()
 		$BG/OptionsHolder/OptionsContainer/VBoxContainer/Cancel.visible = cancelable
 	else:
@@ -103,29 +85,25 @@ func _on_tab_bar_tab_changed(tab):
 
 
 func _on_use_button_pressed():
-	var script:Script = load("res://Items/ItemScripts/" + selectedItem["script"])
-	var cancelable:bool = script.has_method("unequipped")
-	
+	var cancelable:bool = selectedItem.has_method("unequipped")
 	$BG/OptionsHolder/OptionsContainer/VBoxContainer/UseButton.hide()
 	$BG/OptionsHolder/OptionsContainer/VBoxContainer/Cancel.visible = cancelable
-	if selectedItem["id"] in Globals.inUseItems:
+	if selectedItem in Globals.inUseItems:
 		return
 		
-	#Equp item
-	Globals.inUseItems.append(selectedItem["id"])
-	$BG/TabBar.get_node(str(currentTab) + "/GridContainer/" + selectedItem["id"]).showInUse(true)
-	script.equipped(selectedItem)
-	#print(Globals.inUseItems)
+	#Equip item
+	Globals.inUseItems.append(selectedItem)
+	$BG/TabBar.get_node(str(currentTab) + "/GridContainer/" + selectedItem.displayName).showInUse(true)
+	selectedItem.equipped()
 	
 
 
 func _on_cancel_pressed():
-	var script:Script = load("res://Items/ItemScripts/" + selectedItem["script"])
-	script.unequipped(selectedItem)
+	selectedItem.unequipped()
 	#Removes item from inUseItems
-	Globals.inUseItems.remove_at(Globals.inUseItems.find(selectedItem["id"]))
+	Globals.inUseItems.erase(selectedItem)
 	#Updating stuff
-	$BG/TabBar.get_node(str(currentTab) + "/GridContainer/" + selectedItem["id"]).showInUse(false)
+	$BG/TabBar.get_node(str(currentTab) + "/GridContainer/" + selectedItem.displayName).showInUse(false)
 	$BG/OptionsHolder/OptionsContainer/VBoxContainer/Cancel.hide()
 	$BG/OptionsHolder/OptionsContainer/VBoxContainer/UseButton.show()
 	$BG/OptionsHolder/ReUse.button_pressed = false
@@ -137,21 +115,20 @@ func _on_exit_button_pressed():
 
 func _on_re_use_toggled(toggled_on: bool) -> void:
 	if toggled_on:
-		if selectedItem["id"] not in Globals.inUseItems:
+		if selectedItem not in Globals.inUseItems:
 			_on_use_button_pressed()
-		Globals.reUseItems.append(selectedItem["id"])
+		Globals.reUseItems.append(selectedItem)
 	else:
 		#Top 10 worst lines of code ever
-		if Globals.reUseItems.has(selectedItem["id"]):
-			Globals.reUseItems.remove_at(
-				Globals.reUseItems.find(selectedItem["id"]))
+		if Globals.reUseItems.has(selectedItem):
+			Globals.reUseItems.erase(selectedItem)
 	
 
 func _on_visibility_changed() -> void:
 	if self.visible:
 		#Checks to see if item exists
-		
-		if selectedItem and Globals.itemInventory[selectedItem["id"]] <= 0:
+		createItemButtons()
+		if selectedItem and selectedItem.count <= 0:
 			hideEverything()
 		
 		for button in $"BG/TabBar/0/GridContainer".get_children():

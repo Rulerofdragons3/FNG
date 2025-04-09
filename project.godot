@@ -22,14 +22,15 @@ config/windows_native_icon="res://Assets/GameIcons/icon.ico"
 
 [autoload]
 
-Globals="*res://Globals.gd"
 ConfigManager="*res://configManager.gd"
+SaveManager="*res://Global Scripts/SaveManager.gd"
 ShinyHandler="*res://shinyHandler.gd"
 LimboConsole="*res://addons/limbo_console/limbo_console.gd"
+ItemManager="*res://Global Scripts/ItemManager.gd"
+Globals="*res://Global Scripts/Globals.gd"
 
 [display]
 
-window/size/mode=2
 window/energy_saving/keep_screen_on=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"

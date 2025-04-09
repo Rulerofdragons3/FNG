@@ -1,9 +1,8 @@
-[gd_scene load_steps=129 format=4 uid="uid://d4e3mnaty5tra"]
+[gd_scene load_steps=128 format=4 uid="uid://d4e3mnaty5tra"]
 
 [ext_resource type="Texture2D" uid="uid://cx2o8qff2nwc4" path="res://Assets/Backgrounds/OceanBG.png" id="1_2ayna"]
 [ext_resource type="Script" uid="uid://kkuxne6gc0f7" path="res://Scenes/BG.gd" id="1_i705n"]
 [ext_resource type="PackedScene" uid="uid://bbr1c7fe7xj68" path="res://Scenes/CatchScreen.tscn" id="1_j7tnm"]
-[ext_resource type="Script" uid="uid://ddku1kspom7wa" path="res://Scenes/screenScale.gd" id="1_p7v1t"]
 [ext_resource type="PackedScene" uid="uid://b1fus4882sx0c" path="res://Scenes/UI.tscn" id="2_l4tja"]
 [ext_resource type="Texture2D" uid="uid://6yiajdtsl6qa" path="res://Assets/Boat.png" id="2_luh3p"]
 [ext_resource type="PackedScene" uid="uid://dvdi4opl0erhm" path="res://Scenes/bar.tscn" id="2_yr64v"]
@@ -793,7 +792,6 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 649.0
-script = ExtResource("1_p7v1t")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 0

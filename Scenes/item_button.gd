@@ -1,38 +1,26 @@
 extends ColorRect
 
-@export var itemID:String = ""
-var count:int = 0
+@export var item:Item
 
-signal showItemDesc(ID)
+signal showItemDesc(itemType:Item)
 
 # Huzzah
 func _on_pressed():
-	if count > 0:
-		showItemDesc.emit(itemID)
+	if item.count > 0:
+		showItemDesc.emit(item)
 
 func setup():
-	var data = JSON.parse_string(FileAccess.get_file_as_string(
-		"res://Items/ItemDat/" + itemID + ".json"
-	))
-	if "texture" in data and data["texture"] != "":
-		$Button.texture_normal = load("res://Assets/Items/" + data["texture"])
+	$Button.texture_normal = item.texture
 	#Hides item count if item is non-consumable
-	if "consumable" in data and !data["consumable"]:
+	if not item.consumable:
 		$Count.hide()
 	
 	update() #Resuing code lol
 	
 func update():
-	count = Globals.itemInventory[itemID]
-	$Count.text = "x" + str(count)
-	
-	$InUseIndicator.visible = (itemID in Globals.inUseItems) #Checks if item is being used
-	if count <= 0:
-		self.hide()
-		#self.modulate = Color8(200,200,200)
-	else:
-		self.show()
-		#self.modulate = Color8(255,255,255)
+	$Count.text = "x" + str(item.count)
+	$InUseIndicator.visible = (item in Globals.inUseItems) #Checks if item is being used	
+	self.visible = item.count > 0
 
 func showInUse(val:bool):
 	$InUseIndicator.visible = val

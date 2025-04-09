@@ -9,7 +9,7 @@ var playlist
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Globals.loadSave() #Yes this is where I load the save data
+	SaveManager.load_game()
 	ConfigManager.loadCFG()
 	Globals.createFishData() #Creates the fishdata dict
 	$Waves.play()
