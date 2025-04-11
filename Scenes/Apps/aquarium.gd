@@ -49,11 +49,10 @@ func instantiateFish():
 		return
 	
 	var tankfish:TextureButton = fishScene.instantiate()
-	var ID = Globals.obtainedFishIDs.keys().pick_random()
-	tankfish.fishID = ID
+	var fish:Fish = load(Globals.obtainedFishIDs.keys().pick_random())
+	tankfish.fish = fish
 	tankfish.swimRange = $SubViewportContainer/SubViewport/BG.size - Vector2(0,100)
-	if "tankIsMirrored" in Globals.fishData[ID]:
-		tankfish.isMirrored = Globals.fishData[ID]["tankIsMirrored"]
+	tankfish.isMirrored = fish.tankIsMirrored
 	
 	tankfish.create(
 		-self.size.x if bool(randi_range(0,1)) else $SubViewportContainer/SubViewport/BG.size.x + tankfish.size.x,

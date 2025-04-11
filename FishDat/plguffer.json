@@ -1,8 +1,0 @@
-{
- "name": "plguffer",
- "desc": "is touch-starved, but always hurts those he gets close to",
- "value": 1,
- "rarity": 1,
- "texture": "BaseFish/plguffer.png",
- "id": "plguffer"
-}

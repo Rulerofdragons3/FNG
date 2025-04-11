@@ -1,6 +1,6 @@
 extends TextureButton
 @export_category("FishVisuals")
-@export var fishID:String
+@export var fish:Fish
 @export var fishName:String
 @export var isMirrored:bool = false
 @export_category("Properties")
@@ -14,10 +14,10 @@ var aqScript
 var isBeingDragged = false
 
 func create(x:int,y:int):
-	self.flip_h = isMirrored	
+	self.flip_h = fish.tankIsMirrored	
 	self.position = Vector2(x,y)
-	
-	fishName = Globals.fishData[fishID]["name"]
+	isMirrored = fish.tankIsMirrored
+	fishName = fish.name
 	if forceGoto != Vector2(-1,-1):
 		$Timer.stop()
 		swim(forceGoto)
@@ -86,33 +86,18 @@ func dismiss():
 	self.queue_free()
 
 ########################FISH TEXTUREs########################################
-func getTexture(ID, isShiny = false):
-	var frameData
-	frameData = load("res://Assets/Fish/" + Globals.fishData[ID]["texture"])
-	if !frameData:
-		return null
+func setTexture(shiny:bool):
+	self.texture_normal = fish.texture
+	if shiny:
+		ShinyHandler.createShiny(self, fish)
+		$ShinyParticles.visible = shiny
 	
-	#fishSprites.sprite_frames.get_frame_texture("default",ID)
-	if isShiny:
-		$ShinyParticles.show()
-		if "shinyOverride" in Globals.fishData[ID]:
-			if Globals.fishData[ID]["shinyOverride"] == "none":
-				return frameData
-			return ShinyHandler.createShiny(
-				frameData.get_image(),
-				Globals.fishData[ID]["shinyOverride"])
-		else:
-			return ShinyHandler.createShiny(frameData.get_image())
-	return frameData
-
-
 #Sets fish sprite whenever scene tree is entered
 func _on_tree_entered():
 	var isShiny = false
-	if Globals.obtainedFishIDs[fishID]["caughtShiny"] >= 1:
-		isShiny = bool(randi_range(0,1))
-		
-	self.texture_normal = getTexture(fishID, isShiny)
+	if Globals.obtainedFishIDs[fish.resource_path]["caughtShiny"] >= 1:
+		isShiny = bool(randi_range(0,1))	
+	setTexture(isShiny)
 	aqScript = self.get_parent().get_parent().get_parent().get_parent()
 ########################Finteractions####################################
 

@@ -1,8 +1,0 @@
-{
- "name": "anchovy",
- "desc": "gets jealous of sardine's popularity over anchovies as a food item, but doesn't realize how much it sucks to get eaten.",
- "value": 0.5,
- "rarity": 1,
- "texture": "BaseFish/anchovy.png",
- "id": "anchovy"
-}

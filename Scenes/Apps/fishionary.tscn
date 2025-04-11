@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwcou6ea5scea"]
+[gd_scene load_steps=13 format=3 uid="uid://dwcou6ea5scea"]
 
 [ext_resource type="Script" uid="uid://u3rec4ieeqt4" path="res://Scenes/Apps/fishionary.gd" id="1_emphk"]
 [ext_resource type="Texture2D" uid="uid://x4qqty1bin5d" path="res://Assets/Phone.png" id="2_bk5fb"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="3_pcchd"]
 [ext_resource type="Texture2D" uid="uid://du2s7la1tqct1" path="res://Assets/Buttons/ExitDOWN.png" id="4_68vrn"]
 [ext_resource type="LabelSettings" uid="uid://cnw3wdb2q0mrr" path="res://defaultLabelSettings.tres" id="4_jy8nr"]
+[ext_resource type="Material" uid="uid://coo28ye0knrb0" path="res://shinyMaterial.tres" id="5_yh4vc"]
 [ext_resource type="Texture2D" uid="uid://bm43qgsolf4j6" path="res://Assets/Buttons/ShowShiny.png" id="6_xmibe"]
 [ext_resource type="Texture2D" uid="uid://bj81botcadakq" path="res://Assets/Buttons/ShowShinyPressed.png" id="7_btbg4"]
 [ext_resource type="AudioStream" uid="uid://bfumxqwliu4hl" path="res://Assets/Sounds/shiny.mp3" id="9_bo0qt"]
@@ -103,6 +104,16 @@ grow_vertical = 2
 color = Color(0.454732, 0.177254, 2.40654e-07, 1)
 
 [node name="Icon" type="TextureRect" parent="FiscriptionBG"]
+visible = false
+material = ExtResource("5_yh4vc")
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 300.0
+texture = ExtResource("3_pcchd")
+expand_mode = 1
+
+[node name="HiddenIcon" type="TextureRect" parent="FiscriptionBG"]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_right = 300.0
 offset_bottom = 300.0

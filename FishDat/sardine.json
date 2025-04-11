@@ -1,8 +1,0 @@
-{
- "name": "sardine",
- "desc": "is claustraphobic",
- "value": 0.5,
- "rarity": 1,
- "texture": "BaseFish/sardine.png",
- "id": "sardine"
-}

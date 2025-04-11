@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c1t5gljhsn163"]
+[gd_scene load_steps=8 format=3 uid="uid://c1t5gljhsn163"]
 
 [ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="1_ba6bj"]
+[ext_resource type="Material" uid="uid://coo28ye0knrb0" path="res://shinyMaterial.tres" id="1_uw0rs"]
 [ext_resource type="Script" uid="uid://llwqafs6sdgx" path="res://Scenes/tankfish.gd" id="2_5ubbj"]
 [ext_resource type="AudioStream" uid="uid://cd5nhx1e5qalm" path="res://Assets/Sounds/JokeSounds/squeakIn.mp3" id="3_rs1fr"]
 [ext_resource type="AudioStream" uid="uid://by7qgr5k1nu3t" path="res://Assets/Sounds/JokeSounds/squeakOut.mp3" id="4_qau53"]
@@ -12,6 +13,7 @@ point_count = 2
 
 [node name="Fish" type="TextureButton"]
 texture_filter = 5
+material = ExtResource("1_uw0rs")
 offset_left = -40.0
 offset_top = -40.0
 offset_right = 40.0

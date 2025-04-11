@@ -1,8 +1,0 @@
-{
- "name": "crayfish",
- "desc": "say your crayers",
- "value": 0.5,
- "rarity": 2,
- "texture": "BaseFish/crayfish.png",
- "id": "crayfish"
-}

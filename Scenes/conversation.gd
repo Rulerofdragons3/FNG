@@ -39,11 +39,8 @@ func instantiateFish(posNode:Node,i,y):
 	
 	var tankfish = fishScene.instantiate()
 	var ID = Globals.obtainedFishIDs.keys().pick_random() #Swag
-	tankfish.fishID = ID
+	tankfish.fish = load(ID)
 	tankfish.forceGoto = posNode.global_position
-	if "tankIsMirrored" in Globals.fishData[ID]:
-		tankfish.isMirrored = Globals.fishData[ID]["tankIsMirrored"]
-	
 	container.get_node("FishContainer").add_child(tankfish)
 	tankfish.create(
 		i * BG.size.x,

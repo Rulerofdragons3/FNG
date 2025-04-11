@@ -1,8 +1,0 @@
-{
- "name": "sandfish",
- "desc": "used to be found in deserts such as the sahara desert. however, due to global warming, they were forced to move to beaches, then the ocean",
- "value": 60,
- "rarity": 50,
- "texture": "BaseFish/sandfish.png",
- "id": "sandfish"
-}

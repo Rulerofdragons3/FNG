@@ -1,8 +1,0 @@
-{
- "name": "salmon",
- "desc": "despite always being overshadowed by its red cousin, this salmon plans to make itself KNOWN",
- "value": 3,
- "rarity": 2,
- "texture": "BaseFish/salmon.png",
- "id": "salmon"
-}

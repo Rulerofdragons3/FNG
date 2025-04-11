@@ -1,9 +1,0 @@
-{
- "name": "herring",
- "desc": "says it has crucial evidence on a murder case. despite initial skepticism, detectives determined that this isn't a red herring.",
- "shinyDesc": "says it has crucial evidence on a murder case. however, detectives determined that this IS a red herring.",
- "value": 2,
- "rarity": 3,
- "texture": "BaseFish/herring.png",
- "id": "herring"
-}

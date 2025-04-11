@@ -1,8 +1,0 @@
-{
- "name": "stonefish",
- "desc": "stonefish don't get their name due to their stone-like appearance! it actually comes from their diet of rocks and other stone-like material. this one appears to have swallowed an entire cinderblock whole",
- "value": 20,
- "rarity": 10,
- "texture": "BaseFish/stonefish.png",
- "id": "stonefish"
-}

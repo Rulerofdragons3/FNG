@@ -1,16 +1,13 @@
 extends Button
 
-@export var ID:String
+@export var fish:Fish
 
 signal showFishcription(ID)
 
-#@onready var fishionary = $"../Fishionary"
-
 # Huzzah
 func _on_pressed():
-	#print("Button " + str(ID) + " pressed!")
-	showFishcription.emit(ID)
+	showFishcription.emit(fish)
 
 func update():
 	$Icon.modulate = Color.WHITE
-	$Name.text = Globals.fishData[ID]["name"]
+	$Name.text = fish.name
