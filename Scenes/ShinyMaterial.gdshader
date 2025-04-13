@@ -70,5 +70,5 @@ void fragment() {
 			COLOR = pixelColor;
 			break;
 	}
-	
+
 }

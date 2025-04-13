@@ -12,6 +12,7 @@ var fishSprites:Node
 var movements:int = randi_range(2,10)
 var aqScript
 var isBeingDragged = false
+var prevPos = self.position
 
 func create(x:int,y:int):
 	self.flip_h = fish.tankIsMirrored	
@@ -21,7 +22,10 @@ func create(x:int,y:int):
 	if forceGoto != Vector2(-1,-1):
 		$Timer.stop()
 		swim(forceGoto)
-		
+	elif randi_range(0,1) == 0:
+		var present:Node = load("res://Scenes/Apps/Aquarium/Present.tscn").instantiate()
+		$PresentHolder.add_child(present)
+	
 var swimTween:Tween
 func swim(swimTo:Vector2):
 	#Mirroring
@@ -98,10 +102,12 @@ func _on_tree_entered():
 	if Globals.obtainedFishIDs[fish.resource_path]["caughtShiny"] >= 1:
 		isShiny = bool(randi_range(0,1))	
 	setTexture(isShiny)
-	aqScript = self.get_parent().get_parent().get_parent().get_parent()
+	aqScript = self.find_parent("Aquarium")
+	
 ########################Finteractions####################################
 
 func _on_button_down():
+	prevPos = self.position
 	$SqueakOut.stop()
 	$SqueakIn.play()
 	var pressTween = create_tween()
@@ -116,6 +122,7 @@ func _on_button_down():
 func _on_button_up():
 	var pressTween = create_tween()
 	pressTween.tween_property(self,"scale",Vector2(1,1),0.1)
+	$Scream.stop()
 	if forceGoto == Vector2(-1,-1):
 		swim(Vector2(
 			randf_range(0,swimRange.x),
@@ -126,10 +133,15 @@ func _on_button_up():
 	if $SqueakIn.playing:
 		await $SqueakIn.finished
 	$SqueakOut.play()
-	
+
+
+func isShaking():
+	var v = (self.position.distance_to(prevPos) > 75)
+	prevPos = self.position
+	return v
+
 func _process(_delta):
 	if isBeingDragged:
-		self.global_position = get_global_mouse_position() - Vector2(
-			self.size.x / 2,
-			self.size.y / 2
-		)
+		self.position = get_global_mouse_position() - (self.size / 2)
+		if not $Scream.playing and isShaking():
+			$Scream.play()

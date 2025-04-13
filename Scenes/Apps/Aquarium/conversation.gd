@@ -1,7 +1,7 @@
 extends Control
 
 #Reference Variable(s)
-var fishScene = preload("res://Scenes/tankfish.tscn")
+var fishScene = preload("res://Scenes/Apps/Aquarium/tankfish.tscn")
 var container:Node
 var BG:Node 
 var fishReferences = []

@@ -1,8 +1,8 @@
 extends Control
 
 #Objects
-var fishScene = preload("res://Scenes/tankfish.tscn")
-var convScene = preload("res://Scenes/conversation.tscn")
+var fishScene = preload("res://Scenes/Apps/Aquarium/tankfish.tscn")
+var convScene = preload("res://Scenes/Apps/Aquarium/conversation.tscn")
 @onready var phoneMenu = $"../Ui/Phone"
 #Drag Controls
 @export var dragging:bool = false

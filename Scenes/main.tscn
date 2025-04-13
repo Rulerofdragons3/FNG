@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dwcou6ea5scea" path="res://Scenes/Apps/fishionary.tscn" id="6_krk6v"]
 [ext_resource type="PackedScene" uid="uid://dxt5bvk8b8huv" path="res://Scenes/websites.tscn" id="9_7l3je"]
 [ext_resource type="PackedScene" uid="uid://dwcfhyw6g5pv6" path="res://Scenes/Apps/map.tscn" id="9_afvv1"]
-[ext_resource type="PackedScene" uid="uid://c74h6gtqecvdj" path="res://Scenes/Apps/aquarium.tscn" id="11_63vkb"]
+[ext_resource type="PackedScene" uid="uid://c74h6gtqecvdj" path="res://Scenes/Apps/Aquarium/aquarium.tscn" id="11_63vkb"]
 [ext_resource type="PackedScene" uid="uid://b25lagvl6w4g" path="res://Scenes/Apps/inventory.tscn" id="17_818vx"]
 [ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="19_45jws"]
 [ext_resource type="Texture2D" uid="uid://du2s7la1tqct1" path="res://Assets/Buttons/ExitDOWN.png" id="20_og77c"]
