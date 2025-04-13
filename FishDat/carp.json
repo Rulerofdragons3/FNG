@@ -1,8 +1,0 @@
-{
- "name": "carp",
- "desc": "would probably be a fantastic carpenter, but unfortunately fish don't have access to a reliable source of wood.",
- "value": 1,
- "rarity": 1,
- "texture": "BaseFish/carp.png",
- "id": "carp"
-}

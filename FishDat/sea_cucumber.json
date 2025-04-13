@@ -1,8 +1,0 @@
-{
- "name": "sea cucumber",
- "desc": "not a substitute for actual cucumbers",
- "value": 5,
- "rarity": 4,
- "texture": "BaseFish/sea_cucumber.png",
- "id": "sea_cucumber"
-}

@@ -1,6 +1,6 @@
 extends Node
 
-const SAVE_PATH = "user://save.tres"
+const SAVE_PATH = "user://save.res"
 
 func _ready() -> void:
 	LimboConsole.register_command(save_game,"save","Saves the game.")

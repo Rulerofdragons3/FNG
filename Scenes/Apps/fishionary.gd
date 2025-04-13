@@ -13,30 +13,26 @@ var worldData = JSON.parse_string(
 	FileAccess.get_file_as_string(worldConfigFile)
 )
 var showingShiny = false
-var currentFishID = ""
+var currentFish:Fish
 
 func createEntry(ID:String):
-	var data:Dictionary = fishData[ID]
+	var fish:Fish = load(fishData[ID])
 	
 	var entry = fishContainer.instantiate()
 	var icon = entry.get_node("Icon")
 	var fishName = entry.get_node("Name")
 	#Connecting button press to this script
-	entry.ID = ID
+	entry.fish = fish
 	entry.connect("showFishcription",self.show_fishcription)
 	
-	#var frameData = null
-	#if fishSprites: #Prevents errors
-	#	frameData = fishSprites.sprite_frames.get_frame_texture("default",ID)
-	
 	#Checks if obtained or not
-	icon.texture = load("res://Assets/Fish/" + data["texture"])
-	if ID in Globals.obtainedFishIDs:
-		fishName.text = data['name']
+	icon.texture = fish.texture
+	if fish.resource_path in Globals.obtainedFishIDs:
+		fishName.text = fish.name
 	else:
 		fishName.text = "???"
 		icon.modulate = Color.BLACK
-			
+	
 	$ScrollContainer/FishList.add_child(entry)
 	
 func createEntries():
@@ -56,54 +52,49 @@ func _on_visibility_changed():
 	createEntries()
 
 
-func show_fishcription(ID):
-	currentFishID = ID
+func show_fishcription(fish:Fish):
 	$BG.visible = false
 	$ScrollContainer.visible = false
-	var fish:Dictionary = fishData[ID]
+	currentFish = fish
+	var ID = fish.resource_path
 	var obtained = (ID in Globals.obtainedFishIDs)
 	#Setting up description
 	if obtained:
-		$FiscriptionBG/Name.text = fish['name']
-		$FiscriptionBG/Value.text = "Base Value:\n$" + "%.2f" % fish['value']
+		$FiscriptionBG/Name.text = fish.name
+		$FiscriptionBG/Value.text = "Base Value:\n$" + "%.2f" % fish.value
 		$FiscriptionBG/Caught.text =  "Caught:\n" + str(
 			Globals.obtainedFishIDs[ID]["caught"])
-		$FiscriptionBG/Desc.text = fish['desc']
+		$FiscriptionBG/Desc.text = fish.description
+		$FiscriptionBG/Icon.get_material().set_shader_parameter("mode", 6)
 		if Globals.obtainedFishIDs[ID]["caughtShiny"] >= 1:
 			$FiscriptionBG/ShowShiny.show()
 	else:
 		$FiscriptionBG/Name.text = "???" 
 		$FiscriptionBG/Value.text = "Base Value:\n???"
 		$FiscriptionBG/Desc.text = "???"
+		$FiscriptionBG/Icon.modulate = Color.BLACK
 		
-	$FiscriptionBG/Rarity.text = "Rarity:\n" + str(fish['rarity'])
+	$FiscriptionBG/Rarity.text = "Rarity:\n" + str(fish.rarity)
+	$FiscriptionBG/Icon.texture = fish.texture
+	$FiscriptionBG/HiddenIcon.texture = fish.texture
+	$FiscriptionBG/Icon.visible = obtained
+	$FiscriptionBG/HiddenIcon.visible = !obtained
 	
-	if true: 
-		var texture = load("res://Assets/Fish/" + fish["texture"])
-		$FiscriptionBG/Icon.texture = texture
-		if !obtained:
-			$FiscriptionBG/Icon.modulate = Color.BLACK
+	var worldList = "Found in:\n"
+	var worldAmount = len(fish.worlds)
+	for i in range(worldAmount - 1):
+		if fish.worlds[i] in worldData:
+			worldList += worldData[fish.worlds[i]]['name'] + ", "
 		else:
-			$FiscriptionBG/Icon.modulate = Color.WHITE
-	
-	if "world" not in fish:
-		$FiscriptionBG/Worlds.text = "Found in:\n" + worldData['ocean']['name']
+			worldList += fish.worlds[i]
+	#
+	if fish.worlds[worldAmount - 1] in worldData:
+			worldList += worldData[fish.worlds[worldAmount - 1]]['name']
 	else:
-		var worldList = "Found in:\n"
-		var worldAmount = len(fish['world'])
-		for i in range(worldAmount - 1):
-			if fish['world'][i] in worldData:
-				worldList += worldData[fish['world'][i]]['name'] + ", "
-			else:
-				worldList += fish['world'][i]
-		#
-		if fish['world'][worldAmount - 1] in worldData:
-				worldList += worldData[fish['world'][worldAmount - 1]]['name']
-		else:
-			worldList += fish['world'][worldAmount - 1]
-				
-		
-		$FiscriptionBG/Worlds.text = worldList
+		worldList += fish.worlds[worldAmount - 1]
+			
+	
+	$FiscriptionBG/Worlds.text = worldList
 	$FiscriptionBG.visible = true
 
 
@@ -119,34 +110,31 @@ func _on_back_button_pressed():
 
 func _on_show_shiny_pressed():
 	#Toggles Shiny
-	#print(currentFishID)
-	var texture = load("res://Assets/Fish/" + Globals.fishData[currentFishID]["texture"])
+	var fishIcon = $FiscriptionBG/Icon
 	if not showingShiny:
-		if "shinyOverride" in fishData[currentFishID]:
-			$FiscriptionBG/Icon.texture = ShinyHandler.createShiny(
-				texture.get_image(),
-				fishData[currentFishID]["shinyOverride"]
-				)
-		else:
-			$FiscriptionBG/Icon.texture = ShinyHandler.createShiny(texture.get_image())
-		
 		$FiscriptionBG/ShowShiny.texture_normal = load("res://Assets/Buttons/ShowShinyPressed.png")
 		$FiscriptionBG/ShowShiny.texture_pressed = load("res://Assets/Buttons/ShowShiny.png")
-		if "shinyDesc" in fishData[currentFishID]:
-			$FiscriptionBG/Desc.text = fishData[currentFishID]['shinyDesc']
-		else:
-			$FiscriptionBG/Desc.text = fishData[currentFishID]['desc']
+		# Actual Shiny Application
+		ShinyHandler.createShiny(fishIcon, currentFish)
+		$FiscriptionBG/Desc.text = currentFish.shinyDescription if currentFish.shinyDescription != "" else currentFish.description
 		$FiscriptionBG/Caught.text = "Caught:\n" + str(
-				Globals.obtainedFishIDs[currentFishID]["caughtShiny"])
+				Globals.obtainedFishIDs[currentFish.resource_path]["caughtShiny"])
 			
 		$ShowShinySound.stop()
 		$ShowShinySound.play()
 	else:
+		match currentFish.shinyOverride:
+			4:
+				fishIcon.modulate = Color.WHITE
+			5:
+				fishIcon.texture = currentFish.texture
+			_:
+				fishIcon.get_material().set_shader_parameter("mode", 6)
+		
 		$FiscriptionBG/ShowShiny.texture_normal = load("res://Assets/Buttons/ShowShiny.png")
 		$FiscriptionBG/ShowShiny.texture_pressed = load("res://Assets/Buttons/ShowShinyPressed.png")
-		$FiscriptionBG/Icon.texture = texture
 		$FiscriptionBG/Caught.text =  "Caught:\n" + str(
-			Globals.obtainedFishIDs[currentFishID]["caught"]
+			Globals.obtainedFishIDs[currentFish.resource_path]["caught"]
 		)
-		$FiscriptionBG/Desc.text = fishData[currentFishID]['desc']
+		$FiscriptionBG/Desc.text = currentFish.description
 	showingShiny = not showingShiny #Inverts value

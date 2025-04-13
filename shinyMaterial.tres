@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://coo28ye0knrb0"]
+
+[ext_resource type="Shader" uid="uid://bbsa16h6jte1i" path="res://Scenes/ShinyMaterial.gdshader" id="1_28u2l"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_28u2l")
+shader_parameter/mode = 2
+shader_parameter/hueShiftDegrees = 0.0
+shader_parameter/modulate = Color(1, 1, 1, 1)

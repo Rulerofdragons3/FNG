@@ -1,8 +1,0 @@
-{
- "name": "mutacarp",
- "desc": "a species that was bioengineered in an unethical lab. this fish was intended on being a weapon, but just ended up ugly. these were released into the wild and ended up becoming an invasive species.",
- "value": 50,
- "rarity": 40,
- "texture": "BaseFish/mutacarp.png",
- "id": "mutacarp"
-}

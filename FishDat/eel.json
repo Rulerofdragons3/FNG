@@ -1,9 +1,0 @@
-{
- "name": "eel",
- "desc": "yes, i'm being for eel with you",
- "value": 7,
- "rarity": 4,
- "tankIsMirrored": true,
- "texture": "BaseFish/eel.png",
- "id": "eel"
-}
