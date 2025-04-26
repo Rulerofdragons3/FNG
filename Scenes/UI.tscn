@@ -20,19 +20,14 @@
 [ext_resource type="Texture2D" uid="uid://ciui8chetiofu" path="res://Assets/Buttons/AquariumApp.png" id="15_st5up"]
 [ext_resource type="Texture2D" uid="uid://dom2hcvlfs8ls" path="res://Assets/Buttons/AquariumAppPressed.png" id="16_svsqk"]
 [ext_resource type="Texture2D" uid="uid://bpr7h223d3gwo" path="res://Assets/Buttons/SettingsAppPressed.png" id="16_tmktk"]
+[ext_resource type="Texture2D" uid="uid://bo3qt438lp2f5" path="res://Assets/Buttons/Inventory.png" id="17_68ajo"]
+[ext_resource type="Texture2D" uid="uid://du1rw6wavsbe4" path="res://Assets/Buttons/InventoryDown.png" id="18_iufls"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wqsoj"]
 font = ExtResource("2_uj4x1")
 font_size = 64
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="InputEventAction" id="InputEventAction_awhih"]
-action = &"ShopHotkey"
-pressed = true
-
-[sub_resource type="Shortcut" id="Shortcut_x42qx"]
-events = [SubResource("InputEventAction_awhih")]
 
 [node name="Ui" type="Control"]
 layout_mode = 3
@@ -69,7 +64,6 @@ offset_left = 1040.0
 offset_top = 10.0
 offset_right = 1140.0
 offset_bottom = 110.0
-shortcut = SubResource("Shortcut_x42qx")
 texture_normal = ExtResource("2_w6r82")
 texture_pressed = ExtResource("5_uo1il")
 texture_disabled = ExtResource("6_lpfif")
@@ -169,14 +163,14 @@ texture_normal = ExtResource("15_st5up")
 texture_pressed = ExtResource("16_svsqk")
 stretch_mode = 0
 
-[node name="SettingsButton" type="TextureButton" parent="Phone/GridContainer"]
+[node name="invButton" type="TextureButton" parent="Phone/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-texture_normal = ExtResource("15_8fe8x")
-texture_pressed = ExtResource("16_tmktk")
+texture_normal = ExtResource("17_68ajo")
+texture_pressed = ExtResource("18_iufls")
 stretch_mode = 0
 
-[node name="invButton" type="TextureButton" parent="Phone/GridContainer"]
+[node name="SettingsButton" type="TextureButton" parent="Phone/GridContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 texture_normal = ExtResource("15_8fe8x")
@@ -215,6 +209,6 @@ color = Color(0, 0, 0, 1)
 [connection signal="pressed" from="Phone/GridContainer/FishionaryButton" to="." method="_on_fishionary_button_pressed"]
 [connection signal="pressed" from="Phone/GridContainer/MapButton" to="." method="_on_map_button_pressed"]
 [connection signal="pressed" from="Phone/GridContainer/TankButton" to="." method="_on_tank_button_pressed"]
-[connection signal="pressed" from="Phone/GridContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Phone/GridContainer/invButton" to="." method="_on_inv_button_pressed"]
+[connection signal="pressed" from="Phone/GridContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Phone/OffButton" to="." method="_on_off_button_pressed"]

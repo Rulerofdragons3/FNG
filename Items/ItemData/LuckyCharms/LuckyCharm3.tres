@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="LuckyCharm" load_steps=3 format=3 uid="uid://d0yue4vxaadn2"]
+
+[ext_resource type="Script" uid="uid://b4y6qwnvxecri" path="res://Items/ItemScripts/luckyCharm.gd" id="1_ybbrb"]
+[ext_resource type="Texture2D" uid="uid://dgm4k3qv0pmxt" path="res://Assets/Items/luckyCharm/luckyCharm4.png" id="2_6pume"]
+
+[resource]
+script = ExtResource("1_ybbrb")
+luckIncrease = 4
+texture = ExtResource("2_6pume")
+stackable = true
+consumable = true
+trashable = true
+mergeable = false
+displayName = "Lcuky Charm"
+description = "Increases base luck by... 4."
+metadata/_custom_type_script = "uid://b4y6qwnvxecri"

@@ -13,11 +13,17 @@ var count:int = 0
 func depleteCount(amount:int = 1):
 	if consumable:
 		count -= amount
+		
+		
 		if count <= 0:
 			count = 0
 			Globals.inUseItems.erase(self)
 			Globals.reUseItems.erase(self)
 			self.unequipped()
+		elif self not in Globals.reUseItems:
+			Globals.inUseItems.erase(self)
+			self.unequipped()
+
 	return count
 
 func incrementCount(amount:int = 1):

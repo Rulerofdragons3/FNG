@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="LuckyCharm" load_steps=3 format=3 uid="uid://bj0s4qyx1vbkq"]
+
+[ext_resource type="Script" uid="uid://b4y6qwnvxecri" path="res://Items/ItemScripts/luckyCharm.gd" id="1_22sh7"]
+[ext_resource type="Texture2D" uid="uid://dmfjlti8jmty5" path="res://Assets/Items/luckyCharm/luckyCharm1.png" id="2_3ojlr"]
+
+[resource]
+script = ExtResource("1_22sh7")
+luckIncrease = 32
+texture = ExtResource("2_3ojlr")
+stackable = true
+consumable = true
+trashable = true
+mergeable = false
+displayName = "Oversaturated Lucky Charm"
+description = "Why is this one the green one?
++32 to base luck."
+metadata/_custom_type_script = "uid://b4y6qwnvxecri"

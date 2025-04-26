@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1j4cytdpqjhy"]
+
+[ext_resource type="Script" uid="uid://by34bdjmysq3g" path="res://Scenes/Apps/Inventory/item_button.gd" id="2_2b8yq"]
+[ext_resource type="Texture2D" uid="uid://5dr5y0urry6a" path="res://Assets/InUseItem.png" id="2_fky5v"]
+
+[node name="ItemButton" type="ColorRect"]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 100.0
+offset_bottom = 100.0
+color = Color(0, 0, 0, 0.180392)
+script = ExtResource("2_2b8yq")
+
+[node name="Button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 97.0
+offset_bottom = 97.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Count" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -16.0
+offset_right = 100.0
+grow_vertical = 0
+text = "x0"
+horizontal_alignment = 2
+text_overrun_behavior = 1
+
+[node name="InUseIndicator" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_fky5v")
+
+[connection signal="focus_entered" from="Button" to="." method="_on_button_focus_entered"]
+[connection signal="focus_exited" from="Button" to="." method="_on_button_focus_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_pressed"]

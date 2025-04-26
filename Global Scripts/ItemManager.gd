@@ -50,6 +50,15 @@ func giveItem(subDir:String, count:int = 1) -> bool:
 		item.count = count
 		Globals.itemInventory.append(item)
 	return true
+	
+## subDir: Directory to item starting at res://Items/ItemData/
+## Gives the player an item
+func giveItemRes(item:Item, count:int = 1):
+	if item in Globals.itemInventory:
+		item.incrementCount(count)
+	else:
+		item.count = count
+		Globals.itemInventory.append(item)
 
 ## subDir: Directory to item starting at res://Items/ItemData/
 ## Depletes an item

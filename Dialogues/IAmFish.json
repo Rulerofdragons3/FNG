@@ -1,0 +1,30 @@
+{
+	"tags":{},
+	"conversation":[
+		{
+			"text":"Who are you?",
+			"displayTime":3,
+			"speaker":"left"
+		},
+		{
+			"text":"I...",
+			"displayTime":2,
+			"speaker":"right"
+		},
+		{
+			"text":"Am %s.",
+			"displayTime":2,
+			"speaker":"right"
+		},
+		{
+			"text":"thats me idiot",
+			"displayTime":3,
+			"speaker":"left"
+		},
+		{
+			"text":"😔",
+			"displayTime":2,
+			"speaker":"right"
+		}
+	]
+}

@@ -22,7 +22,7 @@ func create(x:int,y:int):
 	if forceGoto != Vector2(-1,-1):
 		$Timer.stop()
 		swim(forceGoto)
-	elif randi_range(0,1) == 0:
+	elif randi_range(0,10) == 0:
 		var present:Node = load("res://Scenes/Apps/Aquarium/Present.tscn").instantiate()
 		$PresentHolder.add_child(present)
 	

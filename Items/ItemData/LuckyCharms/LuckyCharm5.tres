@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="LuckyCharm" load_steps=3 format=3 uid="uid://75gb8m5wmqwo"]
+
+[ext_resource type="Script" uid="uid://b4y6qwnvxecri" path="res://Items/ItemScripts/luckyCharm.gd" id="1_k0di0"]
+[ext_resource type="Texture2D" uid="uid://dnlqemqdonlrm" path="res://Assets/Items/luckyCharm/luckyCharm3.png" id="2_ayl7e"]
+
+[resource]
+script = ExtResource("1_k0di0")
+luckIncrease = 16
+texture = ExtResource("2_ayl7e")
+stackable = true
+consumable = true
+trashable = true
+mergeable = false
+displayName = "Saturated Lucky Charm"
+description = "Full of luck -> 🍀
+(Increases base luck by 16)"
+metadata/_custom_type_script = "uid://b4y6qwnvxecri"

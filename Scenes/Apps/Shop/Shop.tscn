@@ -1,0 +1,453 @@
+[gd_scene load_steps=29 format=3 uid="uid://b4cplf8v1xp2a"]
+
+[ext_resource type="Script" uid="uid://ct54is4q8qiya" path="res://Scenes/Apps/Shop/newShop.gd" id="1_h5djo"]
+[ext_resource type="Texture2D" uid="uid://cn47nlfmm1858" path="res://Assets/ads.png" id="3_qmuho"]
+[ext_resource type="Texture2D" uid="uid://cflw6qyftwyp8" path="res://Assets/Buttons/shopIcon.png" id="3_yjs8n"]
+[ext_resource type="Texture2D" uid="uid://dvj4tcco51x2r" path="res://Assets/Buttons/BuyButtonYellow.png" id="4_cywlt"]
+[ext_resource type="Texture2D" uid="uid://ba5c5tugs1trq" path="res://Assets/Present.png" id="4_f76bj"]
+[ext_resource type="Texture2D" uid="uid://bejx46x1lm8b2" path="res://Assets/Items/shinyCharms/shinyCharm3.png" id="5_5lyhl"]
+[ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="5_8hm1p"]
+[ext_resource type="Texture2D" uid="uid://c6grwx5kpibqo" path="res://Assets/Buttons/BuyButtonYellowPressed.png" id="5_iw5iq"]
+[ext_resource type="LabelSettings" uid="uid://cnw3wdb2q0mrr" path="res://defaultLabelSettings.tres" id="6_gmpe3"]
+[ext_resource type="Script" uid="uid://hniww5obu81d" path="res://Scenes/Apps/Shop/results.gd" id="6_h4k7b"]
+[ext_resource type="Texture2D" uid="uid://du2s7la1tqct1" path="res://Assets/Buttons/ExitDOWN.png" id="6_ht106"]
+[ext_resource type="Texture2D" uid="uid://bcfq0leq8cilr" path="res://Assets/Items/shinyCharms/shinyCharm4.png" id="8_52287"]
+[ext_resource type="Script" uid="uid://dgyihdjkrax1j" path="res://Scenes/Apps/Shop/purchase_page.gd" id="8_pnyx2"]
+[ext_resource type="Texture2D" uid="uid://x4qqty1bin5d" path="res://Assets/Phone.png" id="8_ugg21"]
+[ext_resource type="Texture2D" uid="uid://d3qr3lsdi85q3" path="res://Assets/5Stars.png" id="9_pnyx2"]
+[ext_resource type="Texture2D" uid="uid://dppkog0thqe2j" path="res://Assets/Star.png" id="10_jimtg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7l6al"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(0, 0, 95, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrcfw"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(95, 0, 95, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_miihl"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(190, 0, 95, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7313"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(285, 0, 95, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70lje"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(380, 0, 95, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssssw"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(0, 24, 95, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dv5ev"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(95, 24, 95, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3q4t"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(190, 24, 95, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qthvc"]
+atlas = ExtResource("3_qmuho")
+region = Rect2(285, 24, 95, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j826f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7l6al")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrcfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_miihl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7313")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70lje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssssw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dv5ev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3q4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qthvc")
+}],
+"loop": true,
+"name": &"ads",
+"speed": 5.0
+}]
+
+[sub_resource type="InputEventAction" id="InputEventAction_a33lw"]
+action = &"ShopHotkey"
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_s4cbc"]
+events = [SubResource("InputEventAction_a33lw")]
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h5djo")
+metadata/_edit_lock_ = true
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 104.0
+offset_right = 944.0
+offset_bottom = 604.0
+color = Color(0.164063, 0.164063, 0.164063, 1)
+metadata/_edit_lock_ = true
+
+[node name="SelectPage" type="ScrollContainer" parent="."]
+visible = false
+layout_mode = 1
+offset_left = 215.0
+offset_top = 104.0
+offset_right = 943.0
+offset_bottom = 566.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SelectPage"]
+layout_mode = 2
+
+[node name="ShopTitleContainer" type="ColorRect" parent="SelectPage/VBoxContainer"]
+custom_minimum_size = Vector2(700, 50)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+
+[node name="URL" type="Label" parent="SelectPage/VBoxContainer/ShopTitleContainer"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 60.0
+offset_top = -25.0
+offset_right = 700.0
+offset_bottom = 25.0
+grow_vertical = 2
+text = "hppts://fishermansparadise.net/shop"
+label_settings = ExtResource("6_gmpe3")
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="SelectPage/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="Ads" type="AnimatedSprite2D" parent="SelectPage/VBoxContainer/PanelContainer"]
+position = Vector2(352, 72)
+scale = Vector2(5.62051, 5.68)
+sprite_frames = SubResource("SpriteFrames_j826f")
+animation = &"ads"
+
+[node name="GoToSite" type="TextureButton" parent="SelectPage/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="MainPage" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+
+[node name="Logo" type="TextureRect" parent="MainPage"]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 144.0
+offset_right = 527.0
+offset_bottom = 236.0
+texture = ExtResource("3_yjs8n")
+
+[node name="UpgradeButton" type="TextureButton" parent="MainPage"]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 369.0
+offset_right = 405.0
+offset_bottom = 449.0
+texture_normal = ExtResource("4_f76bj")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MainPage/UpgradeButton"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = 90.0
+offset_right = 106.0
+offset_bottom = 106.0
+text = "Upgrades"
+horizontal_alignment = 1
+
+[node name="ItemButton" type="TextureButton" parent="MainPage"]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 373.0
+offset_right = 620.0
+offset_bottom = 453.0
+texture_normal = ExtResource("5_5lyhl")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MainPage/ItemButton"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = 90.0
+offset_right = 106.0
+offset_bottom = 106.0
+text = "Items"
+horizontal_alignment = 1
+
+[node name="RodsButton" type="TextureButton" parent="MainPage"]
+layout_mode = 0
+offset_left = 743.0
+offset_top = 377.0
+offset_right = 823.0
+offset_bottom = 457.0
+texture_normal = ExtResource("4_f76bj")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MainPage/RodsButton"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = 90.0
+offset_right = 106.0
+offset_bottom = 106.0
+text = "Rods"
+horizontal_alignment = 1
+
+[node name="Slogan" type="Label" parent="MainPage"]
+layout_mode = 0
+offset_left = 539.0
+offset_top = 176.0
+offset_right = 763.0
+offset_bottom = 211.0
+text = "By fishermen, 
+for fishermen"
+
+[node name="Hint" type="Label" parent="MainPage"]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 330.0
+offset_right = 673.0
+offset_bottom = 365.0
+text = "What are you fishing for?"
+
+[node name="BackButton" type="Button" parent="."]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 197.0
+offset_top = 104.0
+offset_right = 243.0
+offset_bottom = 154.0
+text = "<"
+
+[node name="Results" type="ScrollContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 188.0
+offset_top = 153.0
+offset_right = 943.0
+offset_bottom = 566.0
+script = ExtResource("6_h4k7b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Results"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AdContainer" type="PanelContainer" parent="Results/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="Ads" type="AnimatedSprite2D" parent="Results/VBoxContainer/AdContainer"]
+position = Vector2(377, 74)
+scale = Vector2(5.62051, 5.68)
+sprite_frames = SubResource("SpriteFrames_j826f")
+animation = &"ads"
+
+[node name="GoToSite" type="TextureButton" parent="Results/VBoxContainer/AdContainer"]
+layout_mode = 2
+
+[node name="DailyRefreshTimer" type="Label" parent="Results/VBoxContainer"]
+layout_mode = 2
+text = "Offers refresh in: 24:00:00"
+horizontal_alignment = 1
+
+[node name="PurchasePage" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("8_pnyx2")
+
+[node name="TopBar" type="ColorRect" parent="PurchasePage"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 154.0
+offset_right = 944.0
+offset_bottom = 199.0
+color = Color(0, 0, 0, 1)
+
+[node name="Logo" type="TextureRect" parent="PurchasePage/TopBar"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 1.0
+offset_right = 137.0
+offset_bottom = 45.0
+texture = ExtResource("3_yjs8n")
+expand_mode = 1
+
+[node name="ProductImage" type="TextureRect" parent="PurchasePage"]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 199.0
+offset_right = 489.0
+offset_bottom = 499.0
+texture = ExtResource("8_52287")
+stretch_mode = 5
+
+[node name="Title" type="RichTextLabel" parent="PurchasePage"]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 199.0
+offset_right = 944.0
+offset_bottom = 284.0
+bbcode_enabled = true
+text = "top
+
+
+
+bottom"
+
+[node name="StarsBG" type="TextureRect" parent="PurchasePage"]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 284.0
+offset_right = 529.0
+offset_bottom = 292.0
+scale = Vector2(5, 5)
+texture = ExtResource("9_pnyx2")
+stretch_mode = 1
+
+[node name="Stars" type="TextureRect" parent="PurchasePage/StarsBG"]
+layout_mode = 0
+offset_right = 36.0
+offset_bottom = 8.0
+texture = ExtResource("10_jimtg")
+stretch_mode = 1
+
+[node name="Price" type="Label" parent="PurchasePage"]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 330.0
+offset_right = 673.0
+offset_bottom = 346.0
+text = "$100.00"
+
+[node name="Desc" type="RichTextLabel" parent="PurchasePage"]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 365.0
+offset_right = 915.0
+offset_bottom = 499.0
+bbcode_enabled = true
+text = "Description"
+
+[node name="Buy" type="TextureButton" parent="PurchasePage"]
+layout_mode = 0
+offset_left = 721.0
+offset_top = 315.0
+offset_right = 915.0
+offset_bottom = 364.0
+texture_normal = ExtResource("4_cywlt")
+texture_pressed = ExtResource("5_iw5iq")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="PurchasePage/Buy"]
+layout_mode = 0
+offset_right = 194.0
+offset_bottom = 49.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Buy Now"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="PurchasePage"]
+z_index = 1
+layout_mode = 0
+offset_left = 197.0
+offset_top = 104.0
+offset_right = 243.0
+offset_bottom = 154.0
+text = "<"
+
+[node name="ShopTitleContainer" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(700, 50)
+layout_mode = 2
+offset_left = 189.0
+offset_top = 104.0
+offset_right = 944.0
+offset_bottom = 154.0
+size_flags_horizontal = 6
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="URL" type="Label" parent="ShopTitleContainer"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 60.0
+offset_top = -25.0
+offset_right = 700.0
+offset_bottom = 25.0
+grow_vertical = 2
+text = "hppts://fishermansparadise.net/shop"
+label_settings = ExtResource("6_gmpe3")
+vertical_alignment = 1
+
+[node name="PhoneSideways" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 617.0
+offset_right = 689.0
+offset_bottom = 1527.0
+rotation = -1.5708
+mouse_filter = 2
+texture = ExtResource("8_ugg21")
+metadata/_edit_lock_ = true
+
+[node name="ExitButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 959.0
+offset_top = 315.0
+offset_right = 1009.0
+offset_bottom = 365.0
+shortcut = SubResource("Shortcut_s4cbc")
+texture_normal = ExtResource("5_8hm1p")
+texture_pressed = ExtResource("6_ht106")
+stretch_mode = 0
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="SelectPage/VBoxContainer/PanelContainer/GoToSite" to="." method="_on_go_to_site_pressed"]
+[connection signal="pressed" from="MainPage/UpgradeButton" to="." method="_on_upgrade_button_pressed"]
+[connection signal="pressed" from="MainPage/ItemButton" to="." method="_on_item_button_pressed"]
+[connection signal="pressed" from="MainPage/RodsButton" to="." method="_on_rods_button_pressed"]
+[connection signal="pressed" from="BackButton" to="Results" method="_on_back_button_pressed"]
+[connection signal="visibility_changed" from="Results" to="Results" method="_on_visibility_changed"]
+[connection signal="pressed" from="Results/VBoxContainer/AdContainer/GoToSite" to="Results" method="_on_go_to_site_pressed"]
+[connection signal="pressed" from="PurchasePage/Buy" to="PurchasePage" method="_on_buy_pressed"]
+[connection signal="pressed" from="PurchasePage/BackButton" to="PurchasePage" method="_on_back_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

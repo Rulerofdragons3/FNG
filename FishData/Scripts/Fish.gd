@@ -12,7 +12,7 @@ enum ShinyOverrides {Invert,TrueInvert,Hue,Modulate,Custom,None}
 @export_category("Values")
 @export var value:float = 0
 @export var rarity:int = 0
-@export var worlds:Array = ["Ocean"]
+@export var worlds:Array[String] = ["ocean"]
 @export var tankIsMirrored:bool = false
 @export_category("Shiny Overrides")
 @export_multiline var shinyDescription = ""

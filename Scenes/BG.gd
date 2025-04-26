@@ -14,12 +14,14 @@ func _ready():
 	Globals.createFishData() #Creates the fishdata dict
 	$Waves.play()
 	$Timer.wait_time = randi_range(60,300)
-	$BoatContainer/Character.play("default")
+	#$BoatContainer/Character.play("default")
 	resetMusic()
-	#createFishPNGS()
+	var rod:PackedScene = Globals.currentRod.scene
+	self.get_parent().get_node("RodContainer").add_child(rod.instantiate())
 
 func resetMusic():
 	$Timer.stop()
+	print("World: ", Globals.world)
 	if "playlist" not in worldConfigs[Globals.world]:
 		return
 	playlist = worldConfigs[Globals.world]["playlist"]

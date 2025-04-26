@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="LuckyCharm" load_steps=3 format=3 uid="uid://bdje5p1qcuyfk"]
+
+[ext_resource type="Script" uid="uid://b4y6qwnvxecri" path="res://Items/ItemScripts/luckyCharm.gd" id="1_cs4l1"]
+[ext_resource type="Texture2D" uid="uid://cvvd62m88uucn" path="res://Assets/Items/luckyCharm/luckyCharm6.png" id="2_8rd5n"]
+
+[resource]
+script = ExtResource("1_cs4l1")
+luckIncrease = 1
+texture = ExtResource("2_8rd5n")
+stackable = true
+consumable = true
+trashable = true
+mergeable = false
+displayName = "Pity Lucky Charm"
+description = "Increases base luck by one."
+metadata/_custom_type_script = "uid://b4y6qwnvxecri"

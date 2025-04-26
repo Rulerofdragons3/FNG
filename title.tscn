@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://s6k8segf62oq"]
+
+[ext_resource type="Texture2D" uid="uid://cx2o8qff2nwc4" path="res://Assets/Backgrounds/OceanBG.png" id="1_kpexm"]
+[ext_resource type="Texture2D" uid="uid://cvpmwv7u75w5b" path="res://Assets/Title.png" id="2_3xoar"]
+[ext_resource type="AudioStream" uid="uid://wf0rvi8h2nww" path="res://Assets/Sounds/Music/Fng Title(2.0).mp3" id="3_mom7w"]
+
+[sub_resource type="Animation" id="Animation_kpexm"]
+resource_name = "title"
+length = 4.0
+loop_mode = 1
+
+[sub_resource type="Animation" id="Animation_3xoar"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mom7w"]
+_data = {
+&"RESET": SubResource("Animation_3xoar"),
+&"title": SubResource("Animation_kpexm")
+}
+
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_kpexm")
+
+[node name="Title" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 455.0
+offset_top = 67.0
+offset_right = 711.0
+offset_bottom = 323.0
+pivot_offset = Vector2(128, 128)
+texture = ExtResource("2_3xoar")
+
+[node name="Label" type="Label" parent="."]
+offset_top = 509.0
+offset_right = 1152.0
+offset_bottom = 646.0
+text = "Press space to start fishin'"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_mom7w")
+volume_db = 10.0
+autoplay = true
+bus = &"Music"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_mom7w")
+}

@@ -1,27 +1,34 @@
 extends Node
-
+#Generated on load
 var fishData:Dictionary = {}
+#Saved
 var money:float = 0.00
 var baseMultiplier = 1
 var performanceMultiplier = 1
 var cheapValueMultiplier = 0
 var obtainedFishIDs:Dictionary = {}
-var world = "ocean"
+var world:String = "ocean"
 var obtainedWorlds = ['ocean']
 var worldPool:Array[Fish] = [] #Fish available in the selected world
 var shinyOdds = 0.0005
 var itemInventory:Array[Item] = []
+var upgrades:Dictionary = {}
+var currentRod:ItemRod = load("res://Items/Rods/BasicRod.res")
+var rods:Array[ItemRod] = [load("res://Items/Rods/BasicRod.res")]
 
 #Non - saved
 var inUseItems:Array[Item] = []
 var reUseItems:Array[Item] = []
 
-var SECURITY_KEY = "493610325234" #Encryption pass to prevent save editing
 #The long one
-var upgrades = JSON.parse_string(FileAccess.get_file_as_string("res://upgrades.json"))
+#var upgrades = JSON.parse_string(FileAccess.get_file_as_string("res://upgrades.json"))
 
 func _ready():
 	LimboConsole.register_command(_fish_command,"fish","unlocks fish")
+	LimboConsole.register_command(_money_command,"money","sets cash")
+
+func _money_command(amount:float):
+	money = amount
 
 func _fish_command(fishDir):
 	var path = "res://FishData/Resources/" + fishDir
@@ -60,5 +67,14 @@ func setWorldPool(worldName):
 	# TODO: Fix O(N) execution time pls
 	for fishFile in fishData:
 		var fish:Fish = load(fishData[fishFile])
+		if not fish:
+			print(fishData[fishFile])
+		
 		if world in fish.worlds:
 			self.worldPool.append(fish)
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("fullscreen"):
+		var mode := DisplayServer.window_get_mode()
+		var is_window: bool = mode != DisplayServer.WINDOW_MODE_FULLSCREEN
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if is_window else DisplayServer.WINDOW_MODE_WINDOWED)

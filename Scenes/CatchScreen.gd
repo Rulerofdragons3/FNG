@@ -1,23 +1,28 @@
 extends Control
-@onready var bar = $"../Bar"
+@onready var bar = $"../RodContainer"
 @onready var UIMoney = $"../Ui/MoneyLabel"
 @onready var menuButton = $"../Ui/MenuButton"
 var plguffer:Fish = preload("res://FishData/Resources/Default/plguffer.res")
 #Get World Fish
 #var ID:String
 var isShiny:bool = false
+var jumpscareFish = [
+	"the angler", 
+	"pandemonium",
+	"pinkie",
+	"chainsmoker",
+	"froger",
+	"blitz"
+	]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#Hides at start
 	self.visible = false
-	#print($BG/FishSprites.sprite_frames.get_frame_texture("default",0))
 
 #Is triggered from the FishingMinigame script
-func _on_bar_fish_caught(luckMult,bigCatch):
-	if Globals.worldPool == []:
-		print("No fish in world pools")
-		return
+func on_fish_caught(luckMult,bigCatch):
+	assert(Globals.worldPool != [], "No fish in world pool.")
 	var fish = determineFish(luckMult,bigCatch)
 	displayFishInfo(fish)
 	await $Dismiss.pressed
@@ -79,7 +84,7 @@ func displayFishInfo(fish:Fish):
 	$BG/FishSprite.texture = fish.texture
 	$Name.text = fish.name
 	$Value.text = valueText
-	bar.visible = false
+	bar.get_child(0).visible = false
 	self.visible = true
 	# Probably should remove this code eventually...
 	if fish.name == "the angler" or fish.name == "pandemonium":
@@ -116,7 +121,7 @@ func on_dismiss_pressed(fish:Fish):
 	#UpdateUI
 	$BG/NewIndicator.hide()
 	$BG/NewIndicator/PulseAnim.stop()
-	if fish.name == "the angler" or fish.name == "pandemonium":
+	if fish.name in jumpscareFish:
 		$JokeAudioContainer/PressureIdle.stop()
 		$JokeAudioContainer/PressureJumpscare.play()
 		$Fiscription.hide()
@@ -134,5 +139,5 @@ func on_dismiss_pressed(fish:Fish):
 	self.visible = false
 	UIMoney.text = "$" + "%.2f" % Globals.money
 	menuButton.disabled = false
-	bar.canFish = true
+	bar.get_child(0).canFish = true
 	

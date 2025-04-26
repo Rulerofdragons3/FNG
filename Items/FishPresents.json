@@ -1,4 +1,11 @@
 {
-	"ShinyCharms/pity_shiny_charm.res": 10,
-	"ShinyCharms/superlative_shiny_charm.res": 1
+	"ShinyCharms/pity_shiny_charm.res": 15,
+	"ShinyCharms/lesser_shiny_charm.res": 7,
+	"ShinyCharms/decent_shiny_charm.res": 3,
+	"ShinyCharms/good_shiny_charm.res": 1,
+	"LuckyCharms/LuckyCharm1.tres":20,
+	"LuckyCharms/LuckyCharm2.tres":14,
+	"LuckyCharms/LuckyCharm3.tres":8,
+	"LuckyCharms/LuckyCharm4.tres":4,
+	"LuckyCharms/LuckyCharm5.tres":2
 }

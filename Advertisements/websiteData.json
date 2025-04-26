@@ -14,6 +14,16 @@
 		"PageData":"FishRecipe.txt",
 		"URL":"recettesgratuites.com/fishauchocolat"
 	},
+	"4": {
+		"pageColor":"#FFFFFF",
+		"PageData":"test.txt",
+		"URL":"evilsite.net"
+	},
+	"5": {
+		"pageColor":"#000845",
+		"PageData":"FishSlippers.txt",
+		"URL":"fngmerch.gov"
+	},
 	"7":{
 		"pageColor":"#ed04e9",
 		"PageData":"HotFish.txt",

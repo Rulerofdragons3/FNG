@@ -1,16 +1,6 @@
-Rework Shop
-- Change how upgrades work
-- Add a tab for items
-
 Items
-- Add shiny charms for other tiers
-- Add value increasing item
 - Add luck increasing items
 - Other items lmao
-
-Rods
-- Add rods tab
-- Add rods of different types
 
 RNG
 - Rework internal rng systems

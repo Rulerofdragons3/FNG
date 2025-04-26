@@ -1,0 +1,37 @@
+[
+	{
+		"res://ShopItems/ItemPurchases/pity_shiny_charm.res":8,
+		"res://ShopItems/ItemPurchases/lesser_shiny_charm.res":6,
+		"res://ShopItems/ItemPurchases/pity_lucky_charm.res":10,
+		"res://ShopItems/ItemPurchases/lesser_lucky_charms.res":7,
+		"res://ShopItems/ItemPurchases/lucky_charm.res":4
+	},
+	{
+		"res://ShopItems/ItemPurchases/pity_shiny_charm.res":9,
+		"res://ShopItems/ItemPurchases/lesser_shiny_charm.res":8,
+		"res://ShopItems/ItemPurchases/lesser_shiny_charm1.res":6,
+		"res://ShopItems/ItemPurchases/greater_shiny_charm.res":3,
+		"res://ShopItems/ItemPurchases/pity_lucky_charm.res":15,
+		"res://ShopItems/ItemPurchases/lesser_lucky_charms.res":10,
+		"res://ShopItems/ItemPurchases/lucky_charm.res":4,
+		"res://ShopItems/ItemPurchases/greater_lucky_charm.res":2
+	},
+	{
+		"res://ShopItems/ItemPurchases/lesser_shiny_charm1.res":6,
+		"res://ShopItems/ItemPurchases/greater_shiny_charm.res":3,
+		"res://ShopItems/ItemPurchases/shiny_charm.res":6,
+		"res://ShopItems/ItemPurchases/greater_lucky_charm.res":12,
+		"res://ShopItems/ItemPurchases/saturated_lucky_charm.res":8,
+		"res://ShopItems/ItemPurchases/oversaturated_lucky_charm.res":4,
+		"res://ShopItems/ItemPurchases/superlative_lucky_charm.res":2
+	},
+	{
+		"res://ShopItems/ItemPurchases/greater_shiny_charm.res":3,
+		"res://ShopItems/ItemPurchases/shiny_charm.res":6,
+		"res://ShopItems/ItemPurchases/superlative_shiny_charm.res":1,
+		"res://ShopItems/ItemPurchases/saturated_lucky_charm.res":8,
+		"res://ShopItems/ItemPurchases/oversaturated_lucky_charm.res":4,
+		"res://ShopItems/ItemPurchases/superlative_lucky_charm.res":2
+	}
+	
+]

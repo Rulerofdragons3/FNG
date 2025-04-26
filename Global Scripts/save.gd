@@ -7,3 +7,6 @@ class_name Save
 @export var world:String = ""
 @export var obtainedWorlds:Array = []
 @export var itemInventory:Array[Dictionary] = []
+@export var currentRod:ItemRod
+@export var rods:Array[ItemRod]
+@export var date:String

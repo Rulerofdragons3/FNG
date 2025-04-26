@@ -4,7 +4,7 @@ extends ColorRect
 @onready var menuButton = $"../Ui/MenuButton"
 @onready var Fade = $"../Ui/Fade"
 @onready var BG = $"../Background"
-@onready var bar = $"../Bar"
+@onready var bar = $"../RodContainer"
 @onready var musicPlayer = $"../Background/Music" 
 @onready var musicController = $"../Background"
 
@@ -108,7 +108,7 @@ func _on_travel_button_pressed():
 	musicPlayer.volume_db = 0
 	#Save Game
 	Globals.setWorldPool(selectedWorld)
-	Globals.saveGame()
+	SaveManager.save_game()
 	#Reset Music
 	musicController.resetMusic()
 	#Reset Ship Location
@@ -129,4 +129,4 @@ func _on_travel_button_pressed():
 	#Reset to default menu
 	Fade.hide()
 	menuButton.visible = true
-	bar.canFish = true
+	bar.get_child(0).canFish = true

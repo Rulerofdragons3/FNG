@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://cble6x2rtvl7c"]
+
+[ext_resource type="Script" uid="uid://cxwdvvgqv2f62" path="res://Scenes/Apps/Inventory/rod_button.gd" id="1_152nt"]
+[ext_resource type="Texture2D" uid="uid://5dr5y0urry6a" path="res://Assets/InUseItem.png" id="2_o8s5y"]
+
+[node name="RodButton" type="ColorRect"]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 100.0
+offset_bottom = 100.0
+color = Color(0, 0, 0, 0.180392)
+script = ExtResource("1_152nt")
+
+[node name="Button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 97.0
+offset_bottom = 97.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="InUseIndicator" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_o8s5y")
+stretch_mode = 5
+
+[connection signal="focus_entered" from="Button" to="." method="_on_button_focus_entered"]
+[connection signal="focus_exited" from="Button" to="." method="_on_button_focus_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_pressed"]

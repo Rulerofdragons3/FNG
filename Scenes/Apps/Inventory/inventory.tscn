@@ -1,0 +1,292 @@
+[gd_scene load_steps=14 format=3 uid="uid://b25lagvl6w4g"]
+
+[ext_resource type="Texture2D" uid="uid://x4qqty1bin5d" path="res://Assets/Phone.png" id="1_sjunw"]
+[ext_resource type="Script" uid="uid://2sc3prbuhjmu" path="res://Scenes/Apps/Inventory/inventory.gd" id="1_x06p2"]
+[ext_resource type="Texture2D" uid="uid://bpkj6dddrtavq" path="res://Assets/Buttons/ExitUP.png" id="2_760g1"]
+[ext_resource type="Texture2D" uid="uid://dctf6w3f6m872" path="res://Assets/GameIcons/icon.png" id="2_pexk1"]
+[ext_resource type="LabelSettings" uid="uid://cnw3wdb2q0mrr" path="res://defaultLabelSettings.tres" id="3_1hdfe"]
+[ext_resource type="Texture2D" uid="uid://du2s7la1tqct1" path="res://Assets/Buttons/ExitDOWN.png" id="3_6003s"]
+[ext_resource type="FontFile" uid="uid://goan0j3j1id4" path="res://Assets/Fonts/PublicPixel-rv0pA.ttf" id="4_6exlt"]
+[ext_resource type="PackedScene" uid="uid://c1j4cytdpqjhy" path="res://Scenes/Apps/Inventory/item_button.tscn" id="8_j7hd5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3gl25"]
+font = ExtResource("4_6exlt")
+font_size = 8
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_20ri2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_55cy0"]
+font_color = Color(0.207843, 0.368627, 0.231373, 1)
+
+[sub_resource type="InputEventAction" id="InputEventAction_a33lw"]
+action = &"ShopHotkey"
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_nmg36"]
+events = [SubResource("InputEventAction_a33lw")]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x06p2")
+metadata/_edit_lock_ = true
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 70.0
+offset_right = 1010.0
+offset_bottom = 584.0
+color = Color(0.180392, 0.545098, 0.341176, 1)
+
+[node name="OptionsHolder" type="ColorRect" parent="BG"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -395.0
+offset_top = -515.0
+offset_right = -12.0
+grow_horizontal = 0
+grow_vertical = 0
+color = Color(0.207843, 0.368627, 0.231373, 1)
+
+[node name="ItemTexture" type="TextureRect" parent="BG/OptionsHolder"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -181.5
+offset_top = 25.0
+offset_right = -81.5
+offset_bottom = 125.0
+grow_horizontal = 2
+texture = ExtResource("2_pexk1")
+expand_mode = 1
+
+[node name="Name" type="Label" parent="BG/OptionsHolder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -231.5
+offset_right = 183.5
+offset_bottom = -125.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Item Name"
+label_settings = ExtResource("3_1hdfe")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Desc" type="Label" parent="BG/OptionsHolder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.5
+offset_top = -124.5
+offset_right = 110.5
+offset_bottom = -44.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.25, 1.25)
+text = "Item Description"
+label_settings = SubResource("LabelSettings_3gl25")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="OptionsContainer" type="ScrollContainer" parent="BG/OptionsHolder"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -181.5
+offset_top = -257.0
+offset_right = 183.5
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG/OptionsHolder/OptionsContainer"]
+layout_mode = 2
+
+[node name="UseButton" type="Button" parent="BG/OptionsHolder/OptionsContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(360, 75)
+layout_mode = 2
+text = "Equip
+"
+
+[node name="Cancel" type="Button" parent="BG/OptionsHolder/OptionsContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(360, 75)
+layout_mode = 2
+text = "Unequip"
+
+[node name="MergeButton" type="Button" parent="BG/OptionsHolder/OptionsContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(360, 75)
+layout_mode = 2
+text = "MERGE"
+
+[node name="Trash" type="Button" parent="BG/OptionsHolder/OptionsContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(360, 75)
+layout_mode = 2
+text = "TRASH"
+
+[node name="ReUse" type="CheckBox" parent="BG/OptionsHolder"]
+visible = false
+layout_mode = 0
+offset_left = 10.0
+offset_top = 233.0
+offset_right = 34.0
+offset_bottom = 257.0
+
+[node name="Desc2" type="Label" parent="BG/OptionsHolder/ReUse"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 18.0
+offset_top = -12.0
+offset_right = 282.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.25, 1.25)
+text = "Use until depleted"
+label_settings = SubResource("LabelSettings_3gl25")
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TabBar" type="TabBar" parent="BG"]
+layout_mode = 0
+offset_left = 7.0
+offset_right = 494.0
+offset_bottom = 24.0
+theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_20ri2")
+current_tab = 0
+tab_count = 3
+tab_0/title = "Items"
+tab_1/title = "Rods"
+tab_2/title = "Cosmetics"
+
+[node name="0" type="ScrollContainer" parent="BG/TabBar"]
+custom_minimum_size = Vector2(325, 450)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 1.0
+offset_right = 487.0
+offset_bottom = 451.0
+grow_vertical = 0
+
+[node name="GridContainer" type="GridContainer" parent="BG/TabBar/0"]
+layout_mode = 2
+columns = 4
+
+[node name="1" type="ScrollContainer" parent="BG/TabBar"]
+visible = false
+custom_minimum_size = Vector2(325, 450)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_right = 489.0
+offset_bottom = 451.0
+grow_vertical = 0
+
+[node name="GridContainer" type="GridContainer" parent="BG/TabBar/1"]
+layout_mode = 2
+columns = 3
+
+[node name="2" type="ScrollContainer" parent="BG/TabBar"]
+visible = false
+custom_minimum_size = Vector2(325, 450)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_right = 489.0
+offset_bottom = 451.0
+grow_vertical = 0
+
+[node name="GridContainer" type="GridContainer" parent="BG/TabBar/2"]
+layout_mode = 2
+columns = 3
+
+[node name="Label" type="Label" parent="BG/TabBar/2/GridContainer"]
+layout_mode = 2
+text = "(Cosmetics Tab)"
+
+[node name="Label" type="Label" parent="BG"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 467.0
+offset_right = 496.0
+offset_bottom = 514.0
+text = "Open Inventory Manager V0.9
+"
+label_settings = SubResource("LabelSettings_55cy0")
+vertical_alignment = 1
+
+[node name="PhoneSideways" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 51.0023
+offset_top = 638.004
+offset_right = 675.002
+offset_bottom = 1688.0
+rotation = -1.5708
+mouse_filter = 2
+texture = ExtResource("1_sjunw")
+metadata/_edit_lock_ = true
+
+[node name="ExitButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1020.0
+offset_top = 302.004
+offset_right = 1070.0
+offset_bottom = 352.004
+shortcut = SubResource("Shortcut_nmg36")
+texture_normal = ExtResource("2_760g1")
+texture_pressed = ExtResource("3_6003s")
+stretch_mode = 0
+
+[node name="ItemButton" parent="." instance=ExtResource("8_j7hd5")]
+visible = false
+layout_mode = 0
+offset_left = -107.0
+offset_top = -107.0
+offset_right = -7.0
+offset_bottom = -7.0
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="BG/OptionsHolder/OptionsContainer/VBoxContainer/UseButton" to="." method="_on_use_button_pressed"]
+[connection signal="pressed" from="BG/OptionsHolder/OptionsContainer/VBoxContainer/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="toggled" from="BG/OptionsHolder/ReUse" to="." method="_on_re_use_toggled"]
+[connection signal="tab_changed" from="BG/TabBar" to="." method="_on_tab_bar_tab_changed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
